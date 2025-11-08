@@ -1,11 +1,9 @@
 name: ci
-on:
-  push:
-  pull_request:
+on: [push, pull_request]
 
 permissions:
   contents: read
-  packages: write  # allow pushing to GHCR
+  packages: write  # needed only if you push to GHCR
 
 jobs:
   test:
@@ -17,41 +15,42 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install deps (if requirements.txt exists)
+      - name: Install
         run: |
           if [ -f requirements.txt ]; then
             pip install -r requirements.txt
           else
-            echo "No requirements.txt found; skipping install"
+            echo "No requirements.txt; skipping install"
           fi
 
-      - name: Run tests (if tests/ exists)
+      - name: Tests
         run: |
           if [ -d tests ]; then
             pytest -q
           else
-            echo "No tests/ directory; skipping tests"
+            echo "No tests/ dir; skipping tests"
           fi
 
   docker:
     needs: [test]
-    if: github.ref == 'refs/heads/main' && hashFiles('Dockerfile') != ''
+    if: ${{ github.ref == 'refs/heads/main' }}   # run only on main
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Log in to GitHub Container Registry
+      - name: Log in to GHCR
         uses: docker/login-action@v3
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build image
+      - name: Build & push (only if Dockerfile exists)
         run: |
-          IMAGE=ghcr.io/${{ github.repository }}:latest
-          docker build -t $IMAGE .
-          echo "IMAGE=$IMAGE" >> $GITHUB_ENV
-
-      - name: Push image
-        run: docker push $IMAGE
+          if [ -f Dockerfile ]; then
+            IMAGE=ghcr.io/${{ github.repository }}:latest
+            docker build -t "$IMAGE" .
+            docker push "$IMAGE"
+          else
+            echo "No Dockerfile; skipping image build"
+          fi
