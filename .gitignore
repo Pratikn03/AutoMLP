@@ -7,6 +7,5 @@ __pycache__/
 mlruns/
 artifacts/
 .ipynb_checkpoints/
-# data files (keep out of git; use DVC/LFS instead)
 data/
 src/data/modeldata.csv
