@@ -15,7 +15,7 @@ jobs:
   build-test-image:
     runs-on: ubuntu-latest
     env:
-      CSV_PATH: Project/src/data/modeldata_demo.csv
+      CSV_PATH: Project/src/data/modeldata.csv
       TARGET: IsInsurable
       FLAML_TIME_BUDGET: 15
       H2O_MAX_RUNTIME: 0   # keep 0 in CI unless you install Java
