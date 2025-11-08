@@ -1,0 +1,2 @@
+f1_macro,accuracy,roc_auc_ovr,avg_precision_ovr,framework
+0.0,0.0,0.0,0.3333333333333333,H2O_AutoML

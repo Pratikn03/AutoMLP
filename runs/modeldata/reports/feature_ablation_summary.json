@@ -1,0 +1,38 @@
+[
+  {
+    "framework":"feature_ablation_xgboost_baseline",
+    "estimator":"xgboost",
+    "variant_key":"baseline",
+    "variant_name":"Baseline",
+    "variant_description":"Median\/most-frequent imputation, scaling enabled, no extra transforms.",
+    "metric":"accuracy",
+    "mean":0.9235918317,
+    "std":0.0024748879,
+    "n":5,
+    "delta_vs_baseline":0.0
+  },
+  {
+    "framework":"feature_ablation_xgboost_baseline",
+    "estimator":"xgboost",
+    "variant_key":"baseline",
+    "variant_name":"Baseline",
+    "variant_description":"Median\/most-frequent imputation, scaling enabled, no extra transforms.",
+    "metric":"fit_time_sec",
+    "mean":4.0927554082,
+    "std":0.1333792834,
+    "n":5,
+    "delta_vs_baseline":0.0
+  },
+  {
+    "framework":"feature_ablation_xgboost_baseline",
+    "estimator":"xgboost",
+    "variant_key":"baseline",
+    "variant_name":"Baseline",
+    "variant_description":"Median\/most-frequent imputation, scaling enabled, no extra transforms.",
+    "metric":"predict_time_sec",
+    "mean":0.1287434666,
+    "std":0.043755438,
+    "n":5,
+    "delta_vs_baseline":0.0
+  }
+]

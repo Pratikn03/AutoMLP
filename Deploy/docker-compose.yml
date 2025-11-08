@@ -1,0 +1,17 @@
+services:
+  api:
+    build: ./api
+    image: automl-api:dev
+    environment:
+      CSV_PATH: Project/src/data/modeldata_demo.csv
+      TARGET: IsInsurable
+    ports: [ "8000:8000" ]
+  prometheus:
+    image: prom/prometheus:latest
+    volumes:
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+    ports: [ "9090:9090" ]
+  grafana:
+    image: grafana/grafana-oss:latest
+    ports: [ "3000:3000" ]
+    depends_on: [ prometheus ]

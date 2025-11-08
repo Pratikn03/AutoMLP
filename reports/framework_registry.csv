@@ -1,0 +1,6 @@
+framework,category,is_booster,datasets_covered
+CatBoost,booster,True,2
+FLAML,automl,False,2
+H2O_AutoML,automl,False,3
+LightGBM,booster,True,2
+XGBoost,booster,True,2

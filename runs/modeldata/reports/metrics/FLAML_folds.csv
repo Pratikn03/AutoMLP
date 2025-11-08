@@ -1,0 +1,2 @@
+framework,f1_macro,accuracy,roc_auc_ovr,avg_precision_ovr
+FLAML,0.9132464982513714,0.920599666851749,0.981376876104427,0.968499362801243

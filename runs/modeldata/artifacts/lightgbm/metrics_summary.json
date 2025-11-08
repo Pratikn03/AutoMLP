@@ -1,0 +1,9 @@
+{
+  "fold": 3.0,
+  "accuracy": 0.9232956999197978,
+  "f1_macro": 0.9163772556793122,
+  "roc_auc_ovr": 0.9825530395420531,
+  "avg_precision_ovr": 0.9704249001361849,
+  "folds": 5,
+  "target": "IsInsurable"
+}

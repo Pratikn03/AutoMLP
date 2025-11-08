@@ -1,0 +1,4 @@
+framework,estimator,variant_key,variant_name,variant_description,metric,mean,std,n,delta_vs_baseline
+feature_ablation_xgboost_baseline,xgboost,baseline,Baseline,"Median/most-frequent imputation, scaling enabled, no extra transforms.",accuracy,0.9235918316984393,0.0024748879244289824,5,0.0
+feature_ablation_xgboost_baseline,xgboost,baseline,Baseline,"Median/most-frequent imputation, scaling enabled, no extra transforms.",fit_time_sec,4.09275540819799,0.13337928340931743,5,0.0
+feature_ablation_xgboost_baseline,xgboost,baseline,Baseline,"Median/most-frequent imputation, scaling enabled, no extra transforms.",predict_time_sec,0.1287434665980981,0.04375543804649441,5,0.0

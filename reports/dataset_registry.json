@@ -1,0 +1,40 @@
+[
+  {
+    "dataset": "modeldata_demo",
+    "path": "/Users/pratik_n/Downloads/Pro_v8_AllInOne/Project/src/data/modeldata_demo.csv",
+    "rows": 1200,
+    "columns": 8,
+    "target_candidates": [
+      "Region",
+      "PolicyType",
+      "Channel",
+      "PrevClaims",
+      "HasAddon"
+    ]
+  },
+  {
+    "dataset": "modeldata",
+    "path": "/Users/pratik_n/Downloads/Pro_v8_AllInOne/src/data/modeldata.csv",
+    "rows": 162090,
+    "columns": 351,
+    "target_candidates": [
+      "IsSurplusLines",
+      "IsAgencyBilled",
+      "ProducerHoldFlag",
+      "BinderExpectedFlag",
+      "IsRenewal"
+    ]
+  },
+  {
+    "dataset": "salary",
+    "path": "/Users/pratik_n/Downloads/Pro_v8_AllInOne/src/data/salary.csv",
+    "rows": 40,
+    "columns": 5,
+    "target_candidates": [
+      "Gender",
+      "Age",
+      "Years of service",
+      "Education level"
+    ]
+  }
+]

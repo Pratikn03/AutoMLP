@@ -1,0 +1,46 @@
+{
+  "experiment_name": "boosting_suite_lightgbm_baseline",
+  "seeds": [
+    42,
+    77
+  ],
+  "n_splits": 5,
+  "metrics": [
+    "accuracy",
+    "precision",
+    "recall",
+    "f1"
+  ],
+  "preprocessing": {
+    "numeric_imputer_strategy": "median",
+    "categorical_imputer_strategy": "most_frequent",
+    "scale_numeric": true,
+    "poly_degree": null,
+    "binning_strategy": null,
+    "n_bins": 5,
+    "bin_encode": "onehot-dense",
+    "vif_threshold": null
+  },
+  "output_dir": "reports/metrics",
+  "artifact_dir": "artifacts/experiments",
+  "figure_dir": "figures/feature_importance",
+  "save_pipeline": true,
+  "save_feature_importance": true,
+  "feature_importance_top_k": 20,
+  "metadata": {},
+  "target": "IsInsurable",
+  "estimator": "TunableBoostingClassifier",
+  "estimator_params": {
+    "model_name": "lightgbm",
+    "base_params": null,
+    "tuning_strategy": null,
+    "tuning_param_space": null,
+    "n_iter": 25,
+    "n_trials": 25,
+    "inner_cv": 3,
+    "scoring": "f1",
+    "n_jobs": -1,
+    "random_state": null,
+    "verbosity": 0
+  }
+}

@@ -1,0 +1,5 @@
+framework,metric,mean,std,ci95_low,ci95_high,boot_ci_low,boot_ci_high,n
+H2O_AutoML,f1_macro,0.0,0.0,0.0,0.0,0.0,0.0,1
+H2O_AutoML,accuracy,0.0,0.0,0.0,0.0,0.0,0.0,1
+H2O_AutoML,roc_auc_ovr,0.0,0.0,0.0,0.0,0.0,0.0,1
+H2O_AutoML,avg_precision_ovr,0.3333333333333333,0.0,0.3333333333333333,0.3333333333333333,0.3333333333333333,0.3333333333333333,1

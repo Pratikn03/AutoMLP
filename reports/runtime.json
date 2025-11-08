@@ -1,0 +1,1365 @@
+{
+  "training": [
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "target": "IsInsurable",
+      "seed": 42,
+      "fold": 1,
+      "fit_time_sec": 4.168571791000431,
+      "predict_time_sec": 0.1457783340010792,
+      "wall_time_sec": 4.314471006393433,
+      "resource_before": {
+        "rss_mb": 1904.84375,
+        "vms_mb": 427796.5625,
+        "cpu_user_sec": 3.000253696,
+        "cpu_system_sec": 1.32840704
+      },
+      "resource_after": {
+        "rss_mb": 3155.015625,
+        "vms_mb": 429313.296875,
+        "cpu_user_sec": 20.429903872,
+        "cpu_system_sec": 3.065061632
+      },
+      "rss_delta_mb": 1250.171875,
+      "model_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_42/fold_1_pipeline.joblib",
+      "model_size_bytes": 1219043,
+      "timestamp": 1762578132.210381
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "target": "IsInsurable",
+      "seed": 42,
+      "fold": 2,
+      "fit_time_sec": 4.166465625006822,
+      "predict_time_sec": 0.10157791699748486,
+      "wall_time_sec": 4.268270015716553,
+      "resource_before": {
+        "rss_mb": 2972.71875,
+        "vms_mb": 429490.828125,
+        "cpu_user_sec": 20.893370368,
+        "cpu_system_sec": 3.118057216
+      },
+      "resource_after": {
+        "rss_mb": 2807.828125,
+        "vms_mb": 429491.828125,
+        "cpu_user_sec": 38.63496704,
+        "cpu_system_sec": 4.858960384
+      },
+      "rss_delta_mb": -164.890625,
+      "model_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_42/fold_2_pipeline.joblib",
+      "model_size_bytes": 1212307,
+      "timestamp": 1762578136.606074
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "target": "IsInsurable",
+      "seed": 42,
+      "fold": 3,
+      "fit_time_sec": 4.356571875003283,
+      "predict_time_sec": 0.17266091700003017,
+      "wall_time_sec": 4.52935004234314,
+      "resource_before": {
+        "rss_mb": 3163.015625,
+        "vms_mb": 429491.828125,
+        "cpu_user_sec": 39.182450688,
+        "cpu_system_sec": 4.949018624
+      },
+      "resource_after": {
+        "rss_mb": 2686.09375,
+        "vms_mb": 429502.078125,
+        "cpu_user_sec": 57.073610752,
+        "cpu_system_sec": 6.629932032
+      },
+      "rss_delta_mb": -476.921875,
+      "model_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_42/fold_3_pipeline.joblib",
+      "model_size_bytes": 1203683,
+      "timestamp": 1762578141.3808901
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "target": "IsInsurable",
+      "seed": 42,
+      "fold": 4,
+      "fit_time_sec": 4.24413624999579,
+      "predict_time_sec": 0.13010799999756273,
+      "wall_time_sec": 4.374369859695435,
+      "resource_before": {
+        "rss_mb": 2798.890625,
+        "vms_mb": 429502.078125,
+        "cpu_user_sec": 57.583251456,
+        "cpu_system_sec": 6.701569024
+      },
+      "resource_after": {
+        "rss_mb": 3177.125,
+        "vms_mb": 429502.078125,
+        "cpu_user_sec": 75.196571648,
+        "cpu_system_sec": 8.496964608
+      },
+      "rss_delta_mb": 378.234375,
+      "model_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_42/fold_4_pipeline.joblib",
+      "model_size_bytes": 1211907,
+      "timestamp": 1762578145.984638
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "target": "IsInsurable",
+      "seed": 42,
+      "fold": 5,
+      "fit_time_sec": 4.0047322919999715,
+      "predict_time_sec": 0.08632870799920056,
+      "wall_time_sec": 4.091192960739136,
+      "resource_before": {
+        "rss_mb": 3225.015625,
+        "vms_mb": 429502.078125,
+        "cpu_user_sec": 75.551981568,
+        "cpu_system_sec": 8.52248832
+      },
+      "resource_after": {
+        "rss_mb": 3193.609375,
+        "vms_mb": 429502.078125,
+        "cpu_user_sec": 93.255827456,
+        "cpu_system_sec": 10.150728704
+      },
+      "rss_delta_mb": -31.40625,
+      "model_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_42/fold_5_pipeline.joblib",
+      "model_size_bytes": 1216323,
+      "timestamp": 1762578150.224653
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "target": "IsInsurable",
+      "seed": 77,
+      "fold": 1,
+      "fit_time_sec": 4.103423750013462,
+      "predict_time_sec": 0.12310837500263005,
+      "wall_time_sec": 4.226637125015259,
+      "resource_before": {
+        "rss_mb": 3157.609375,
+        "vms_mb": 429502.078125,
+        "cpu_user_sec": 93.726670848,
+        "cpu_system_sec": 10.214270976
+      },
+      "resource_after": {
+        "rss_mb": 3175.359375,
+        "vms_mb": 429501.53125,
+        "cpu_user_sec": 111.394013184,
+        "cpu_system_sec": 11.937240064
+      },
+      "rss_delta_mb": 17.75,
+      "model_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_77/fold_1_pipeline.joblib",
+      "model_size_bytes": 1213603,
+      "timestamp": 1762578154.654729
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "target": "IsInsurable",
+      "seed": 77,
+      "fold": 2,
+      "fit_time_sec": 4.223018957985914,
+      "predict_time_sec": 0.11038158299925271,
+      "wall_time_sec": 4.333503007888794,
+      "resource_before": {
+        "rss_mb": 3213.578125,
+        "vms_mb": 429501.53125,
+        "cpu_user_sec": 111.747465216,
+        "cpu_system_sec": 11.970967552
+      },
+      "resource_after": {
+        "rss_mb": 2186.59375,
+        "vms_mb": 429501.53125,
+        "cpu_user_sec": 128.62324736,
+        "cpu_system_sec": 13.668396032
+      },
+      "rss_delta_mb": -1026.984375,
+      "model_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_77/fold_2_pipeline.joblib",
+      "model_size_bytes": 1222115,
+      "timestamp": 1762578159.145014
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "target": "IsInsurable",
+      "seed": 77,
+      "fold": 3,
+      "fit_time_sec": 5.060170249998919,
+      "predict_time_sec": 0.1639967910014093,
+      "wall_time_sec": 5.224321126937866,
+      "resource_before": {
+        "rss_mb": 2455.109375,
+        "vms_mb": 429501.53125,
+        "cpu_user_sec": 129.256988672,
+        "cpu_system_sec": 13.856330752
+      },
+      "resource_after": {
+        "rss_mb": 1809.609375,
+        "vms_mb": 429501.53125,
+        "cpu_user_sec": 147.478347776,
+        "cpu_system_sec": 15.918713856
+      },
+      "rss_delta_mb": -645.5,
+      "model_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_77/fold_3_pipeline.joblib",
+      "model_size_bytes": 1199459,
+      "timestamp": 1762578164.70105
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "target": "IsInsurable",
+      "seed": 77,
+      "fold": 4,
+      "fit_time_sec": 4.71243787498679,
+      "predict_time_sec": 0.15136187500320375,
+      "wall_time_sec": 4.864023923873901,
+      "resource_before": {
+        "rss_mb": 2141.796875,
+        "vms_mb": 429501.53125,
+        "cpu_user_sec": 148.17370112,
+        "cpu_system_sec": 16.051869696
+      },
+      "resource_after": {
+        "rss_mb": 2161.046875,
+        "vms_mb": 429401.921875,
+        "cpu_user_sec": 166.137135104,
+        "cpu_system_sec": 18.136879104
+      },
+      "rss_delta_mb": 19.25,
+      "model_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_77/fold_4_pipeline.joblib",
+      "model_size_bytes": 1222915,
+      "timestamp": 1762578169.896618
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "target": "IsInsurable",
+      "seed": 77,
+      "fold": 5,
+      "fit_time_sec": 4.837230167002417,
+      "predict_time_sec": 0.17107283299264964,
+      "wall_time_sec": 5.00855016708374,
+      "resource_before": {
+        "rss_mb": 2147.140625,
+        "vms_mb": 429401.921875,
+        "cpu_user_sec": 166.720126976,
+        "cpu_system_sec": 18.298404864
+      },
+      "resource_after": {
+        "rss_mb": 2411.546875,
+        "vms_mb": 429412.71875,
+        "cpu_user_sec": 185.000001536,
+        "cpu_system_sec": 20.470726656
+      },
+      "rss_delta_mb": 264.40625,
+      "model_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_77/fold_5_pipeline.joblib",
+      "model_size_bytes": 1211635,
+      "timestamp": 1762578175.250779
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "target": "IsInsurable",
+      "seed": 42,
+      "fold": 1,
+      "fit_time_sec": 4.487840250003501,
+      "predict_time_sec": 0.1458855829987442,
+      "wall_time_sec": 4.633800029754639,
+      "resource_before": {
+        "rss_mb": 3109.890625,
+        "vms_mb": 429861.90625,
+        "cpu_user_sec": 186.379419648,
+        "cpu_system_sec": 20.956225536
+      },
+      "resource_after": {
+        "rss_mb": 2521.96875,
+        "vms_mb": 428094.703125,
+        "cpu_user_sec": 191.83214592,
+        "cpu_system_sec": 27.14317824
+      },
+      "rss_delta_mb": -587.921875,
+      "model_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_42/fold_1_pipeline.joblib",
+      "model_size_bytes": 1851427,
+      "timestamp": 1762578181.4548302
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "target": "IsInsurable",
+      "seed": 42,
+      "fold": 2,
+      "fit_time_sec": 4.611120750007103,
+      "predict_time_sec": 0.1681831659952877,
+      "wall_time_sec": 4.779458999633789,
+      "resource_before": {
+        "rss_mb": 2659.90625,
+        "vms_mb": 428099.515625,
+        "cpu_user_sec": 192.29261824,
+        "cpu_system_sec": 27.183050752
+      },
+      "resource_after": {
+        "rss_mb": 2832.984375,
+        "vms_mb": 429135.359375,
+        "cpu_user_sec": 198.184599552,
+        "cpu_system_sec": 33.525354496
+      },
+      "rss_delta_mb": 173.078125,
+      "model_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_42/fold_2_pipeline.joblib",
+      "model_size_bytes": 1851411,
+      "timestamp": 1762578186.384927
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "target": "IsInsurable",
+      "seed": 42,
+      "fold": 3,
+      "fit_time_sec": 4.453048416995443,
+      "predict_time_sec": 0.17221787499147467,
+      "wall_time_sec": 4.6254189014434814,
+      "resource_before": {
+        "rss_mb": 2946.390625,
+        "vms_mb": 429140.171875,
+        "cpu_user_sec": 198.904578048,
+        "cpu_system_sec": 33.659312128
+      },
+      "resource_after": {
+        "rss_mb": 3091.53125,
+        "vms_mb": 429140.171875,
+        "cpu_user_sec": 204.32592896,
+        "cpu_system_sec": 39.914139648
+      },
+      "rss_delta_mb": 145.140625,
+      "model_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_42/fold_3_pipeline.joblib",
+      "model_size_bytes": 1851731,
+      "timestamp": 1762578191.349396
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "target": "IsInsurable",
+      "seed": 42,
+      "fold": 4,
+      "fit_time_sec": 4.437872708003852,
+      "predict_time_sec": 0.18438691599294543,
+      "wall_time_sec": 4.62240195274353,
+      "resource_before": {
+        "rss_mb": 3177.296875,
+        "vms_mb": 429144.984375,
+        "cpu_user_sec": 205.018677248,
+        "cpu_system_sec": 40.052908032
+      },
+      "resource_after": {
+        "rss_mb": 3369.625,
+        "vms_mb": 429144.984375,
+        "cpu_user_sec": 210.466291712,
+        "cpu_system_sec": 45.867102208
+      },
+      "rss_delta_mb": 192.328125,
+      "model_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_42/fold_4_pipeline.joblib",
+      "model_size_bytes": 1852707,
+      "timestamp": 1762578196.279587
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "target": "IsInsurable",
+      "seed": 42,
+      "fold": 5,
+      "fit_time_sec": 4.387642333997064,
+      "predict_time_sec": 0.17791970899270382,
+      "wall_time_sec": 4.565757989883423,
+      "resource_before": {
+        "rss_mb": 3399.890625,
+        "vms_mb": 429144.984375,
+        "cpu_user_sec": 211.171475456,
+        "cpu_system_sec": 45.990682624
+      },
+      "resource_after": {
+        "rss_mb": 3410.96875,
+        "vms_mb": 429144.984375,
+        "cpu_user_sec": 216.588173312,
+        "cpu_system_sec": 52.071993344
+      },
+      "rss_delta_mb": 11.078125,
+      "model_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_42/fold_5_pipeline.joblib",
+      "model_size_bytes": 1852179,
+      "timestamp": 1762578201.155487
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "target": "IsInsurable",
+      "seed": 77,
+      "fold": 1,
+      "fit_time_sec": 4.409520333996625,
+      "predict_time_sec": 0.1457923749985639,
+      "wall_time_sec": 4.555437088012695,
+      "resource_before": {
+        "rss_mb": 3399.3125,
+        "vms_mb": 429149.796875,
+        "cpu_user_sec": 217.164709888,
+        "cpu_system_sec": 52.163121152
+      },
+      "resource_after": {
+        "rss_mb": 3174.203125,
+        "vms_mb": 428804.515625,
+        "cpu_user_sec": 222.598496256,
+        "cpu_system_sec": 58.201018368
+      },
+      "rss_delta_mb": -225.109375,
+      "model_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_77/fold_1_pipeline.joblib",
+      "model_size_bytes": 1852035,
+      "timestamp": 1762578205.9560761
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "target": "IsInsurable",
+      "seed": 77,
+      "fold": 2,
+      "fit_time_sec": 4.112259792003897,
+      "predict_time_sec": 0.14155300000857096,
+      "wall_time_sec": 4.253909111022949,
+      "resource_before": {
+        "rss_mb": 3263.578125,
+        "vms_mb": 428809.328125,
+        "cpu_user_sec": 222.9854208,
+        "cpu_system_sec": 58.23277056
+      },
+      "resource_after": {
+        "rss_mb": 3294.796875,
+        "vms_mb": 429154.609375,
+        "cpu_user_sec": 228.567728128,
+        "cpu_system_sec": 63.682199552
+      },
+      "rss_delta_mb": 31.21875,
+      "model_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_77/fold_2_pipeline.joblib",
+      "model_size_bytes": 1852819,
+      "timestamp": 1762578210.360329
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "target": "IsInsurable",
+      "seed": 77,
+      "fold": 3,
+      "fit_time_sec": 4.09367062500678,
+      "predict_time_sec": 0.1847810839972226,
+      "wall_time_sec": 4.278601169586182,
+      "resource_before": {
+        "rss_mb": 3279.78125,
+        "vms_mb": 429155.609375,
+        "cpu_user_sec": 228.984799232,
+        "cpu_system_sec": 63.719911424
+      },
+      "resource_after": {
+        "rss_mb": 3270.828125,
+        "vms_mb": 429155.609375,
+        "cpu_user_sec": 234.476732416,
+        "cpu_system_sec": 69.096996864
+      },
+      "rss_delta_mb": -8.953125,
+      "model_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_77/fold_3_pipeline.joblib",
+      "model_size_bytes": 1854067,
+      "timestamp": 1762578214.822589
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "target": "IsInsurable",
+      "seed": 77,
+      "fold": 4,
+      "fit_time_sec": 4.190028708995669,
+      "predict_time_sec": 0.19882420799694955,
+      "wall_time_sec": 4.388947010040283,
+      "resource_before": {
+        "rss_mb": 3299.84375,
+        "vms_mb": 429161.421875,
+        "cpu_user_sec": 235.135369216,
+        "cpu_system_sec": 69.220261888
+      },
+      "resource_after": {
+        "rss_mb": 3250.734375,
+        "vms_mb": 429204.546875,
+        "cpu_user_sec": 240.371843072,
+        "cpu_system_sec": 74.741481472
+      },
+      "rss_delta_mb": -49.109375,
+      "model_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_77/fold_4_pipeline.joblib",
+      "model_size_bytes": 1852083,
+      "timestamp": 1762578219.503938
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "target": "IsInsurable",
+      "seed": 77,
+      "fold": 5,
+      "fit_time_sec": 4.295369999992545,
+      "predict_time_sec": 0.18194266699720174,
+      "wall_time_sec": 4.477411985397339,
+      "resource_before": {
+        "rss_mb": 3289.75,
+        "vms_mb": 429209.359375,
+        "cpu_user_sec": 241.050632192,
+        "cpu_system_sec": 74.846224384
+      },
+      "resource_after": {
+        "rss_mb": 3067.359375,
+        "vms_mb": 429209.359375,
+        "cpu_user_sec": 246.349234176,
+        "cpu_system_sec": 80.016130048
+      },
+      "rss_delta_mb": -222.390625,
+      "model_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_77/fold_5_pipeline.joblib",
+      "model_size_bytes": 1852291,
+      "timestamp": 1762578224.286507
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "target": "IsInsurable",
+      "seed": 42,
+      "fold": 1,
+      "fit_time_sec": 7.31979916599812,
+      "predict_time_sec": 0.10996349999913946,
+      "wall_time_sec": 7.42988395690918,
+      "resource_before": {
+        "rss_mb": 3201.0625,
+        "vms_mb": 430105.453125,
+        "cpu_user_sec": 247.663837184,
+        "cpu_system_sec": 80.344113152
+      },
+      "resource_after": {
+        "rss_mb": 3070.671875,
+        "vms_mb": 430050.125,
+        "cpu_user_sec": 273.34172672,
+        "cpu_system_sec": 87.225401344
+      },
+      "rss_delta_mb": -130.390625,
+      "model_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_42/fold_1_pipeline.joblib",
+      "model_size_bytes": 1182819,
+      "timestamp": 1762578232.9020941
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "target": "IsInsurable",
+      "seed": 42,
+      "fold": 2,
+      "fit_time_sec": 7.082547833007993,
+      "predict_time_sec": 0.05942062500980683,
+      "wall_time_sec": 7.142181873321533,
+      "resource_before": {
+        "rss_mb": 3095.671875,
+        "vms_mb": 430056.0625,
+        "cpu_user_sec": 273.991974912,
+        "cpu_system_sec": 87.332192256
+      },
+      "resource_after": {
+        "rss_mb": 2794.765625,
+        "vms_mb": 429239.1875,
+        "cpu_user_sec": 299.76035328,
+        "cpu_system_sec": 94.121222144
+      },
+      "rss_delta_mb": -300.90625,
+      "model_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_42/fold_2_pipeline.joblib",
+      "model_size_bytes": 1182819,
+      "timestamp": 1762578240.380691
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "target": "IsInsurable",
+      "seed": 42,
+      "fold": 3,
+      "fit_time_sec": 7.037644667012501,
+      "predict_time_sec": 0.06874270799744409,
+      "wall_time_sec": 7.106513023376465,
+      "resource_before": {
+        "rss_mb": 2936.109375,
+        "vms_mb": 429239.1875,
+        "cpu_user_sec": 300.1597952,
+        "cpu_system_sec": 94.139990016
+      },
+      "resource_after": {
+        "rss_mb": 2949.46875,
+        "vms_mb": 429234.671875,
+        "cpu_user_sec": 326.29325824,
+        "cpu_system_sec": 100.911235072
+      },
+      "rss_delta_mb": 13.359375,
+      "model_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_42/fold_3_pipeline.joblib",
+      "model_size_bytes": 1182835,
+      "timestamp": 1762578247.6032808
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "target": "IsInsurable",
+      "seed": 42,
+      "fold": 4,
+      "fit_time_sec": 7.042693583003711,
+      "predict_time_sec": 0.05390662500576582,
+      "wall_time_sec": 7.0967230796813965,
+      "resource_before": {
+        "rss_mb": 2955.8125,
+        "vms_mb": 429234.671875,
+        "cpu_user_sec": 326.5626112,
+        "cpu_system_sec": 100.917829632
+      },
+      "resource_after": {
+        "rss_mb": 3303.75,
+        "vms_mb": 429579.953125,
+        "cpu_user_sec": 352.8564736,
+        "cpu_system_sec": 107.650564096
+      },
+      "rss_delta_mb": 347.9375,
+      "model_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_42/fold_4_pipeline.joblib",
+      "model_size_bytes": 1182883,
+      "timestamp": 1762578254.8130271
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "target": "IsInsurable",
+      "seed": 42,
+      "fold": 5,
+      "fit_time_sec": 7.011160999987624,
+      "predict_time_sec": 0.05806116700114217,
+      "wall_time_sec": 7.069347143173218,
+      "resource_before": {
+        "rss_mb": 3309.25,
+        "vms_mb": 429579.953125,
+        "cpu_user_sec": 353.136214016,
+        "cpu_system_sec": 107.655077888
+      },
+      "resource_after": {
+        "rss_mb": 2958.6875,
+        "vms_mb": 429199.875,
+        "cpu_user_sec": 379.309162496,
+        "cpu_system_sec": 114.338504704
+      },
+      "rss_delta_mb": -350.5625,
+      "model_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_42/fold_5_pipeline.joblib",
+      "model_size_bytes": 1182339,
+      "timestamp": 1762578261.9944398
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "target": "IsInsurable",
+      "seed": 77,
+      "fold": 1,
+      "fit_time_sec": 7.008590124998591,
+      "predict_time_sec": 0.05386316699150484,
+      "wall_time_sec": 7.062525987625122,
+      "resource_before": {
+        "rss_mb": 2968.453125,
+        "vms_mb": 429199.875,
+        "cpu_user_sec": 379.615346688,
+        "cpu_system_sec": 114.342821888
+      },
+      "resource_after": {
+        "rss_mb": 2971.328125,
+        "vms_mb": 429197.0625,
+        "cpu_user_sec": 405.752938496,
+        "cpu_system_sec": 121.055879168
+      },
+      "rss_delta_mb": 2.875,
+      "model_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_77/fold_1_pipeline.joblib",
+      "model_size_bytes": 1182803,
+      "timestamp": 1762578269.175828
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "target": "IsInsurable",
+      "seed": 77,
+      "fold": 2,
+      "fit_time_sec": 7.012551084000734,
+      "predict_time_sec": 0.05454387499776203,
+      "wall_time_sec": 7.067214250564575,
+      "resource_before": {
+        "rss_mb": 2976.921875,
+        "vms_mb": 429197.0625,
+        "cpu_user_sec": 406.014230528,
+        "cpu_system_sec": 121.059590144
+      },
+      "resource_after": {
+        "rss_mb": 3327.703125,
+        "vms_mb": 429542.34375,
+        "cpu_user_sec": 432.211361792,
+        "cpu_system_sec": 127.795757056
+      },
+      "rss_delta_mb": 350.78125,
+      "model_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_77/fold_2_pipeline.joblib",
+      "model_size_bytes": 1182819,
+      "timestamp": 1762578276.351205
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "target": "IsInsurable",
+      "seed": 77,
+      "fold": 3,
+      "fit_time_sec": 7.6298213330010185,
+      "predict_time_sec": 0.06527404100052081,
+      "wall_time_sec": 7.6952080726623535,
+      "resource_before": {
+        "rss_mb": 3333.03125,
+        "vms_mb": 429542.34375,
+        "cpu_user_sec": 432.48500736,
+        "cpu_system_sec": 127.799312384
+      },
+      "resource_after": {
+        "rss_mb": 1968.25,
+        "vms_mb": 429542.34375,
+        "cpu_user_sec": 459.072831488,
+        "cpu_system_sec": 134.608150528
+      },
+      "rss_delta_mb": -1364.78125,
+      "model_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_77/fold_3_pipeline.joblib",
+      "model_size_bytes": 1181955,
+      "timestamp": 1762578284.1630359
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "target": "IsInsurable",
+      "seed": 77,
+      "fold": 4,
+      "fit_time_sec": 7.269947292006691,
+      "predict_time_sec": 0.0856764999916777,
+      "wall_time_sec": 7.355781078338623,
+      "resource_before": {
+        "rss_mb": 2570.359375,
+        "vms_mb": 429542.34375,
+        "cpu_user_sec": 459.764826112,
+        "cpu_system_sec": 134.778208256
+      },
+      "resource_after": {
+        "rss_mb": 3071.40625,
+        "vms_mb": 429542.34375,
+        "cpu_user_sec": 485.49953536,
+        "cpu_system_sec": 141.642596352
+      },
+      "rss_delta_mb": 501.046875,
+      "model_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_77/fold_4_pipeline.joblib",
+      "model_size_bytes": 1182803,
+      "timestamp": 1762578291.903518
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "target": "IsInsurable",
+      "seed": 77,
+      "fold": 5,
+      "fit_time_sec": 7.000656332995277,
+      "predict_time_sec": 0.05683549999957904,
+      "wall_time_sec": 7.057615280151367,
+      "resource_before": {
+        "rss_mb": 3130.578125,
+        "vms_mb": 429542.34375,
+        "cpu_user_sec": 485.996167168,
+        "cpu_system_sec": 141.718061056
+      },
+      "resource_after": {
+        "rss_mb": 3108.375,
+        "vms_mb": 429542.34375,
+        "cpu_user_sec": 511.848382464,
+        "cpu_system_sec": 148.47500288
+      },
+      "rss_delta_mb": -22.203125,
+      "model_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_77/fold_5_pipeline.joblib",
+      "model_size_bytes": 1182803,
+      "timestamp": 1762578299.183104
+    },
+    {
+      "experiment": "automl_suite_flaml",
+      "target": "IsInsurable",
+      "seed": 42,
+      "fold": 1,
+      "fit_time_sec": 174.33983412501402,
+      "predict_time_sec": 0.22467275000235531,
+      "wall_time_sec": 1074.462112903595,
+      "resource_before": {
+        "rss_mb": 2797.625,
+        "vms_mb": 427815.328125,
+        "cpu_user_sec": 3.756073472,
+        "cpu_system_sec": 1.60843392
+      },
+      "resource_after": {
+        "rss_mb": 1910.21875,
+        "vms_mb": 428859.65625,
+        "cpu_user_sec": 446.939201536,
+        "cpu_system_sec": 95.780265984
+      },
+      "rss_delta_mb": -887.40625,
+      "model_path": "artifacts/experiments/automl_suite_flaml/seed_42/fold_1_pipeline.joblib",
+      "model_size_bytes": 289108,
+      "timestamp": 1762579377.497032
+    },
+    {
+      "experiment": "automl_suite_flaml",
+      "target": "IsInsurable",
+      "seed": 42,
+      "fold": 2,
+      "fit_time_sec": 146.23358225000266,
+      "predict_time_sec": 0.17704075000074226,
+      "wall_time_sec": 1053.8312740325928,
+      "resource_before": {
+        "rss_mb": 2418.609375,
+        "vms_mb": 428859.65625,
+        "cpu_user_sec": 447.001657344,
+        "cpu_system_sec": 95.920652288
+      },
+      "resource_after": {
+        "rss_mb": 2032.296875,
+        "vms_mb": 429313.53125,
+        "cpu_user_sec": 889.314082816,
+        "cpu_system_sec": 205.815463936
+      },
+      "rss_delta_mb": -386.3125,
+      "model_path": "artifacts/experiments/automl_suite_flaml/seed_42/fold_2_pipeline.joblib",
+      "model_size_bytes": 356260,
+      "timestamp": 1762580431.576331
+    },
+    {
+      "experiment": "automl_suite_flaml",
+      "target": "IsInsurable",
+      "seed": 42,
+      "fold": 3,
+      "fit_time_sec": 86.46181133299251,
+      "predict_time_sec": 0.17367891600588337,
+      "wall_time_sec": 641.9430978298187,
+      "resource_before": {
+        "rss_mb": 2716.890625,
+        "vms_mb": 429313.53125,
+        "cpu_user_sec": 889.379422208,
+        "cpu_system_sec": 205.897777152
+      },
+      "resource_after": {
+        "rss_mb": 2252.25,
+        "vms_mb": 429004.890625,
+        "cpu_user_sec": 1164.860850176,
+        "cpu_system_sec": 275.898597376
+      },
+      "rss_delta_mb": -464.640625,
+      "model_path": "artifacts/experiments/automl_suite_flaml/seed_42/fold_3_pipeline.joblib",
+      "model_size_bytes": 252420,
+      "timestamp": 1762581073.803374
+    },
+    {
+      "experiment": "automl_suite_flaml",
+      "target": "IsInsurable",
+      "seed": 42,
+      "fold": 4,
+      "fit_time_sec": 48.359484250002424,
+      "predict_time_sec": 0.17185866700310726,
+      "wall_time_sec": 948.501443862915,
+      "resource_before": {
+        "rss_mb": 2873.921875,
+        "vms_mb": 429002.890625,
+        "cpu_user_sec": 1164.957712384,
+        "cpu_system_sec": 276.044939264
+      },
+      "resource_after": {
+        "rss_mb": 1986.71875,
+        "vms_mb": 428706.90625,
+        "cpu_user_sec": 1284.072538112,
+        "cpu_system_sec": 333.789528064
+      },
+      "rss_delta_mb": -887.203125,
+      "model_path": "artifacts/experiments/automl_suite_flaml/seed_42/fold_4_pipeline.joblib",
+      "model_size_bytes": 274148,
+      "timestamp": 1762582022.525602
+    },
+    {
+      "experiment": "automl_suite_flaml",
+      "target": "IsInsurable",
+      "seed": 42,
+      "fold": 5,
+      "fit_time_sec": 60.30478391700308,
+      "predict_time_sec": 0.15104204099043272,
+      "wall_time_sec": 960.4074311256409,
+      "resource_before": {
+        "rss_mb": 2505.234375,
+        "vms_mb": 428706.90625,
+        "cpu_user_sec": 1284.127981568,
+        "cpu_system_sec": 333.889929216
+      },
+      "resource_after": {
+        "rss_mb": 2367.234375,
+        "vms_mb": 429325.21875,
+        "cpu_user_sec": 1438.022893568,
+        "cpu_system_sec": 405.43059968
+      },
+      "rss_delta_mb": -138.0,
+      "model_path": "artifacts/experiments/automl_suite_flaml/seed_42/fold_5_pipeline.joblib",
+      "model_size_bytes": 253396,
+      "timestamp": 1762582983.129795
+    },
+    {
+      "experiment": "feature_ablation_xgboost_baseline",
+      "target": "IsInsurable",
+      "seed": 42,
+      "fold": 1,
+      "fit_time_sec": 4.133276874999865,
+      "predict_time_sec": 0.1379049999959534,
+      "wall_time_sec": 4.281409740447998,
+      "resource_before": {
+        "rss_mb": 2654.59375,
+        "vms_mb": 427800.203125,
+        "cpu_user_sec": 2.117464064,
+        "cpu_system_sec": 1.466889856
+      },
+      "resource_after": {
+        "rss_mb": 3084.65625,
+        "vms_mb": 429316.9375,
+        "cpu_user_sec": 19.151456256,
+        "cpu_system_sec": 3.188982528
+      },
+      "rss_delta_mb": 430.0625,
+      "model_path": "artifacts/experiments/feature_ablation_xgboost_baseline/seed_42/fold_1_pipeline.joblib",
+      "model_size_bytes": 1219043,
+      "timestamp": 1762588289.160317,
+      "meta_ablation_suite": true,
+      "meta_preprocessing_variant": "baseline",
+      "meta_feature_variant": "Baseline",
+      "meta_feature_description": "Median/most-frequent imputation, scaling enabled, no extra transforms.",
+      "meta_feature_variant_key": "baseline",
+      "meta_estimator_name": "xgboost",
+      "meta_experiment_family": "feature_ablation"
+    },
+    {
+      "experiment": "feature_ablation_xgboost_baseline",
+      "target": "IsInsurable",
+      "seed": 42,
+      "fold": 2,
+      "fit_time_sec": 4.116557832996477,
+      "predict_time_sec": 0.09786812499805819,
+      "wall_time_sec": 4.221895933151245,
+      "resource_before": {
+        "rss_mb": 2947.515625,
+        "vms_mb": 429494.96875,
+        "cpu_user_sec": 19.63112448,
+        "cpu_system_sec": 3.28947328
+      },
+      "resource_after": {
+        "rss_mb": 2863.375,
+        "vms_mb": 429495.96875,
+        "cpu_user_sec": 36.997746688,
+        "cpu_system_sec": 5.045269504
+      },
+      "rss_delta_mb": -84.140625,
+      "model_path": "artifacts/experiments/feature_ablation_xgboost_baseline/seed_42/fold_2_pipeline.joblib",
+      "model_size_bytes": 1212307,
+      "timestamp": 1762588293.53138,
+      "meta_ablation_suite": true,
+      "meta_preprocessing_variant": "baseline",
+      "meta_feature_variant": "Baseline",
+      "meta_feature_description": "Median/most-frequent imputation, scaling enabled, no extra transforms.",
+      "meta_feature_variant_key": "baseline",
+      "meta_estimator_name": "xgboost",
+      "meta_experiment_family": "feature_ablation"
+    },
+    {
+      "experiment": "feature_ablation_xgboost_baseline",
+      "target": "IsInsurable",
+      "seed": 42,
+      "fold": 3,
+      "fit_time_sec": 3.965067083001486,
+      "predict_time_sec": 0.20043558299948927,
+      "wall_time_sec": 4.171029806137085,
+      "resource_before": {
+        "rss_mb": 2933.1875,
+        "vms_mb": 429495.96875,
+        "cpu_user_sec": 37.586190336,
+        "cpu_system_sec": 5.143141888
+      },
+      "resource_after": {
+        "rss_mb": 2964.5625,
+        "vms_mb": 429506.21875,
+        "cpu_user_sec": 54.644498432,
+        "cpu_system_sec": 6.84385536
+      },
+      "rss_delta_mb": 31.375,
+      "model_path": "artifacts/experiments/feature_ablation_xgboost_baseline/seed_42/fold_3_pipeline.joblib",
+      "model_size_bytes": 1203683,
+      "timestamp": 1762588297.964548,
+      "meta_ablation_suite": true,
+      "meta_preprocessing_variant": "baseline",
+      "meta_feature_variant": "Baseline",
+      "meta_feature_description": "Median/most-frequent imputation, scaling enabled, no extra transforms.",
+      "meta_feature_variant_key": "baseline",
+      "meta_estimator_name": "xgboost",
+      "meta_experiment_family": "feature_ablation"
+    },
+    {
+      "experiment": "feature_ablation_xgboost_baseline",
+      "target": "IsInsurable",
+      "seed": 42,
+      "fold": 4,
+      "fit_time_sec": 3.9653154169936897,
+      "predict_time_sec": 0.1145306249964051,
+      "wall_time_sec": 4.084074974060059,
+      "resource_before": {
+        "rss_mb": 3100.421875,
+        "vms_mb": 429506.21875,
+        "cpu_user_sec": 55.180079104,
+        "cpu_system_sec": 6.928370176
+      },
+      "resource_after": {
+        "rss_mb": 3201.609375,
+        "vms_mb": 429506.21875,
+        "cpu_user_sec": 72.318533632,
+        "cpu_system_sec": 8.561713664
+      },
+      "rss_delta_mb": 101.1875,
+      "model_path": "artifacts/experiments/feature_ablation_xgboost_baseline/seed_42/fold_4_pipeline.joblib",
+      "model_size_bytes": 1211907,
+      "timestamp": 1762588302.289077,
+      "meta_ablation_suite": true,
+      "meta_preprocessing_variant": "baseline",
+      "meta_feature_variant": "Baseline",
+      "meta_feature_description": "Median/most-frequent imputation, scaling enabled, no extra transforms.",
+      "meta_feature_variant_key": "baseline",
+      "meta_estimator_name": "xgboost",
+      "meta_experiment_family": "feature_ablation"
+    },
+    {
+      "experiment": "feature_ablation_xgboost_baseline",
+      "target": "IsInsurable",
+      "seed": 42,
+      "fold": 5,
+      "fit_time_sec": 4.283559832998435,
+      "predict_time_sec": 0.09297800000058487,
+      "wall_time_sec": 4.37992000579834,
+      "resource_before": {
+        "rss_mb": 3259.390625,
+        "vms_mb": 429506.21875,
+        "cpu_user_sec": 72.690212864,
+        "cpu_system_sec": 8.6004736
+      },
+      "resource_after": {
+        "rss_mb": 2734.71875,
+        "vms_mb": 429506.21875,
+        "cpu_user_sec": 90.198024192,
+        "cpu_system_sec": 10.25956352
+      },
+      "rss_delta_mb": -524.671875,
+      "model_path": "artifacts/experiments/feature_ablation_xgboost_baseline/seed_42/fold_5_pipeline.joblib",
+      "model_size_bytes": 1216323,
+      "timestamp": 1762588306.8282108,
+      "meta_ablation_suite": true,
+      "meta_preprocessing_variant": "baseline",
+      "meta_feature_variant": "Baseline",
+      "meta_feature_description": "Median/most-frequent imputation, scaling enabled, no extra transforms.",
+      "meta_feature_variant_key": "baseline",
+      "meta_estimator_name": "xgboost",
+      "meta_experiment_family": "feature_ablation"
+    }
+  ],
+  "orchestration": [
+    {
+      "dataset": "modeldata_demo",
+      "script": "Project/trainers/train_boosters.py",
+      "path": "/Users/pratik_n/Downloads/Pro_v8_AllInOne/Project/trainers/train_boosters.py",
+      "exit_code": 0,
+      "status": "ok",
+      "duration_sec": 17.731,
+      "timestamp": 1762577262.625857
+    },
+    {
+      "dataset": "modeldata_demo",
+      "script": "Project/trainers/train_catboost.py",
+      "path": "/Users/pratik_n/Downloads/Pro_v8_AllInOne/Project/trainers/train_catboost.py",
+      "exit_code": 0,
+      "status": "ok",
+      "duration_sec": 2.912,
+      "timestamp": 1762577265.537979
+    },
+    {
+      "dataset": "modeldata_demo",
+      "script": "Project/trainers/train_flaml.py",
+      "path": "/Users/pratik_n/Downloads/Pro_v8_AllInOne/Project/trainers/train_flaml.py",
+      "exit_code": 0,
+      "status": "ok",
+      "duration_sec": 21.291,
+      "timestamp": 1762577286.829393
+    },
+    {
+      "dataset": "modeldata_demo",
+      "script": "Project/trainers/train_h2o.py",
+      "path": "/Users/pratik_n/Downloads/Pro_v8_AllInOne/Project/trainers/train_h2o.py",
+      "exit_code": 0,
+      "status": "ok",
+      "duration_sec": 33.459,
+      "timestamp": 1762577320.288297
+    },
+    {
+      "dataset": "modeldata_demo",
+      "script": "scripts/run_boosting_suite.py",
+      "path": "/Users/pratik_n/Downloads/Pro_v8_AllInOne/scripts/run_boosting_suite.py",
+      "exit_code": 1,
+      "status": "error",
+      "duration_sec": 1.485,
+      "timestamp": 1762577321.773985
+    },
+    {
+      "dataset": "modeldata_demo",
+      "script": "scripts/run_automl_suite.py",
+      "path": "/Users/pratik_n/Downloads/Pro_v8_AllInOne/scripts/run_automl_suite.py",
+      "exit_code": 1,
+      "status": "error",
+      "duration_sec": 601.221,
+      "timestamp": 1762577922.995429
+    },
+    {
+      "dataset": "modeldata_demo",
+      "script": "scripts/run_feature_ablation.py",
+      "path": "/Users/pratik_n/Downloads/Pro_v8_AllInOne/scripts/run_feature_ablation.py",
+      "exit_code": 1,
+      "status": "error",
+      "duration_sec": 1.675,
+      "timestamp": 1762577924.670911
+    },
+    {
+      "dataset": "modeldata_demo",
+      "script": "Project/analysis/analyze_stats.py",
+      "path": "/Users/pratik_n/Downloads/Pro_v8_AllInOne/Project/analysis/analyze_stats.py",
+      "exit_code": 0,
+      "status": "ok",
+      "duration_sec": 0.572,
+      "timestamp": 1762577925.242969
+    },
+    {
+      "dataset": "modeldata_demo",
+      "script": "Project/analysis/analyze_feature_ablations.py",
+      "path": "/Users/pratik_n/Downloads/Pro_v8_AllInOne/Project/analysis/analyze_feature_ablations.py",
+      "exit_code": 1,
+      "status": "error",
+      "duration_sec": 0.412,
+      "timestamp": 1762577925.654956
+    },
+    {
+      "dataset": "modeldata_demo",
+      "script": "Project/analysis/plot_comparisons.py",
+      "path": "/Users/pratik_n/Downloads/Pro_v8_AllInOne/Project/analysis/plot_comparisons.py",
+      "exit_code": 1,
+      "status": "error",
+      "duration_sec": 0.459,
+      "timestamp": 1762577926.113719
+    },
+    {
+      "dataset": "modeldata_demo",
+      "script": "Project/analysis/summarize_all.py",
+      "path": "/Users/pratik_n/Downloads/Pro_v8_AllInOne/Project/analysis/summarize_all.py",
+      "exit_code": 0,
+      "status": "ok",
+      "duration_sec": 0.78,
+      "timestamp": 1762577926.894252
+    },
+    {
+      "dataset": "modeldata_demo",
+      "script": "Project/analysis/explain_shap.py",
+      "path": "/Users/pratik_n/Downloads/Pro_v8_AllInOne/Project/analysis/explain_shap.py",
+      "exit_code": 0,
+      "status": "ok",
+      "duration_sec": 1.329,
+      "timestamp": 1762577928.223789
+    },
+    {
+      "dataset": "modeldata",
+      "script": "Project/trainers/train_boosters.py",
+      "path": "/Users/pratik_n/Downloads/Pro_v8_AllInOne/Project/trainers/train_boosters.py",
+      "exit_code": 0,
+      "status": "ok",
+      "duration_sec": 69.078,
+      "timestamp": 1762577998.191539
+    },
+    {
+      "dataset": "modeldata",
+      "script": "Project/trainers/train_catboost.py",
+      "path": "/Users/pratik_n/Downloads/Pro_v8_AllInOne/Project/trainers/train_catboost.py",
+      "exit_code": 0,
+      "status": "ok",
+      "duration_sec": 18.308,
+      "timestamp": 1762578016.499588
+    },
+    {
+      "dataset": "modeldata",
+      "script": "Project/trainers/train_flaml.py",
+      "path": "/Users/pratik_n/Downloads/Pro_v8_AllInOne/Project/trainers/train_flaml.py",
+      "exit_code": 0,
+      "status": "ok",
+      "duration_sec": 33.808,
+      "timestamp": 1762578050.307474
+    },
+    {
+      "dataset": "modeldata",
+      "script": "Project/trainers/train_h2o.py",
+      "path": "/Users/pratik_n/Downloads/Pro_v8_AllInOne/Project/trainers/train_h2o.py",
+      "exit_code": 0,
+      "status": "ok",
+      "duration_sec": 74.96,
+      "timestamp": 1762578125.267314
+    },
+    {
+      "dataset": "modeldata",
+      "script": "scripts/run_boosting_suite.py",
+      "path": "/Users/pratik_n/Downloads/Pro_v8_AllInOne/scripts/run_boosting_suite.py",
+      "exit_code": 1,
+      "status": "error",
+      "duration_sec": 174.175,
+      "timestamp": 1762578299.4428532
+    },
+    {
+      "dataset": "modeldata",
+      "script": "scripts/run_automl_suite.py",
+      "path": "/Users/pratik_n/Downloads/Pro_v8_AllInOne/scripts/run_automl_suite.py",
+      "exit_code": -9,
+      "status": "timeout",
+      "duration_sec": 9081.994,
+      "timestamp": 1762587381.4368799
+    },
+    {
+      "dataset": "modeldata",
+      "script": "scripts/run_feature_ablation.py",
+      "path": "/Users/pratik_n/Downloads/Pro_v8_AllInOne/scripts/run_feature_ablation.py",
+      "exit_code": -9,
+      "status": "timeout",
+      "duration_sec": 1978.23,
+      "timestamp": 1762589359.667171
+    },
+    {
+      "dataset": "modeldata",
+      "script": "Project/analysis/analyze_stats.py",
+      "path": "/Users/pratik_n/Downloads/Pro_v8_AllInOne/Project/analysis/analyze_stats.py",
+      "exit_code": 0,
+      "status": "ok",
+      "duration_sec": 1.016,
+      "timestamp": 1762589360.6861892
+    },
+    {
+      "dataset": "modeldata",
+      "script": "Project/analysis/analyze_feature_ablations.py",
+      "path": "/Users/pratik_n/Downloads/Pro_v8_AllInOne/Project/analysis/analyze_feature_ablations.py",
+      "exit_code": 0,
+      "status": "ok",
+      "duration_sec": 0.88,
+      "timestamp": 1762589361.566098
+    },
+    {
+      "dataset": "modeldata",
+      "script": "Project/analysis/plot_comparisons.py",
+      "path": "/Users/pratik_n/Downloads/Pro_v8_AllInOne/Project/analysis/plot_comparisons.py",
+      "exit_code": 1,
+      "status": "error",
+      "duration_sec": 0.498,
+      "timestamp": 1762589362.063997
+    },
+    {
+      "dataset": "modeldata",
+      "script": "Project/analysis/summarize_all.py",
+      "path": "/Users/pratik_n/Downloads/Pro_v8_AllInOne/Project/analysis/summarize_all.py",
+      "exit_code": 0,
+      "status": "ok",
+      "duration_sec": 1.011,
+      "timestamp": 1762589363.07499
+    },
+    {
+      "dataset": "modeldata",
+      "script": "Project/analysis/explain_shap.py",
+      "path": "/Users/pratik_n/Downloads/Pro_v8_AllInOne/Project/analysis/explain_shap.py",
+      "exit_code": -9,
+      "status": "timeout",
+      "duration_sec": 7882.051,
+      "timestamp": 1762597245.125798
+    },
+    {
+      "dataset": "salary",
+      "script": "Project/trainers/train_boosters.py",
+      "path": "/Users/pratik_n/Downloads/Pro_v8_AllInOne/Project/trainers/train_boosters.py",
+      "exit_code": 1,
+      "status": "error",
+      "duration_sec": 1.007,
+      "timestamp": 1762597246.25372
+    },
+    {
+      "dataset": "salary",
+      "script": "Project/trainers/train_catboost.py",
+      "path": "/Users/pratik_n/Downloads/Pro_v8_AllInOne/Project/trainers/train_catboost.py",
+      "exit_code": 1,
+      "status": "error",
+      "duration_sec": 0.741,
+      "timestamp": 1762597246.994894
+    },
+    {
+      "dataset": "salary",
+      "script": "Project/trainers/train_flaml.py",
+      "path": "/Users/pratik_n/Downloads/Pro_v8_AllInOne/Project/trainers/train_flaml.py",
+      "exit_code": 1,
+      "status": "error",
+      "duration_sec": 1.189,
+      "timestamp": 1762597248.184216
+    },
+    {
+      "dataset": "salary",
+      "script": "Project/trainers/train_h2o.py",
+      "path": "/Users/pratik_n/Downloads/Pro_v8_AllInOne/Project/trainers/train_h2o.py",
+      "exit_code": 0,
+      "status": "ok",
+      "duration_sec": 31.833,
+      "timestamp": 1762597280.017291
+    },
+    {
+      "dataset": "salary",
+      "script": "scripts/run_boosting_suite.py",
+      "path": "/Users/pratik_n/Downloads/Pro_v8_AllInOne/scripts/run_boosting_suite.py",
+      "exit_code": 1,
+      "status": "error",
+      "duration_sec": 1.507,
+      "timestamp": 1762597281.524638
+    },
+    {
+      "dataset": "salary",
+      "script": "scripts/run_automl_suite.py",
+      "path": "/Users/pratik_n/Downloads/Pro_v8_AllInOne/scripts/run_automl_suite.py",
+      "exit_code": 1,
+      "status": "error",
+      "duration_sec": 1.246,
+      "timestamp": 1762597282.77058
+    },
+    {
+      "dataset": "salary",
+      "script": "scripts/run_feature_ablation.py",
+      "path": "/Users/pratik_n/Downloads/Pro_v8_AllInOne/scripts/run_feature_ablation.py",
+      "exit_code": 1,
+      "status": "error",
+      "duration_sec": 1.194,
+      "timestamp": 1762597283.9651148
+    },
+    {
+      "dataset": "salary",
+      "script": "Project/analysis/analyze_stats.py",
+      "path": "/Users/pratik_n/Downloads/Pro_v8_AllInOne/Project/analysis/analyze_stats.py",
+      "exit_code": 0,
+      "status": "ok",
+      "duration_sec": 0.62,
+      "timestamp": 1762597284.585419
+    },
+    {
+      "dataset": "salary",
+      "script": "Project/analysis/analyze_feature_ablations.py",
+      "path": "/Users/pratik_n/Downloads/Pro_v8_AllInOne/Project/analysis/analyze_feature_ablations.py",
+      "exit_code": 1,
+      "status": "error",
+      "duration_sec": 0.434,
+      "timestamp": 1762597285.0198421
+    },
+    {
+      "dataset": "salary",
+      "script": "Project/analysis/plot_comparisons.py",
+      "path": "/Users/pratik_n/Downloads/Pro_v8_AllInOne/Project/analysis/plot_comparisons.py",
+      "exit_code": 1,
+      "status": "error",
+      "duration_sec": 0.49,
+      "timestamp": 1762597285.509977
+    },
+    {
+      "dataset": "salary",
+      "script": "Project/analysis/summarize_all.py",
+      "path": "/Users/pratik_n/Downloads/Pro_v8_AllInOne/Project/analysis/summarize_all.py",
+      "exit_code": 0,
+      "status": "ok",
+      "duration_sec": 0.624,
+      "timestamp": 1762597286.133707
+    },
+    {
+      "dataset": "salary",
+      "script": "Project/analysis/explain_shap.py",
+      "path": "/Users/pratik_n/Downloads/Pro_v8_AllInOne/Project/analysis/explain_shap.py",
+      "exit_code": 1,
+      "status": "error",
+      "duration_sec": 1.34,
+      "timestamp": 1762597287.47419
+    }
+  ]
+}

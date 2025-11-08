@@ -1,0 +1,2 @@
+seed,fit_time_sec_mean,fit_time_sec_std,predict_time_sec_mean,predict_time_sec_std,accuracy_mean,accuracy_std,precision_mean,precision_std,recall_mean,recall_std,f1_mean,f1_std,target,experiment,framework
+42,103.13989917500294,54.8643687433873,0.17965862480050418,0.027150643933540695,0.9224443210562032,0.0023527229007228594,0.8889947614468674,0.005686223066298963,0.8930260643635244,0.0037328148783008093,0.890993575900319,0.003092764143347552,IsInsurable,automl_suite_flaml,automl_suite_flaml

@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: { name: automl-api }
+spec:
+  replicas: 2
+  selector: { matchLabels: { app: automl-api } }
+  template:
+    metadata: { labels: { app: automl-api } }
+    spec:
+      containers:
+      - name: api
+        image: ghcr.io/YOURUSER/YOURREPO:latest
+        ports: [ { containerPort: 8000 } ]
+        readinessProbe: { httpGet: { path: /readyz, port: 8000 }, periodSeconds: 5 }
+        livenessProbe:  { httpGet: { path: /healthz, port: 8000 }, periodSeconds: 10 }
+        env:
+          - { name: CSV_PATH, value: "Project/src/data/modeldata_demo.csv" }
+          - { name: TARGET,   value: "IsInsurable" }
+        resources:
+          requests: { cpu: "250m", memory: "512Mi" }
+          limits:   { cpu: "1",    memory: "1Gi" }

@@ -1,0 +1,32 @@
+[
+  {
+    "framework": "CatBoost",
+    "category": "booster",
+    "is_booster": true,
+    "datasets_covered": 2
+  },
+  {
+    "framework": "FLAML",
+    "category": "automl",
+    "is_booster": false,
+    "datasets_covered": 2
+  },
+  {
+    "framework": "H2O_AutoML",
+    "category": "automl",
+    "is_booster": false,
+    "datasets_covered": 3
+  },
+  {
+    "framework": "LightGBM",
+    "category": "booster",
+    "is_booster": true,
+    "datasets_covered": 2
+  },
+  {
+    "framework": "XGBoost",
+    "category": "booster",
+    "is_booster": true,
+    "datasets_covered": 2
+  }
+]
