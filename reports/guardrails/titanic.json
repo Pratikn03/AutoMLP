@@ -1,0 +1,19 @@
+{
+  "dataset": "titanic",
+  "path": "src/data/datasets/tabular/titanic.csv",
+  "rows": 2201,
+  "columns": 4,
+  "issues": [
+    {
+      "id": "duplicate_rows",
+      "severity": "warning",
+      "summary": {
+        "duplicates": 2177,
+        "fraction": 0.9890958655156747
+      },
+      "description": "Found 2177 duplicated records. Duplicates across folds can leak validation data.",
+      "suggested_fix": "Deduplicate before splitting or ensure GroupKFold/GroupShuffleSplit."
+    }
+  ],
+  "status": "issues_found"
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "dataset": "_salary_skipped",
+    "status": "pass",
+    "issue_count": 0,
+    "path": "reports/guardrails/_salary_skipped.json"
+  },
+  {
+    "dataset": "breast_cancer",
+    "status": "pass",
+    "issue_count": 0,
+    "path": "reports/guardrails/breast_cancer.json"
+  },
+  {
+    "dataset": "diabetes_regression",
+    "status": "pass",
+    "issue_count": 0,
+    "path": "reports/guardrails/diabetes_regression.json"
+  },
+  {
+    "dataset": "heart_statlog",
+    "status": "pass",
+    "issue_count": 0,
+    "path": "reports/guardrails/heart_statlog.json"
+  },
+  {
+    "dataset": "iris",
+    "status": "issues_found",
+    "issue_count": 1,
+    "path": "reports/guardrails/iris.json"
+  },
+  {
+    "dataset": "modeldata",
+    "status": "issues_found",
+    "issue_count": 2,
+    "path": "reports/guardrails/modeldata.json"
+  },
+  {
+    "dataset": "titanic",
+    "status": "issues_found",
+    "issue_count": 1,
+    "path": "reports/guardrails/titanic.json"
+  },
+  {
+    "dataset": "train",
+    "status": "issues_found",
+    "issue_count": 1,
+    "path": "reports/guardrails/train.json"
+  },
+  {
+    "dataset": "wine",
+    "status": "pass",
+    "issue_count": 0,
+    "path": "reports/guardrails/wine.json"
+  }
+]

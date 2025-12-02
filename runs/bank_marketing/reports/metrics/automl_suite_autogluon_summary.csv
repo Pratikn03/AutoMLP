@@ -1,0 +1,2 @@
+seed,fit_time_sec_mean,fit_time_sec_std,predict_time_sec_mean,predict_time_sec_std,accuracy_mean,accuracy_std,precision_mean,precision_std,recall_mean,recall_std,f1_mean,f1_std,target,experiment,framework
+42,12.459082016800313,1.7422730823784534,0.031680700200013234,0.007982876316244053,0.9599209782023281,0.015508901021023308,0.1174048274065509,0.04751184849842341,0.20122699386503068,0.2019141342893174,0.12905989592896666,0.07116926951093357,V5,automl_suite_autogluon,automl_suite_autogluon

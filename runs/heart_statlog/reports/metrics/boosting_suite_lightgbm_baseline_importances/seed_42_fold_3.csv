@@ -1,0 +1,15 @@
+feature,importance
+maximum_heart_rate_achieved,709
+resting_blood_pressure,604
+age,584
+serum_cholestoral,552
+oldpeak,455
+resting_electrocardiographic_results,185
+thal,173
+chest,165
+number_of_major_vessels,119
+slope,95
+class_absent,61
+exercise_induced_angina,35
+class_present,33
+fasting_blood_sugar,26

@@ -9,3 +9,6 @@ artifacts/
 .ipynb_checkpoints/
 data/
 src/data/modeldata.csv
+figures/*
+!figures/pareto_accuracy_runtime.png
+!figures/classifier_accuracy_precision.png

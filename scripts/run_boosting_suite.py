@@ -1,4 +1,15 @@
-"""CLI helper to run the boosting experiment suite end-to-end."""
+"""
+CLI helper to run the boosting experiment suite end-to-end.
+
+We expose this thin wrapper for two reasons:
+1. Keep parity with the "Classifier vs Accuracy / Precision" section in the paper by running
+   XGBoost + LightGBM + CatBoost on a shared preprocessing + CV config.
+2. Allow notebooks / Make targets to trigger the suite without re-implementing orchestration logic.
+
+The heavy lifting lives inside `Project.experiments.boosting.run_boosting_suite`, which in turn
+reuses the generic `ExperimentRunner`. This file simply parses CLI flags, performs basic IO, and
+writes a compact leaderboard CSV for downstream visualisations.
+"""
 
 from __future__ import annotations
 
@@ -28,7 +39,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--n-iter", type=int, default=25, help="Random search iterations (if enabled).")
     parser.add_argument("--n-trials", type=int, default=25, help="Optuna trials (if enabled).")
     parser.add_argument("--inner-cv", type=int, default=3, help="Inner CV splits for tuning.")
-    parser.add_argument("--scoring", type=str, default="f1", help="Metric optimised during tuning.")
+    parser.add_argument("--scoring", type=str, default="auto", help="Metric optimised during tuning (auto chooses based on task).")
     parser.add_argument("--n-jobs", type=int, default=-1, help="Parallel jobs for tuning evaluations.")
     parser.add_argument("--verbosity", type=int, default=0, help="Framework-specific verbosity level.")
     parser.add_argument("--top-k", type=int, default=20, help="Number of top features to plot per fold.")

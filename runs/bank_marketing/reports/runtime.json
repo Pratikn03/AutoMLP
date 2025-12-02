@@ -1,0 +1,246 @@
+{
+  "training": [
+    {
+      "experiment": "automl_suite_autogluon",
+      "target": "V5",
+      "seed": 42,
+      "fold": 1,
+      "fit_time_sec": 13.508922292000534,
+      "predict_time_sec": 0.031551000000035856,
+      "wall_time_sec": 13.54055404663086,
+      "resource_before": {
+        "rss_mb": 609.546875,
+        "vms_mb": 426574.6875,
+        "cpu_user_sec": 2.549867264,
+        "cpu_system_sec": 3.251858432
+      },
+      "resource_after": {
+        "rss_mb": 1426.234375,
+        "vms_mb": 427863.640625,
+        "cpu_user_sec": 64.01994752,
+        "cpu_system_sec": 54.612754432
+      },
+      "rss_delta_mb": 816.6875,
+      "model_path": "artifacts/experiments/automl_suite_autogluon/seed_42/fold_1_pipeline.joblib",
+      "model_size_bytes": 25095,
+      "timestamp": 1762997837.0649989
+    },
+    {
+      "experiment": "automl_suite_autogluon",
+      "target": "V5",
+      "seed": 42,
+      "fold": 2,
+      "fit_time_sec": 12.732882166999843,
+      "predict_time_sec": 0.03121679200012295,
+      "wall_time_sec": 12.764176845550537,
+      "resource_before": {
+        "rss_mb": 1426.28125,
+        "vms_mb": 427863.640625,
+        "cpu_user_sec": 64.170643456,
+        "cpu_system_sec": 54.743027712
+      },
+      "resource_after": {
+        "rss_mb": 1500.078125,
+        "vms_mb": 427871.375,
+        "cpu_user_sec": 141.457702912,
+        "cpu_system_sec": 97.012629504
+      },
+      "rss_delta_mb": 73.796875,
+      "model_path": "artifacts/experiments/automl_suite_autogluon/seed_42/fold_2_pipeline.joblib",
+      "model_size_bytes": 25095,
+      "timestamp": 1762997849.860208
+    },
+    {
+      "experiment": "automl_suite_autogluon",
+      "target": "V5",
+      "seed": 42,
+      "fold": 3,
+      "fit_time_sec": 11.261617000000115,
+      "predict_time_sec": 0.03146420799930638,
+      "wall_time_sec": 11.2931809425354,
+      "resource_before": {
+        "rss_mb": 1500.078125,
+        "vms_mb": 427871.375,
+        "cpu_user_sec": 141.600653312,
+        "cpu_system_sec": 97.185005568
+      },
+      "resource_after": {
+        "rss_mb": 1472.265625,
+        "vms_mb": 427810.28125,
+        "cpu_user_sec": 214.94243328,
+        "cpu_system_sec": 128.513048576
+      },
+      "rss_delta_mb": -27.8125,
+      "model_path": "artifacts/experiments/automl_suite_autogluon/seed_42/fold_3_pipeline.joblib",
+      "model_size_bytes": 25095,
+      "timestamp": 1762997861.1853929
+    },
+    {
+      "experiment": "automl_suite_autogluon",
+      "target": "V5",
+      "seed": 42,
+      "fold": 4,
+      "fit_time_sec": 14.57808600000044,
+      "predict_time_sec": 0.020809709000786825,
+      "wall_time_sec": 14.598939180374146,
+      "resource_before": {
+        "rss_mb": 1472.265625,
+        "vms_mb": 427810.28125,
+        "cpu_user_sec": 215.092477952,
+        "cpu_system_sec": 128.651116544
+      },
+      "resource_after": {
+        "rss_mb": 1484.25,
+        "vms_mb": 427812.859375,
+        "cpu_user_sec": 309.789392896,
+        "cpu_system_sec": 171.200856064
+      },
+      "rss_delta_mb": 11.984375,
+      "model_path": "artifacts/experiments/automl_suite_autogluon/seed_42/fold_4_pipeline.joblib",
+      "model_size_bytes": 25095,
+      "timestamp": 1762997875.8155231
+    },
+    {
+      "experiment": "automl_suite_autogluon",
+      "target": "V5",
+      "seed": 42,
+      "fold": 5,
+      "fit_time_sec": 10.213902625000628,
+      "predict_time_sec": 0.04336179199981416,
+      "wall_time_sec": 10.257360219955444,
+      "resource_before": {
+        "rss_mb": 1484.25,
+        "vms_mb": 427812.859375,
+        "cpu_user_sec": 309.951627264,
+        "cpu_system_sec": 171.344216064
+      },
+      "resource_after": {
+        "rss_mb": 1582.765625,
+        "vms_mb": 427853.625,
+        "cpu_user_sec": 374.035709952,
+        "cpu_system_sec": 201.431990272
+      },
+      "rss_delta_mb": 98.515625,
+      "model_path": "artifacts/experiments/automl_suite_autogluon/seed_42/fold_5_pipeline.joblib",
+      "model_size_bytes": 25095,
+      "timestamp": 1762997886.1030242
+    }
+  ],
+  "explainability": [
+    {
+      "experiment": "automl_suite_autogluon",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/automl_suite_autogluon/seed_42/fold_1_pipeline.joblib",
+      "target": "V5",
+      "model_size_bytes": 25095,
+      "shap_time_sec": null,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 661.328125,
+        "vms_mb": 426705.8125,
+        "cpu_user_sec": 2.905485056,
+        "cpu_system_sec": 3.077945856
+      },
+      "resource_after": {
+        "rss_mb": 666.390625,
+        "vms_mb": 426708.8125,
+        "cpu_user_sec": 2.923853824,
+        "cpu_system_sec": 3.081877248
+      },
+      "shap_error": "[Errno 2] No such file or directory: '/var/folders/pk/ksqc41pj60q3589gfwhqz5tw0000gn/T/autogluon_1rl1c3uy/models/NeuralNetFastAI/model.pkl'"
+    },
+    {
+      "experiment": "automl_suite_autogluon",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/automl_suite_autogluon/seed_42/fold_2_pipeline.joblib",
+      "target": "V5",
+      "model_size_bytes": 25095,
+      "shap_time_sec": null,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 666.546875,
+        "vms_mb": 426708.8125,
+        "cpu_user_sec": 2.92525056,
+        "cpu_system_sec": 3.081938432
+      },
+      "resource_after": {
+        "rss_mb": 666.828125,
+        "vms_mb": 426708.8125,
+        "cpu_user_sec": 2.928978432,
+        "cpu_system_sec": 3.082010624
+      },
+      "shap_error": "[Errno 2] No such file or directory: '/var/folders/pk/ksqc41pj60q3589gfwhqz5tw0000gn/T/autogluon_a4rignme/models/NeuralNetFastAI/model.pkl'"
+    },
+    {
+      "experiment": "automl_suite_autogluon",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/automl_suite_autogluon/seed_42/fold_3_pipeline.joblib",
+      "target": "V5",
+      "model_size_bytes": 25095,
+      "shap_time_sec": null,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 666.828125,
+        "vms_mb": 426708.8125,
+        "cpu_user_sec": 2.930439936,
+        "cpu_system_sec": 3.082085632
+      },
+      "resource_after": {
+        "rss_mb": 666.859375,
+        "vms_mb": 426708.8125,
+        "cpu_user_sec": 2.933764608,
+        "cpu_system_sec": 3.082157312
+      },
+      "shap_error": "[Errno 2] No such file or directory: '/var/folders/pk/ksqc41pj60q3589gfwhqz5tw0000gn/T/autogluon_iky80ame/models/NeuralNetFastAI/model.pkl'"
+    },
+    {
+      "experiment": "automl_suite_autogluon",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/automl_suite_autogluon/seed_42/fold_4_pipeline.joblib",
+      "target": "V5",
+      "model_size_bytes": 25095,
+      "shap_time_sec": null,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 666.859375,
+        "vms_mb": 426708.8125,
+        "cpu_user_sec": 2.935093504,
+        "cpu_system_sec": 3.082209792
+      },
+      "resource_after": {
+        "rss_mb": 666.859375,
+        "vms_mb": 426708.8125,
+        "cpu_user_sec": 2.938258176,
+        "cpu_system_sec": 3.082256128
+      },
+      "shap_error": "[Errno 2] No such file or directory: '/var/folders/pk/ksqc41pj60q3589gfwhqz5tw0000gn/T/autogluon_bmghd1m2/models/LightGBMLarge/model.pkl'"
+    },
+    {
+      "experiment": "automl_suite_autogluon",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/automl_suite_autogluon/seed_42/fold_5_pipeline.joblib",
+      "target": "V5",
+      "model_size_bytes": 25095,
+      "shap_time_sec": null,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 666.859375,
+        "vms_mb": 426708.8125,
+        "cpu_user_sec": 2.939645184,
+        "cpu_system_sec": 3.08231168
+      },
+      "resource_after": {
+        "rss_mb": 666.859375,
+        "vms_mb": 426708.8125,
+        "cpu_user_sec": 2.942918912,
+        "cpu_system_sec": 3.082361088
+      },
+      "shap_error": "[Errno 2] No such file or directory: '/var/folders/pk/ksqc41pj60q3589gfwhqz5tw0000gn/T/autogluon_93y8yyec/models/ExtraTreesGini/model.pkl'"
+    }
+  ]
+}

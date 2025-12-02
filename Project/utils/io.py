@@ -37,10 +37,31 @@ def find_csv() -> str:
     )
 
 
-def load_dataset() -> pd.DataFrame:
-    """Load dataset with light backward compatibility adjustments."""
+def load_dataset(low_memory: bool = True) -> pd.DataFrame:
+    """Load dataset with light backward compatibility adjustments.
+    
+    Args:
+        low_memory: If True, use memory-efficient dtypes and optimize memory usage
+    """
     path = find_csv()
-    df = pd.read_csv(path)
+    
+    if low_memory:
+        # Read with low_memory mode and optimize dtypes
+        df = pd.read_csv(path, low_memory=True)
+        
+        # Downcast numeric columns to save memory
+        for col in df.select_dtypes(include=['float']).columns:
+            df[col] = pd.to_numeric(df[col], downcast='float')
+        for col in df.select_dtypes(include=['int']).columns:
+            df[col] = pd.to_numeric(df[col], downcast='integer')
+        
+        # Convert object columns to category where appropriate
+        for col in df.select_dtypes(include=['object']).columns:
+            if df[col].nunique() / len(df) < 0.5:  # Less than 50% unique values
+                df[col] = df[col].astype('category')
+    else:
+        df = pd.read_csv(path)
+    
     if "IsInsurable" not in df.columns and "SLA_Breached" in df.columns:
         df = df.rename(columns={"SLA_Breached": "IsInsurable"})
     return df

@@ -1,0 +1,2 @@
+seed,fit_time_sec_mean,fit_time_sec_std,predict_time_sec_mean,predict_time_sec_std,rmse_mean,rmse_std,mae_mean,mae_std,r2_mean,r2_std,target,experiment,framework
+42,600.0265767745993,0.04460789563827568,0.0015543835994321852,0.00025048455292206554,0.04292293685681191,0.002031264144274635,0.03750238216025683,0.0025311598685608975,0.18231865942064562,0.08084894923634103,sex,automl_suite_flaml,automl_suite_flaml

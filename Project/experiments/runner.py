@@ -14,9 +14,19 @@ import numpy as np
 import pandas as pd
 import joblib
 from sklearn.base import BaseEstimator, clone
-from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score
-from sklearn.model_selection import StratifiedKFold
+from sklearn.metrics import (
+    accuracy_score,
+    f1_score,
+    mean_absolute_error,
+    mean_squared_error,
+    precision_score,
+    r2_score,
+    recall_score,
+)
+from sklearn.model_selection import KFold, StratifiedKFold
 from sklearn.pipeline import Pipeline
+from sklearn.utils.multiclass import type_of_target
+from sklearn.preprocessing import LabelEncoder
 
 from Project.experiments.preprocessing import PreprocessingConfig, build_preprocessor
 from Project.utils.io import guess_target_column, load_dataset
@@ -28,12 +38,64 @@ from Project.utils.system import capture_resource_snapshot, merge_runtime_sectio
 MetricCallable = Callable[[np.ndarray, np.ndarray], float]
 
 
-def _default_metrics() -> Dict[str, MetricCallable]:
+def _coerce_label_arrays(y_true: np.ndarray, y_pred: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
+    y_true_arr = np.asarray(y_true)
+    y_pred_arr = np.asarray(y_pred)
+    needs_encoding = y_true_arr.dtype.kind in {"U", "S", "O"} or y_pred_arr.dtype.kind in {"U", "S", "O"}
+    if needs_encoding:
+        le = LabelEncoder()
+        combined = np.concatenate([y_true_arr.astype(str), y_pred_arr.astype(str)])
+        if combined.size > 0:
+            le.fit(combined)
+            y_true_arr = le.transform(y_true_arr.astype(str))
+            y_pred_arr = le.transform(y_pred_arr.astype(str))
+    return y_true_arr, y_pred_arr
+
+
+def _infer_positive_label(y_true: np.ndarray, y_pred: np.ndarray) -> int:
+    combined = np.concatenate([y_true, y_pred])
+    if combined.size == 0:
+        return 1
+    unique = np.unique(combined)
+    if unique.size == 0:
+        return 1
+    value = unique[-1]
+    return int(value.item() if hasattr(value, "item") else value)
+
+
+def _default_classification_metrics() -> Dict[str, MetricCallable]:
+    def accuracy_metric(y_true, y_pred):
+        coerced_true, coerced_pred = _coerce_label_arrays(y_true, y_pred)
+        return float(accuracy_score(coerced_true, coerced_pred))
+
+    def precision_metric(y_true, y_pred):
+        coerced_true, coerced_pred = _coerce_label_arrays(y_true, y_pred)
+        pos_label = _infer_positive_label(coerced_true, coerced_pred)
+        return float(precision_score(coerced_true, coerced_pred, zero_division=0, pos_label=pos_label))
+
+    def recall_metric(y_true, y_pred):
+        coerced_true, coerced_pred = _coerce_label_arrays(y_true, y_pred)
+        pos_label = _infer_positive_label(coerced_true, coerced_pred)
+        return float(recall_score(coerced_true, coerced_pred, zero_division=0, pos_label=pos_label))
+
+    def f1_metric(y_true, y_pred):
+        coerced_true, coerced_pred = _coerce_label_arrays(y_true, y_pred)
+        pos_label = _infer_positive_label(coerced_true, coerced_pred)
+        return float(f1_score(coerced_true, coerced_pred, zero_division=0, pos_label=pos_label))
+
     return {
-        "accuracy": lambda y_true, y_pred: float(accuracy_score(y_true, y_pred)),
-        "precision": lambda y_true, y_pred: float(precision_score(y_true, y_pred, zero_division=0)),
-        "recall": lambda y_true, y_pred: float(recall_score(y_true, y_pred, zero_division=0)),
-        "f1": lambda y_true, y_pred: float(f1_score(y_true, y_pred, zero_division=0)),
+        "accuracy": accuracy_metric,
+        "precision": precision_metric,
+        "recall": recall_metric,
+        "f1": f1_metric,
+    }
+
+
+def _default_regression_metrics() -> Dict[str, MetricCallable]:
+    return {
+        "rmse": lambda y_true, y_pred: float(mean_squared_error(y_true, y_pred, squared=False)),
+        "mae": lambda y_true, y_pred: float(mean_absolute_error(y_true, y_pred)),
+        "r2": lambda y_true, y_pred: float(r2_score(y_true, y_pred)),
     }
 
 
@@ -42,7 +104,7 @@ class ExperimentConfig:
     experiment_name: str
     seeds: Iterable[int] = field(default_factory=lambda: (42, 77))
     n_splits: int = 5
-    metrics: Dict[str, MetricCallable] = field(default_factory=_default_metrics)
+    metrics: Optional[Dict[str, MetricCallable]] = None
     preprocessing: PreprocessingConfig = field(default_factory=PreprocessingConfig)
     output_dir: Path = Path("reports/metrics")
     artifact_dir: Path = Path("artifacts/experiments")
@@ -57,7 +119,7 @@ class ExperimentConfig:
             "experiment_name": self.experiment_name,
             "seeds": list(self.seeds),
             "n_splits": self.n_splits,
-            "metrics": list(self.metrics.keys()),
+            "metrics": list(self.metrics.keys()) if self.metrics else [],
             "preprocessing": self.preprocessing.as_dict(),
             "output_dir": str(self.output_dir),
             "artifact_dir": str(self.artifact_dir),
@@ -98,8 +160,19 @@ class ExperimentRunner:
         metadata = cfg.metadata or {}
         runtime_entries: List[Dict[str, Any]] = []
 
+        target_kind = type_of_target(y)
+        is_regression = target_kind in {"continuous", "continuous-multioutput"}
+
+        if cfg.metrics is None:
+            cfg.metrics = _default_regression_metrics() if is_regression else _default_classification_metrics()
+
+        metrics_map = cfg.metrics
+
         for seed in cfg.seeds:
-            cv = StratifiedKFold(n_splits=cfg.n_splits, shuffle=True, random_state=int(seed))
+            if is_regression:
+                cv = KFold(n_splits=cfg.n_splits, shuffle=True, random_state=int(seed))
+            else:
+                cv = StratifiedKFold(n_splits=cfg.n_splits, shuffle=True, random_state=int(seed))
             fold_rows: List[Dict[str, object]] = []
 
             for fold_idx, (train_idx, valid_idx) in enumerate(cv.split(X, y), start=1):
@@ -135,7 +208,7 @@ class ExperimentRunner:
                 y_pred = np.asarray(raw_pred)
                 y_true_np = np.asarray(y_valid)
 
-                metrics = {name: func(y_true_np, y_pred) for name, func in cfg.metrics.items()}
+                metrics = {name: func(y_true_np, y_pred) for name, func in metrics_map.items()}
 
                 model_path = self._persist_artifacts(pipeline, seed=int(seed), fold_idx=fold_idx)
                 model_size = model_path.stat().st_size if model_path and model_path.exists() else None

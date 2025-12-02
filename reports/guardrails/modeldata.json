@@ -1,0 +1,28 @@
+{
+  "dataset": "modeldata",
+  "path": "src/data/datasets/tabular/modeldata.csv",
+  "rows": 162090,
+  "columns": 351,
+  "issues": [
+    {
+      "id": "deterministic_proxy",
+      "column": "Unnamed: 0",
+      "severity": "high",
+      "description": "Column 'Unnamed: 0' deterministically maps to target 'Zurich Small Business'.",
+      "suggested_fix": "Drop the proxy feature or treat it as leakage."
+    },
+    {
+      "id": "temporal_split_warning",
+      "columns": [
+        "HeatingUpdate",
+        "PlumbingUpdate",
+        "RoofingUpdate",
+        "WiringUpdate"
+      ],
+      "severity": "info",
+      "description": "Timestamp columns are not strictly sorted; ensure TimeSeriesSplit or blocking is used to avoid look-ahead leakage.",
+      "suggested_fix": "Generate chronological folds via TimeSeriesSplit before training."
+    }
+  ],
+  "status": "issues_found"
+}

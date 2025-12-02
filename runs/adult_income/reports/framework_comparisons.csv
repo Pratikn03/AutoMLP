@@ -1,0 +1,5 @@
+framework_a,framework_b,metric,diff,t_stat,p_value,boot_ci_low,boot_ci_high
+CatBoost,XGBoost,f1_macro,-0.005556963924053582,-5.1210891091805095,0.006880925952764713,-0.007258720516832295,-0.0034293791428358757
+CatBoost,XGBoost,accuracy,-0.0147005302420391,-16.946497236631846,7.10913010649175e-05,-0.01609307266488145,-0.013123765032865253
+H2O_AutoML,leaderboard,f1_macro,0.0,,,0.0,0.0
+H2O_AutoML,leaderboard,accuracy,0.0,,,0.0,0.0

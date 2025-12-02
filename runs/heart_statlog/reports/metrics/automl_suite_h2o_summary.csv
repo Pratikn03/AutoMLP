@@ -1,0 +1,2 @@
+seed,fit_time_sec_mean,fit_time_sec_std,predict_time_sec_mean,predict_time_sec_std,accuracy_mean,accuracy_std,precision_mean,precision_std,recall_mean,recall_std,f1_mean,f1_std,target,experiment,framework
+42,590.6237338166014,8.622570265732376,0.025625683600082994,0.005370089491414816,0.7222222222222222,0.04721314364437765,0.765495275333985,0.011802575125046559,0.851951951951952,0.11086532347302114,0.8031391646280616,0.05133174363074667,sex,automl_suite_h2o,automl_suite_h2o

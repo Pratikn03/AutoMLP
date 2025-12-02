@@ -9,7 +9,7 @@
     "framework": "FLAML",
     "category": "automl",
     "is_booster": false,
-    "datasets_covered": 2
+    "datasets_covered": 1
   },
   {
     "framework": "H2O_AutoML",

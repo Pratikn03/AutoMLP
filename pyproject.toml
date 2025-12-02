@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=67", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "auto-ml-pro"
+version = "0.1.0"
+description = "End-to-end AutoML benchmarking, explainability, and deployment toolkit."
+readme = "README_RUN.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+  {name = "AutoML Pro Contributors"}
+]
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.2",
+  "scikit-learn>=1.5",
+  "lightgbm>=4.0",
+  "xgboost>=2.0",
+  "flaml>=2.3",
+  "fastapi>=0.110",
+  "uvicorn>=0.30",
+  "matplotlib>=3.8",
+  "seaborn>=0.13"
+]
+
+[project.scripts]
+automl-run = "scripts.run_all:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["Project*", "scripts*"]
+
+[tool.setuptools.package-data]
+"Project" = ["**/*.json", "**/*.csv", "**/*.yml", "**/*.yaml"]

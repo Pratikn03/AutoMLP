@@ -1,0 +1,15 @@
+feature,importance
+thal,0.2814941
+class_absent,0.12319193
+fasting_blood_sugar,0.083784275
+slope,0.063571
+class_present,0.059706245
+serum_cholestoral,0.052951895
+maximum_heart_rate_achieved,0.052380946
+age,0.049927555
+resting_blood_pressure,0.043875344
+oldpeak,0.043456335
+exercise_induced_angina,0.041934796
+resting_electrocardiographic_results,0.036992848
+number_of_major_vessels,0.03548441
+chest,0.031248324

@@ -1,0 +1,2236 @@
+{
+  "training": [
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "target": "MedHouseVal",
+      "seed": 42,
+      "fold": 1,
+      "fit_time_sec": 0.16266016700046748,
+      "predict_time_sec": 0.0055822080003054,
+      "wall_time_sec": 0.16833901405334473,
+      "resource_before": {
+        "rss_mb": 581.140625,
+        "vms_mb": 426550.328125,
+        "cpu_user_sec": 5.130433536,
+        "cpu_system_sec": 0.961229056
+      },
+      "resource_after": {
+        "rss_mb": 604.1875,
+        "vms_mb": 426574.921875,
+        "cpu_user_sec": 5.74736128,
+        "cpu_system_sec": 0.982066304
+      },
+      "rss_delta_mb": 23.046875,
+      "model_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_42/fold_1_pipeline.joblib",
+      "model_size_bytes": 2286103,
+      "timestamp": 1763001370.253044
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "target": "MedHouseVal",
+      "seed": 42,
+      "fold": 2,
+      "fit_time_sec": 0.37609929100017325,
+      "predict_time_sec": 0.005644290999953228,
+      "wall_time_sec": 0.38184571266174316,
+      "resource_before": {
+        "rss_mb": 656.203125,
+        "vms_mb": 426679.625,
+        "cpu_user_sec": 6.38285312,
+        "cpu_system_sec": 1.275887232
+      },
+      "resource_after": {
+        "rss_mb": 662.953125,
+        "vms_mb": 426679.609375,
+        "cpu_user_sec": 7.349822976,
+        "cpu_system_sec": 3.1913088
+      },
+      "rss_delta_mb": 6.75,
+      "model_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_42/fold_2_pipeline.joblib",
+      "model_size_bytes": 2286914,
+      "timestamp": 1763001370.68148
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "target": "MedHouseVal",
+      "seed": 42,
+      "fold": 3,
+      "fit_time_sec": 0.2519496659997458,
+      "predict_time_sec": 0.005472416999509733,
+      "wall_time_sec": 0.25751781463623047,
+      "resource_before": {
+        "rss_mb": 663.5625,
+        "vms_mb": 426680.15625,
+        "cpu_user_sec": 7.567349248,
+        "cpu_system_sec": 3.213048576
+      },
+      "resource_after": {
+        "rss_mb": 663.796875,
+        "vms_mb": 426680.15625,
+        "cpu_user_sec": 8.964165632,
+        "cpu_system_sec": 3.341060608
+      },
+      "rss_delta_mb": 0.234375,
+      "model_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_42/fold_3_pipeline.joblib",
+      "model_size_bytes": 2271263,
+      "timestamp": 1763001370.9827998
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "target": "MedHouseVal",
+      "seed": 42,
+      "fold": 4,
+      "fit_time_sec": 0.25746799999978975,
+      "predict_time_sec": 0.005493207999279548,
+      "wall_time_sec": 0.2630338668823242,
+      "resource_before": {
+        "rss_mb": 668.28125,
+        "vms_mb": 426680.15625,
+        "cpu_user_sec": 9.170971648,
+        "cpu_system_sec": 3.363494912
+      },
+      "resource_after": {
+        "rss_mb": 669.03125,
+        "vms_mb": 426680.15625,
+        "cpu_user_sec": 10.598119424,
+        "cpu_system_sec": 3.483270144
+      },
+      "rss_delta_mb": 0.75,
+      "model_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_42/fold_4_pipeline.joblib",
+      "model_size_bytes": 2273576,
+      "timestamp": 1763001371.290856
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "target": "MedHouseVal",
+      "seed": 42,
+      "fold": 5,
+      "fit_time_sec": 0.2574755420000656,
+      "predict_time_sec": 0.005503207999936421,
+      "wall_time_sec": 0.2630808353424072,
+      "resource_before": {
+        "rss_mb": 674.9375,
+        "vms_mb": 426685.96875,
+        "cpu_user_sec": 10.812046336,
+        "cpu_system_sec": 3.502567168
+      },
+      "resource_after": {
+        "rss_mb": 675.140625,
+        "vms_mb": 426685.96875,
+        "cpu_user_sec": 12.226848768,
+        "cpu_system_sec": 3.629347072
+      },
+      "rss_delta_mb": 0.203125,
+      "model_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_42/fold_5_pipeline.joblib",
+      "model_size_bytes": 2282969,
+      "timestamp": 1763001371.6001039
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "target": "MedHouseVal",
+      "seed": 77,
+      "fold": 1,
+      "fit_time_sec": 0.2549448330000814,
+      "predict_time_sec": 0.005416749999312742,
+      "wall_time_sec": 0.26044797897338867,
+      "resource_before": {
+        "rss_mb": 676.0,
+        "vms_mb": 426685.96875,
+        "cpu_user_sec": 12.449153024,
+        "cpu_system_sec": 3.653289984
+      },
+      "resource_after": {
+        "rss_mb": 676.359375,
+        "vms_mb": 426685.96875,
+        "cpu_user_sec": 13.855143936,
+        "cpu_system_sec": 3.77877248
+      },
+      "rss_delta_mb": 0.359375,
+      "model_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_77/fold_1_pipeline.joblib",
+      "model_size_bytes": 2270856,
+      "timestamp": 1763001371.905292
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "target": "MedHouseVal",
+      "seed": 77,
+      "fold": 2,
+      "fit_time_sec": 0.253381583999726,
+      "predict_time_sec": 0.005432750000181841,
+      "wall_time_sec": 0.2589108943939209,
+      "resource_before": {
+        "rss_mb": 681.90625,
+        "vms_mb": 426690.78125,
+        "cpu_user_sec": 14.056798208,
+        "cpu_system_sec": 3.805302016
+      },
+      "resource_after": {
+        "rss_mb": 682.09375,
+        "vms_mb": 426690.78125,
+        "cpu_user_sec": 15.46138112,
+        "cpu_system_sec": 3.934004224
+      },
+      "rss_delta_mb": 0.1875,
+      "model_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_77/fold_2_pipeline.joblib",
+      "model_size_bytes": 2282767,
+      "timestamp": 1763001372.208056
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "target": "MedHouseVal",
+      "seed": 77,
+      "fold": 3,
+      "fit_time_sec": 0.2516359999999622,
+      "predict_time_sec": 0.005380583000260231,
+      "wall_time_sec": 0.25708889961242676,
+      "resource_before": {
+        "rss_mb": 682.6875,
+        "vms_mb": 426690.78125,
+        "cpu_user_sec": 15.670772736,
+        "cpu_system_sec": 3.952248576
+      },
+      "resource_after": {
+        "rss_mb": 682.8125,
+        "vms_mb": 426690.78125,
+        "cpu_user_sec": 17.064820736,
+        "cpu_system_sec": 4.083584
+      },
+      "rss_delta_mb": 0.125,
+      "model_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_77/fold_3_pipeline.joblib",
+      "model_size_bytes": 2277466,
+      "timestamp": 1763001372.505795
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "target": "MedHouseVal",
+      "seed": 77,
+      "fold": 4,
+      "fit_time_sec": 0.2574663329996838,
+      "predict_time_sec": 0.00542200000018056,
+      "wall_time_sec": 0.2629842758178711,
+      "resource_before": {
+        "rss_mb": 688.46875,
+        "vms_mb": 426696.59375,
+        "cpu_user_sec": 17.257609216,
+        "cpu_system_sec": 4.09989248
+      },
+      "resource_after": {
+        "rss_mb": 688.828125,
+        "vms_mb": 426696.59375,
+        "cpu_user_sec": 18.689536,
+        "cpu_system_sec": 4.221028352
+      },
+      "rss_delta_mb": 0.359375,
+      "model_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_77/fold_4_pipeline.joblib",
+      "model_size_bytes": 2298628,
+      "timestamp": 1763001372.809907
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "target": "MedHouseVal",
+      "seed": 77,
+      "fold": 5,
+      "fit_time_sec": 0.25739483300003485,
+      "predict_time_sec": 0.005444958000225597,
+      "wall_time_sec": 0.2629210948944092,
+      "resource_before": {
+        "rss_mb": 689.375,
+        "vms_mb": 426696.59375,
+        "cpu_user_sec": 18.88262144,
+        "cpu_system_sec": 4.238624
+      },
+      "resource_after": {
+        "rss_mb": 690.59375,
+        "vms_mb": 426696.59375,
+        "cpu_user_sec": 20.30442496,
+        "cpu_system_sec": 4.367107584
+      },
+      "rss_delta_mb": 1.21875,
+      "model_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_77/fold_5_pipeline.joblib",
+      "model_size_bytes": 2284135,
+      "timestamp": 1763001373.114038
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "target": "MedHouseVal",
+      "seed": 42,
+      "fold": 1,
+      "fit_time_sec": 0.40767091599991545,
+      "predict_time_sec": 0.012936334000187344,
+      "wall_time_sec": 0.4207019805908203,
+      "resource_before": {
+        "rss_mb": 695.953125,
+        "vms_mb": 426708.40625,
+        "cpu_user_sec": 20.706736128,
+        "cpu_system_sec": 4.4021504
+      },
+      "resource_after": {
+        "rss_mb": 706.734375,
+        "vms_mb": 426764.59375,
+        "cpu_user_sec": 23.784675328,
+        "cpu_system_sec": 5.414576128
+      },
+      "rss_delta_mb": 10.78125,
+      "model_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_42/fold_1_pipeline.joblib",
+      "model_size_bytes": 1460457,
+      "timestamp": 1763001373.621017
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "target": "MedHouseVal",
+      "seed": 42,
+      "fold": 2,
+      "fit_time_sec": 0.4318141250005283,
+      "predict_time_sec": 0.013144957999429607,
+      "wall_time_sec": 0.44506096839904785,
+      "resource_before": {
+        "rss_mb": 711.546875,
+        "vms_mb": 426764.59375,
+        "cpu_user_sec": 24.042246144,
+        "cpu_system_sec": 5.575026176
+      },
+      "resource_after": {
+        "rss_mb": 711.859375,
+        "vms_mb": 426764.59375,
+        "cpu_user_sec": 27.163723776,
+        "cpu_system_sec": 6.819782144
+      },
+      "rss_delta_mb": 0.3125,
+      "model_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_42/fold_2_pipeline.joblib",
+      "model_size_bytes": 1460706,
+      "timestamp": 1763001374.113464
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "target": "MedHouseVal",
+      "seed": 42,
+      "fold": 3,
+      "fit_time_sec": 0.6349591669995789,
+      "predict_time_sec": 0.013614666000648867,
+      "wall_time_sec": 0.6486210823059082,
+      "resource_before": {
+        "rss_mb": 717.203125,
+        "vms_mb": 426764.59375,
+        "cpu_user_sec": 27.464675328,
+        "cpu_system_sec": 6.978889728
+      },
+      "resource_after": {
+        "rss_mb": 717.390625,
+        "vms_mb": 426764.59375,
+        "cpu_user_sec": 31.350403072,
+        "cpu_system_sec": 9.161874432
+      },
+      "rss_delta_mb": 0.1875,
+      "model_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_42/fold_3_pipeline.joblib",
+      "model_size_bytes": 1460033,
+      "timestamp": 1763001374.8107688
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "target": "MedHouseVal",
+      "seed": 42,
+      "fold": 4,
+      "fit_time_sec": 0.41567379200023424,
+      "predict_time_sec": 0.012766457999532577,
+      "wall_time_sec": 0.42853713035583496,
+      "resource_before": {
+        "rss_mb": 717.671875,
+        "vms_mb": 426764.59375,
+        "cpu_user_sec": 31.60126464,
+        "cpu_system_sec": 9.337679872
+      },
+      "resource_after": {
+        "rss_mb": 717.78125,
+        "vms_mb": 426764.59375,
+        "cpu_user_sec": 34.653446144,
+        "cpu_system_sec": 10.521936896
+      },
+      "rss_delta_mb": 0.109375,
+      "model_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_42/fold_4_pipeline.joblib",
+      "model_size_bytes": 1458824,
+      "timestamp": 1763001375.285717
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "target": "MedHouseVal",
+      "seed": 42,
+      "fold": 5,
+      "fit_time_sec": 0.41375008300019545,
+      "predict_time_sec": 0.012846957999499864,
+      "wall_time_sec": 0.42665767669677734,
+      "resource_before": {
+        "rss_mb": 723.609375,
+        "vms_mb": 426769.40625,
+        "cpu_user_sec": 34.943803392,
+        "cpu_system_sec": 10.67953664
+      },
+      "resource_after": {
+        "rss_mb": 724.640625,
+        "vms_mb": 426769.40625,
+        "cpu_user_sec": 37.985308672,
+        "cpu_system_sec": 11.852729344
+      },
+      "rss_delta_mb": 1.03125,
+      "model_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_42/fold_5_pipeline.joblib",
+      "model_size_bytes": 1459568,
+      "timestamp": 1763001375.7584991
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "target": "MedHouseVal",
+      "seed": 77,
+      "fold": 1,
+      "fit_time_sec": 0.4567514159998609,
+      "predict_time_sec": 0.013514500000383123,
+      "wall_time_sec": 0.4703688621520996,
+      "resource_before": {
+        "rss_mb": 730.609375,
+        "vms_mb": 426775.21875,
+        "cpu_user_sec": 38.25844224,
+        "cpu_system_sec": 11.999752192
+      },
+      "resource_after": {
+        "rss_mb": 730.875,
+        "vms_mb": 426775.21875,
+        "cpu_user_sec": 41.584611328,
+        "cpu_system_sec": 13.26397952
+      },
+      "rss_delta_mb": 0.265625,
+      "model_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_77/fold_1_pipeline.joblib",
+      "model_size_bytes": 1461772,
+      "timestamp": 1763001376.2750342
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "target": "MedHouseVal",
+      "seed": 77,
+      "fold": 2,
+      "fit_time_sec": 0.4236974169998575,
+      "predict_time_sec": 0.013075875000140513,
+      "wall_time_sec": 0.436870813369751,
+      "resource_before": {
+        "rss_mb": 731.8125,
+        "vms_mb": 426775.21875,
+        "cpu_user_sec": 41.861369856,
+        "cpu_system_sec": 13.4164736
+      },
+      "resource_after": {
+        "rss_mb": 731.875,
+        "vms_mb": 426775.21875,
+        "cpu_user_sec": 44.955205632,
+        "cpu_system_sec": 14.628235264
+      },
+      "rss_delta_mb": 0.0625,
+      "model_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_77/fold_2_pipeline.joblib",
+      "model_size_bytes": 1460154,
+      "timestamp": 1763001376.7594628
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "target": "MedHouseVal",
+      "seed": 77,
+      "fold": 3,
+      "fit_time_sec": 0.41574383299939655,
+      "predict_time_sec": 0.012755792000461952,
+      "wall_time_sec": 0.4286007881164551,
+      "resource_before": {
+        "rss_mb": 737.296875,
+        "vms_mb": 426780.03125,
+        "cpu_user_sec": 45.255012352,
+        "cpu_system_sec": 14.785622016
+      },
+      "resource_after": {
+        "rss_mb": 739.59375,
+        "vms_mb": 426780.03125,
+        "cpu_user_sec": 48.322740224,
+        "cpu_system_sec": 15.964333056
+      },
+      "rss_delta_mb": 2.296875,
+      "model_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_77/fold_3_pipeline.joblib",
+      "model_size_bytes": 1460889,
+      "timestamp": 1763001377.235301
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "target": "MedHouseVal",
+      "seed": 77,
+      "fold": 4,
+      "fit_time_sec": 0.4369766250001703,
+      "predict_time_sec": 0.013504999999895517,
+      "wall_time_sec": 0.45058393478393555,
+      "resource_before": {
+        "rss_mb": 740.5625,
+        "vms_mb": 426781.03125,
+        "cpu_user_sec": 48.612896768,
+        "cpu_system_sec": 16.123486208
+      },
+      "resource_after": {
+        "rss_mb": 742.0,
+        "vms_mb": 426781.03125,
+        "cpu_user_sec": 51.803291648,
+        "cpu_system_sec": 17.240479744
+      },
+      "rss_delta_mb": 1.4375,
+      "model_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_77/fold_4_pipeline.joblib",
+      "model_size_bytes": 1460560,
+      "timestamp": 1763001377.732598
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "target": "MedHouseVal",
+      "seed": 77,
+      "fold": 5,
+      "fit_time_sec": 0.41247095900052955,
+      "predict_time_sec": 0.0130679579997377,
+      "wall_time_sec": 0.42563509941101074,
+      "resource_before": {
+        "rss_mb": 747.5,
+        "vms_mb": 426785.84375,
+        "cpu_user_sec": 52.086673408,
+        "cpu_system_sec": 17.400993792
+      },
+      "resource_after": {
+        "rss_mb": 747.859375,
+        "vms_mb": 426785.84375,
+        "cpu_user_sec": 55.121563648,
+        "cpu_system_sec": 18.570139648
+      },
+      "rss_delta_mb": 0.359375,
+      "model_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_77/fold_5_pipeline.joblib",
+      "model_size_bytes": 1459986,
+      "timestamp": 1763001378.205336
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "target": "MedHouseVal",
+      "seed": 42,
+      "fold": 1,
+      "fit_time_sec": 0.8959368340001674,
+      "predict_time_sec": 0.002703999999539519,
+      "wall_time_sec": 0.8987381458282471,
+      "resource_before": {
+        "rss_mb": 749.890625,
+        "vms_mb": 426792.84375,
+        "cpu_user_sec": 55.643418624,
+        "cpu_system_sec": 18.903513088
+      },
+      "resource_after": {
+        "rss_mb": 775.390625,
+        "vms_mb": 427853.5625,
+        "cpu_user_sec": 62.911066112,
+        "cpu_system_sec": 20.147275776
+      },
+      "rss_delta_mb": 25.5,
+      "model_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_42/fold_1_pipeline.joblib",
+      "model_size_bytes": 1123900,
+      "timestamp": 1763001379.189982
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "target": "MedHouseVal",
+      "seed": 42,
+      "fold": 2,
+      "fit_time_sec": 0.8402066669996202,
+      "predict_time_sec": 0.0022552910004378646,
+      "wall_time_sec": 0.8425700664520264,
+      "resource_before": {
+        "rss_mb": 784.140625,
+        "vms_mb": 427853.5625,
+        "cpu_user_sec": 63.007911936,
+        "cpu_system_sec": 20.1506816
+      },
+      "resource_after": {
+        "rss_mb": 789.0,
+        "vms_mb": 427853.5625,
+        "cpu_user_sec": 69.856550912,
+        "cpu_system_sec": 21.172854784
+      },
+      "rss_delta_mb": 4.859375,
+      "model_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_42/fold_2_pipeline.joblib",
+      "model_size_bytes": 1123820,
+      "timestamp": 1763001380.0737941
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "target": "MedHouseVal",
+      "seed": 42,
+      "fold": 3,
+      "fit_time_sec": 0.8314149170000746,
+      "predict_time_sec": 0.002186916999562527,
+      "wall_time_sec": 0.8337042331695557,
+      "resource_before": {
+        "rss_mb": 789.59375,
+        "vms_mb": 427853.5625,
+        "cpu_user_sec": 69.941059584,
+        "cpu_system_sec": 21.175805952
+      },
+      "resource_after": {
+        "rss_mb": 790.46875,
+        "vms_mb": 427853.5625,
+        "cpu_user_sec": 76.9523712,
+        "cpu_system_sec": 22.106314752
+      },
+      "rss_delta_mb": 0.875,
+      "model_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_42/fold_3_pipeline.joblib",
+      "model_size_bytes": 1123780,
+      "timestamp": 1763001380.948709
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "target": "MedHouseVal",
+      "seed": 42,
+      "fold": 4,
+      "fit_time_sec": 0.8480134159999579,
+      "predict_time_sec": 0.002216165999925579,
+      "wall_time_sec": 0.8503239154815674,
+      "resource_before": {
+        "rss_mb": 795.859375,
+        "vms_mb": 427858.375,
+        "cpu_user_sec": 77.042089984,
+        "cpu_system_sec": 22.109063168
+      },
+      "resource_after": {
+        "rss_mb": 796.71875,
+        "vms_mb": 427858.375,
+        "cpu_user_sec": 84.069105664,
+        "cpu_system_sec": 23.10559744
+      },
+      "rss_delta_mb": 0.859375,
+      "model_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_42/fold_4_pipeline.joblib",
+      "model_size_bytes": 1123820,
+      "timestamp": 1763001381.8396292
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "target": "MedHouseVal",
+      "seed": 42,
+      "fold": 5,
+      "fit_time_sec": 0.8201398330002121,
+      "predict_time_sec": 0.0021077080000395654,
+      "wall_time_sec": 0.8223438262939453,
+      "resource_before": {
+        "rss_mb": 797.234375,
+        "vms_mb": 427858.375,
+        "cpu_user_sec": 84.157833216,
+        "cpu_system_sec": 23.10820864
+      },
+      "resource_after": {
+        "rss_mb": 797.5,
+        "vms_mb": 427858.375,
+        "cpu_user_sec": 91.133485056,
+        "cpu_system_sec": 23.947937792
+      },
+      "rss_delta_mb": 0.265625,
+      "model_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_42/fold_5_pipeline.joblib",
+      "model_size_bytes": 1123844,
+      "timestamp": 1763001382.70339
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "target": "MedHouseVal",
+      "seed": 77,
+      "fold": 1,
+      "fit_time_sec": 0.834449916000267,
+      "predict_time_sec": 0.0022344579992932267,
+      "wall_time_sec": 0.8367838859558105,
+      "resource_before": {
+        "rss_mb": 802.984375,
+        "vms_mb": 427863.1875,
+        "cpu_user_sec": 91.227348992,
+        "cpu_system_sec": 23.950782464
+      },
+      "resource_after": {
+        "rss_mb": 803.015625,
+        "vms_mb": 427863.1875,
+        "cpu_user_sec": 98.212216832,
+        "cpu_system_sec": 24.90450944
+      },
+      "rss_delta_mb": 0.03125,
+      "model_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_77/fold_1_pipeline.joblib",
+      "model_size_bytes": 1123908,
+      "timestamp": 1763001383.5811992
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "target": "MedHouseVal",
+      "seed": 77,
+      "fold": 2,
+      "fit_time_sec": 0.8443922500000554,
+      "predict_time_sec": 0.0021068750002086745,
+      "wall_time_sec": 0.8465859889984131,
+      "resource_before": {
+        "rss_mb": 803.546875,
+        "vms_mb": 427863.1875,
+        "cpu_user_sec": 98.289065984,
+        "cpu_system_sec": 24.90710016
+      },
+      "resource_after": {
+        "rss_mb": 803.734375,
+        "vms_mb": 427863.1875,
+        "cpu_user_sec": 105.321013248,
+        "cpu_system_sec": 25.872136192
+      },
+      "rss_delta_mb": 0.1875,
+      "model_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_77/fold_2_pipeline.joblib",
+      "model_size_bytes": 1123932,
+      "timestamp": 1763001384.468092
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "target": "MedHouseVal",
+      "seed": 77,
+      "fold": 3,
+      "fit_time_sec": 0.8392783749995942,
+      "predict_time_sec": 0.002178791000005731,
+      "wall_time_sec": 0.8415520191192627,
+      "resource_before": {
+        "rss_mb": 809.65625,
+        "vms_mb": 427869.0,
+        "cpu_user_sec": 105.410142208,
+        "cpu_system_sec": 25.875009536
+      },
+      "resource_after": {
+        "rss_mb": 809.8125,
+        "vms_mb": 427869.53125,
+        "cpu_user_sec": 112.404414464,
+        "cpu_system_sec": 26.857017344
+      },
+      "rss_delta_mb": 0.15625,
+      "model_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_77/fold_3_pipeline.joblib",
+      "model_size_bytes": 1123868,
+      "timestamp": 1763001385.350137
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "target": "MedHouseVal",
+      "seed": 77,
+      "fold": 4,
+      "fit_time_sec": 0.8477380829999674,
+      "predict_time_sec": 0.002202167000177724,
+      "wall_time_sec": 0.8500361442565918,
+      "resource_before": {
+        "rss_mb": 810.390625,
+        "vms_mb": 427869.0,
+        "cpu_user_sec": 112.486719488,
+        "cpu_system_sec": 26.859640832
+      },
+      "resource_after": {
+        "rss_mb": 810.453125,
+        "vms_mb": 427869.0,
+        "cpu_user_sec": 119.565787136,
+        "cpu_system_sec": 27.829559296
+      },
+      "rss_delta_mb": 0.0625,
+      "model_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_77/fold_4_pipeline.joblib",
+      "model_size_bytes": 1123940,
+      "timestamp": 1763001386.240829
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "target": "MedHouseVal",
+      "seed": 77,
+      "fold": 5,
+      "fit_time_sec": 0.8434860839997782,
+      "predict_time_sec": 0.002210124999692198,
+      "wall_time_sec": 0.8457889556884766,
+      "resource_before": {
+        "rss_mb": 816.421875,
+        "vms_mb": 427873.8125,
+        "cpu_user_sec": 119.655104512,
+        "cpu_system_sec": 27.83227904
+      },
+      "resource_after": {
+        "rss_mb": 816.515625,
+        "vms_mb": 427873.8125,
+        "cpu_user_sec": 126.67297792,
+        "cpu_system_sec": 28.80535552
+      },
+      "rss_delta_mb": 0.09375,
+      "model_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_77/fold_5_pipeline.joblib",
+      "model_size_bytes": 1123876,
+      "timestamp": 1763001387.127077
+    },
+    {
+      "experiment": "automl_suite_autogluon",
+      "target": "MedHouseVal",
+      "seed": 42,
+      "fold": 1,
+      "fit_time_sec": 24.93307204100074,
+      "predict_time_sec": 0.10119708300044294,
+      "wall_time_sec": 25.034825086593628,
+      "resource_before": {
+        "rss_mb": 581.78125,
+        "vms_mb": 426549.734375,
+        "cpu_user_sec": 2.54210816,
+        "cpu_system_sec": 3.215748352
+      },
+      "resource_after": {
+        "rss_mb": 1854.09375,
+        "vms_mb": 427850.40625,
+        "cpu_user_sec": 161.367130112,
+        "cpu_system_sec": 42.24925696
+      },
+      "rss_delta_mb": 1272.3125,
+      "model_path": "artifacts/experiments/automl_suite_autogluon/seed_42/fold_1_pipeline.joblib",
+      "model_size_bytes": 16956,
+      "timestamp": 1763001415.25985
+    },
+    {
+      "experiment": "automl_suite_autogluon",
+      "target": "MedHouseVal",
+      "seed": 42,
+      "fold": 2,
+      "fit_time_sec": 32.81859216700013,
+      "predict_time_sec": 0.06461933299942757,
+      "wall_time_sec": 32.883906841278076,
+      "resource_before": {
+        "rss_mb": 1854.15625,
+        "vms_mb": 427850.40625,
+        "cpu_user_sec": 161.406451712,
+        "cpu_system_sec": 42.310713344
+      },
+      "resource_after": {
+        "rss_mb": 1964.6875,
+        "vms_mb": 427901.78125,
+        "cpu_user_sec": 334.230585344,
+        "cpu_system_sec": 99.652837376
+      },
+      "rss_delta_mb": 110.53125,
+      "model_path": "artifacts/experiments/automl_suite_autogluon/seed_42/fold_2_pipeline.joblib",
+      "model_size_bytes": 16956,
+      "timestamp": 1763001448.152202
+    },
+    {
+      "experiment": "automl_suite_autogluon",
+      "target": "MedHouseVal",
+      "seed": 42,
+      "fold": 3,
+      "fit_time_sec": 31.85490362499968,
+      "predict_time_sec": 0.32868445799977053,
+      "wall_time_sec": 32.184277057647705,
+      "resource_before": {
+        "rss_mb": 1965.828125,
+        "vms_mb": 427901.78125,
+        "cpu_user_sec": 334.266236928,
+        "cpu_system_sec": 99.724591104
+      },
+      "resource_after": {
+        "rss_mb": 2063.125,
+        "vms_mb": 428064.90625,
+        "cpu_user_sec": 518.135808,
+        "cpu_system_sec": 178.916687872
+      },
+      "rss_delta_mb": 97.296875,
+      "model_path": "artifacts/experiments/automl_suite_autogluon/seed_42/fold_3_pipeline.joblib",
+      "model_size_bytes": 16956,
+      "timestamp": 1763001480.34868
+    },
+    {
+      "experiment": "automl_suite_autogluon",
+      "target": "MedHouseVal",
+      "seed": 42,
+      "fold": 4,
+      "fit_time_sec": 40.964511541999855,
+      "predict_time_sec": 0.18080629100040824,
+      "wall_time_sec": 41.146175146102905,
+      "resource_before": {
+        "rss_mb": 2063.125,
+        "vms_mb": 428064.90625,
+        "cpu_user_sec": 518.168346624,
+        "cpu_system_sec": 178.988777472
+      },
+      "resource_after": {
+        "rss_mb": 2248.125,
+        "vms_mb": 428047.015625,
+        "cpu_user_sec": 732.332752896,
+        "cpu_system_sec": 265.69162752
+      },
+      "rss_delta_mb": 185.0,
+      "model_path": "artifacts/experiments/automl_suite_autogluon/seed_42/fold_4_pipeline.joblib",
+      "model_size_bytes": 16956,
+      "timestamp": 1763001521.506343
+    },
+    {
+      "experiment": "automl_suite_autogluon",
+      "target": "MedHouseVal",
+      "seed": 42,
+      "fold": 5,
+      "fit_time_sec": 19.090228791999834,
+      "predict_time_sec": 0.07960495899988018,
+      "wall_time_sec": 19.170278787612915,
+      "resource_before": {
+        "rss_mb": 2248.15625,
+        "vms_mb": 428047.015625,
+        "cpu_user_sec": 732.361457664,
+        "cpu_system_sec": 265.731784704
+      },
+      "resource_after": {
+        "rss_mb": 1973.796875,
+        "vms_mb": 427933.203125,
+        "cpu_user_sec": 853.355855872,
+        "cpu_system_sec": 314.939932672
+      },
+      "rss_delta_mb": -274.359375,
+      "model_path": "artifacts/experiments/automl_suite_autogluon/seed_42/fold_5_pipeline.joblib",
+      "model_size_bytes": 16956,
+      "timestamp": 1763001540.6840441
+    },
+    {
+      "experiment": "feature_ablation_xgboost_baseline",
+      "target": "MedHouseVal",
+      "seed": 42,
+      "fold": 1,
+      "fit_time_sec": 0.1646045410006991,
+      "predict_time_sec": 0.006243334000828327,
+      "wall_time_sec": 0.17094182968139648,
+      "resource_before": {
+        "rss_mb": 581.21875,
+        "vms_mb": 426549.765625,
+        "cpu_user_sec": 4.022677248,
+        "cpu_system_sec": 1.567987072
+      },
+      "resource_after": {
+        "rss_mb": 603.796875,
+        "vms_mb": 426574.359375,
+        "cpu_user_sec": 4.664746496,
+        "cpu_system_sec": 1.581970304
+      },
+      "rss_delta_mb": 22.578125,
+      "model_path": "artifacts/experiments/feature_ablation_xgboost_baseline/seed_42/fold_1_pipeline.joblib",
+      "model_size_bytes": 2286103,
+      "timestamp": 1763001544.866873,
+      "meta_ablation_suite": true,
+      "meta_preprocessing_variant": "baseline",
+      "meta_feature_variant": "Baseline",
+      "meta_feature_description": "Median/most-frequent imputation, scaling enabled, no extra transforms.",
+      "meta_feature_variant_key": "baseline",
+      "meta_estimator_name": "xgboost",
+      "meta_experiment_family": "feature_ablation"
+    },
+    {
+      "experiment": "feature_ablation_xgboost_baseline",
+      "target": "MedHouseVal",
+      "seed": 42,
+      "fold": 2,
+      "fit_time_sec": 0.3747765830003118,
+      "predict_time_sec": 0.005865416999768058,
+      "wall_time_sec": 0.3807511329650879,
+      "resource_before": {
+        "rss_mb": 655.8125,
+        "vms_mb": 426679.0625,
+        "cpu_user_sec": 5.218341376,
+        "cpu_system_sec": 1.807764864
+      },
+      "resource_after": {
+        "rss_mb": 662.09375,
+        "vms_mb": 426679.046875,
+        "cpu_user_sec": 6.255488,
+        "cpu_system_sec": 3.676833536
+      },
+      "rss_delta_mb": 6.28125,
+      "model_path": "artifacts/experiments/feature_ablation_xgboost_baseline/seed_42/fold_2_pipeline.joblib",
+      "model_size_bytes": 2286914,
+      "timestamp": 1763001545.296887,
+      "meta_ablation_suite": true,
+      "meta_preprocessing_variant": "baseline",
+      "meta_feature_variant": "Baseline",
+      "meta_feature_description": "Median/most-frequent imputation, scaling enabled, no extra transforms.",
+      "meta_feature_variant_key": "baseline",
+      "meta_estimator_name": "xgboost",
+      "meta_experiment_family": "feature_ablation"
+    },
+    {
+      "experiment": "feature_ablation_xgboost_baseline",
+      "target": "MedHouseVal",
+      "seed": 42,
+      "fold": 3,
+      "fit_time_sec": 0.25397329199950036,
+      "predict_time_sec": 0.005787415999293444,
+      "wall_time_sec": 0.2598438262939453,
+      "resource_before": {
+        "rss_mb": 662.859375,
+        "vms_mb": 426679.59375,
+        "cpu_user_sec": 6.484476928,
+        "cpu_system_sec": 3.70275584
+      },
+      "resource_after": {
+        "rss_mb": 663.078125,
+        "vms_mb": 426679.59375,
+        "cpu_user_sec": 7.889298432,
+        "cpu_system_sec": 3.829121024
+      },
+      "rss_delta_mb": 0.21875,
+      "model_path": "artifacts/experiments/feature_ablation_xgboost_baseline/seed_42/fold_3_pipeline.joblib",
+      "model_size_bytes": 2271263,
+      "timestamp": 1763001545.603895,
+      "meta_ablation_suite": true,
+      "meta_preprocessing_variant": "baseline",
+      "meta_feature_variant": "Baseline",
+      "meta_feature_description": "Median/most-frequent imputation, scaling enabled, no extra transforms.",
+      "meta_feature_variant_key": "baseline",
+      "meta_estimator_name": "xgboost",
+      "meta_experiment_family": "feature_ablation"
+    },
+    {
+      "experiment": "feature_ablation_xgboost_baseline",
+      "target": "MedHouseVal",
+      "seed": 42,
+      "fold": 4,
+      "fit_time_sec": 0.2569636250000258,
+      "predict_time_sec": 0.0057878329998857225,
+      "wall_time_sec": 0.2628309726715088,
+      "resource_before": {
+        "rss_mb": 667.46875,
+        "vms_mb": 426679.59375,
+        "cpu_user_sec": 8.106177024,
+        "cpu_system_sec": 3.858038016
+      },
+      "resource_after": {
+        "rss_mb": 667.65625,
+        "vms_mb": 426679.59375,
+        "cpu_user_sec": 9.528205312,
+        "cpu_system_sec": 3.97991552
+      },
+      "rss_delta_mb": 0.1875,
+      "model_path": "artifacts/experiments/feature_ablation_xgboost_baseline/seed_42/fold_4_pipeline.joblib",
+      "model_size_bytes": 2273576,
+      "timestamp": 1763001545.912825,
+      "meta_ablation_suite": true,
+      "meta_preprocessing_variant": "baseline",
+      "meta_feature_variant": "Baseline",
+      "meta_feature_description": "Median/most-frequent imputation, scaling enabled, no extra transforms.",
+      "meta_feature_variant_key": "baseline",
+      "meta_estimator_name": "xgboost",
+      "meta_experiment_family": "feature_ablation"
+    },
+    {
+      "experiment": "feature_ablation_xgboost_baseline",
+      "target": "MedHouseVal",
+      "seed": 42,
+      "fold": 5,
+      "fit_time_sec": 0.2566552079997564,
+      "predict_time_sec": 0.005830625000271539,
+      "wall_time_sec": 0.26256680488586426,
+      "resource_before": {
+        "rss_mb": 673.546875,
+        "vms_mb": 426685.40625,
+        "cpu_user_sec": 9.743699968,
+        "cpu_system_sec": 4.003182336
+      },
+      "resource_after": {
+        "rss_mb": 673.75,
+        "vms_mb": 426685.40625,
+        "cpu_user_sec": 11.164502016,
+        "cpu_system_sec": 4.127131904
+      },
+      "rss_delta_mb": 0.203125,
+      "model_path": "artifacts/experiments/feature_ablation_xgboost_baseline/seed_42/fold_5_pipeline.joblib",
+      "model_size_bytes": 2282969,
+      "timestamp": 1763001546.221086,
+      "meta_ablation_suite": true,
+      "meta_preprocessing_variant": "baseline",
+      "meta_feature_variant": "Baseline",
+      "meta_feature_description": "Median/most-frequent imputation, scaling enabled, no extra transforms.",
+      "meta_feature_variant_key": "baseline",
+      "meta_estimator_name": "xgboost",
+      "meta_experiment_family": "feature_ablation"
+    },
+    {
+      "experiment": "feature_ablation_xgboost_poly2",
+      "target": "MedHouseVal",
+      "seed": 42,
+      "fold": 1,
+      "fit_time_sec": 0.6848939169994992,
+      "predict_time_sec": 0.008633458000076644,
+      "wall_time_sec": 0.6936347484588623,
+      "resource_before": {
+        "rss_mb": 675.046875,
+        "vms_mb": 426692.40625,
+        "cpu_user_sec": 11.608244224,
+        "cpu_system_sec": 4.164273664
+      },
+      "resource_after": {
+        "rss_mb": 697.3125,
+        "vms_mb": 426694.171875,
+        "cpu_user_sec": 14.649842688,
+        "cpu_system_sec": 4.309391872
+      },
+      "rss_delta_mb": 22.265625,
+      "model_path": "artifacts/experiments/feature_ablation_xgboost_poly2/seed_42/fold_1_pipeline.joblib",
+      "model_size_bytes": 2239417,
+      "timestamp": 1763001547.0194108,
+      "meta_ablation_suite": true,
+      "meta_preprocessing_variant": "poly2",
+      "meta_feature_variant": "Polynomial (deg=2)",
+      "meta_feature_description": "Augment numeric features with 2nd-degree polynomial terms.",
+      "meta_feature_variant_key": "poly2",
+      "meta_estimator_name": "xgboost",
+      "meta_experiment_family": "feature_ablation"
+    },
+    {
+      "experiment": "feature_ablation_xgboost_poly2",
+      "target": "MedHouseVal",
+      "seed": 42,
+      "fold": 2,
+      "fit_time_sec": 0.692817666999872,
+      "predict_time_sec": 0.008874707999893872,
+      "wall_time_sec": 0.7018020153045654,
+      "resource_before": {
+        "rss_mb": 697.984375,
+        "vms_mb": 426694.171875,
+        "cpu_user_sec": 14.950518784,
+        "cpu_system_sec": 4.340957696
+      },
+      "resource_after": {
+        "rss_mb": 710.234375,
+        "vms_mb": 426704.484375,
+        "cpu_user_sec": 18.088390656,
+        "cpu_system_sec": 4.481664512
+      },
+      "rss_delta_mb": 12.25,
+      "model_path": "artifacts/experiments/feature_ablation_xgboost_poly2/seed_42/fold_2_pipeline.joblib",
+      "model_size_bytes": 2234323,
+      "timestamp": 1763001547.784399,
+      "meta_ablation_suite": true,
+      "meta_preprocessing_variant": "poly2",
+      "meta_feature_variant": "Polynomial (deg=2)",
+      "meta_feature_description": "Augment numeric features with 2nd-degree polynomial terms.",
+      "meta_feature_variant_key": "poly2",
+      "meta_estimator_name": "xgboost",
+      "meta_experiment_family": "feature_ablation"
+    },
+    {
+      "experiment": "feature_ablation_xgboost_poly2",
+      "target": "MedHouseVal",
+      "seed": 42,
+      "fold": 3,
+      "fit_time_sec": 0.6877665419997356,
+      "predict_time_sec": 0.008674499999870022,
+      "wall_time_sec": 0.6965539455413818,
+      "resource_before": {
+        "rss_mb": 715.84375,
+        "vms_mb": 426709.296875,
+        "cpu_user_sec": 18.397298688,
+        "cpu_system_sec": 4.51084032
+      },
+      "resource_after": {
+        "rss_mb": 727.171875,
+        "vms_mb": 426719.609375,
+        "cpu_user_sec": 21.520187392,
+        "cpu_system_sec": 4.649921024
+      },
+      "rss_delta_mb": 11.328125,
+      "model_path": "artifacts/experiments/feature_ablation_xgboost_poly2/seed_42/fold_3_pipeline.joblib",
+      "model_size_bytes": 2215330,
+      "timestamp": 1763001548.5459359,
+      "meta_ablation_suite": true,
+      "meta_preprocessing_variant": "poly2",
+      "meta_feature_variant": "Polynomial (deg=2)",
+      "meta_feature_description": "Augment numeric features with 2nd-degree polynomial terms.",
+      "meta_feature_variant_key": "poly2",
+      "meta_estimator_name": "xgboost",
+      "meta_experiment_family": "feature_ablation"
+    },
+    {
+      "experiment": "feature_ablation_xgboost_poly2",
+      "target": "MedHouseVal",
+      "seed": 42,
+      "fold": 4,
+      "fit_time_sec": 0.7003999999997177,
+      "predict_time_sec": 0.008839125000122294,
+      "wall_time_sec": 0.7093498706817627,
+      "resource_before": {
+        "rss_mb": 733.375,
+        "vms_mb": 426725.421875,
+        "cpu_user_sec": 21.83588864,
+        "cpu_system_sec": 4.677997568
+      },
+      "resource_after": {
+        "rss_mb": 747.9375,
+        "vms_mb": 426735.734375,
+        "cpu_user_sec": 24.960096256,
+        "cpu_system_sec": 4.811318784
+      },
+      "rss_delta_mb": 14.5625,
+      "model_path": "artifacts/experiments/feature_ablation_xgboost_poly2/seed_42/fold_4_pipeline.joblib",
+      "model_size_bytes": 2237441,
+      "timestamp": 1763001549.318347,
+      "meta_ablation_suite": true,
+      "meta_preprocessing_variant": "poly2",
+      "meta_feature_variant": "Polynomial (deg=2)",
+      "meta_feature_description": "Augment numeric features with 2nd-degree polynomial terms.",
+      "meta_feature_variant_key": "poly2",
+      "meta_estimator_name": "xgboost",
+      "meta_experiment_family": "feature_ablation"
+    },
+    {
+      "experiment": "feature_ablation_xgboost_poly2",
+      "target": "MedHouseVal",
+      "seed": 42,
+      "fold": 5,
+      "fit_time_sec": 0.6928343330000644,
+      "predict_time_sec": 0.009418249999725958,
+      "wall_time_sec": 0.7023599147796631,
+      "resource_before": {
+        "rss_mb": 754.34375,
+        "vms_mb": 426741.546875,
+        "cpu_user_sec": 25.268064256,
+        "cpu_system_sec": 4.842775552
+      },
+      "resource_after": {
+        "rss_mb": 768.140625,
+        "vms_mb": 426751.859375,
+        "cpu_user_sec": 28.417335296,
+        "cpu_system_sec": 4.972664832
+      },
+      "rss_delta_mb": 13.796875,
+      "model_path": "artifacts/experiments/feature_ablation_xgboost_poly2/seed_42/fold_5_pipeline.joblib",
+      "model_size_bytes": 2238808,
+      "timestamp": 1763001550.0838652,
+      "meta_ablation_suite": true,
+      "meta_preprocessing_variant": "poly2",
+      "meta_feature_variant": "Polynomial (deg=2)",
+      "meta_feature_description": "Augment numeric features with 2nd-degree polynomial terms.",
+      "meta_feature_variant_key": "poly2",
+      "meta_estimator_name": "xgboost",
+      "meta_experiment_family": "feature_ablation"
+    }
+  ],
+  "explainability": [
+    {
+      "experiment": "automl_suite_autogluon",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/automl_suite_autogluon/seed_42/fold_1_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 16956,
+      "shap_time_sec": null,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 631.953125,
+        "vms_mb": 426682.734375,
+        "cpu_user_sec": 2.805745664,
+        "cpu_system_sec": 3.123869696
+      },
+      "resource_after": {
+        "rss_mb": 632.265625,
+        "vms_mb": 426682.734375,
+        "cpu_user_sec": 2.807033856,
+        "cpu_system_sec": 3.124000512
+      },
+      "shap_error": "[Errno 2] No such file or directory: '/var/folders/pk/ksqc41pj60q3589gfwhqz5tw0000gn/T/autogluon_evlxf8nl/models/CatBoost/model.pkl'"
+    },
+    {
+      "experiment": "automl_suite_autogluon",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/automl_suite_autogluon/seed_42/fold_2_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 16956,
+      "shap_time_sec": null,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 632.375,
+        "vms_mb": 426682.734375,
+        "cpu_user_sec": 2.80793472,
+        "cpu_system_sec": 3.124085504
+      },
+      "resource_after": {
+        "rss_mb": 632.453125,
+        "vms_mb": 426682.734375,
+        "cpu_user_sec": 2.808634624,
+        "cpu_system_sec": 3.124122112
+      },
+      "shap_error": "[Errno 2] No such file or directory: '/var/folders/pk/ksqc41pj60q3589gfwhqz5tw0000gn/T/autogluon_vjlguoyo/models/CatBoost/model.pkl'"
+    },
+    {
+      "experiment": "automl_suite_autogluon",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/automl_suite_autogluon/seed_42/fold_3_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 16956,
+      "shap_time_sec": null,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 632.53125,
+        "vms_mb": 426682.734375,
+        "cpu_user_sec": 2.809485312,
+        "cpu_system_sec": 3.124185856
+      },
+      "resource_after": {
+        "rss_mb": 632.53125,
+        "vms_mb": 426682.734375,
+        "cpu_user_sec": 2.81010944,
+        "cpu_system_sec": 3.12421632
+      },
+      "shap_error": "[Errno 2] No such file or directory: '/var/folders/pk/ksqc41pj60q3589gfwhqz5tw0000gn/T/autogluon_qiv0okjw/models/CatBoost/model.pkl'"
+    },
+    {
+      "experiment": "automl_suite_autogluon",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/automl_suite_autogluon/seed_42/fold_4_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 16956,
+      "shap_time_sec": null,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 632.546875,
+        "vms_mb": 426682.734375,
+        "cpu_user_sec": 2.810939904,
+        "cpu_system_sec": 3.124267264
+      },
+      "resource_after": {
+        "rss_mb": 632.546875,
+        "vms_mb": 426682.734375,
+        "cpu_user_sec": 2.811660544,
+        "cpu_system_sec": 3.124302848
+      },
+      "shap_error": "[Errno 2] No such file or directory: '/var/folders/pk/ksqc41pj60q3589gfwhqz5tw0000gn/T/autogluon_o9ak1lh9/models/CatBoost/model.pkl'"
+    },
+    {
+      "experiment": "automl_suite_autogluon",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/automl_suite_autogluon/seed_42/fold_5_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 16956,
+      "shap_time_sec": null,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 632.5625,
+        "vms_mb": 426682.734375,
+        "cpu_user_sec": 2.812497152,
+        "cpu_system_sec": 3.124346112
+      },
+      "resource_after": {
+        "rss_mb": 632.5625,
+        "vms_mb": 426682.734375,
+        "cpu_user_sec": 2.813282304,
+        "cpu_system_sec": 3.124409856
+      },
+      "shap_error": "[Errno 2] No such file or directory: '/var/folders/pk/ksqc41pj60q3589gfwhqz5tw0000gn/T/autogluon_pe0678rh/models/CatBoost/model.pkl'"
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_42/fold_1_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 1123900,
+      "shap_time_sec": 4.152214415999879,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 634.765625,
+        "vms_mb": 427706.734375,
+        "cpu_user_sec": 2.81391232,
+        "cpu_system_sec": 3.124716544
+      },
+      "resource_after": {
+        "rss_mb": 652.828125,
+        "vms_mb": 427759.953125,
+        "cpu_user_sec": 23.451533312,
+        "cpu_system_sec": 4.59624704
+      },
+      "shap_error": null
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_42/fold_2_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 1123820,
+      "shap_time_sec": 4.226438415999837,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 755.640625,
+        "vms_mb": 427884.953125,
+        "cpu_user_sec": 23.81385728,
+        "cpu_system_sec": 5.528888832
+      },
+      "resource_after": {
+        "rss_mb": 759.625,
+        "vms_mb": 427884.953125,
+        "cpu_user_sec": 45.19419904,
+        "cpu_system_sec": 7.336797696
+      },
+      "shap_error": null
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_42/fold_3_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 1123780,
+      "shap_time_sec": 4.165781790999972,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 775.609375,
+        "vms_mb": 427900.125,
+        "cpu_user_sec": 45.521166336,
+        "cpu_system_sec": 7.343435264
+      },
+      "resource_after": {
+        "rss_mb": 776.25,
+        "vms_mb": 427900.125,
+        "cpu_user_sec": 66.595172352,
+        "cpu_system_sec": 8.82946048
+      },
+      "shap_error": null
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_42/fold_4_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 1123820,
+      "shap_time_sec": 4.273364624999886,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 791.90625,
+        "vms_mb": 427914.75,
+        "cpu_user_sec": 66.92872192,
+        "cpu_system_sec": 8.835892224
+      },
+      "resource_after": {
+        "rss_mb": 792.21875,
+        "vms_mb": 427914.75,
+        "cpu_user_sec": 88.12425216,
+        "cpu_system_sec": 10.340061184
+      },
+      "shap_error": null
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_42/fold_5_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 1123844,
+      "shap_time_sec": 4.206082874999993,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 792.75,
+        "vms_mb": 427914.75,
+        "cpu_user_sec": 88.451653632,
+        "cpu_system_sec": 10.345970688
+      },
+      "resource_after": {
+        "rss_mb": 792.90625,
+        "vms_mb": 427914.75,
+        "cpu_user_sec": 109.650427904,
+        "cpu_system_sec": 11.811688448
+      },
+      "shap_error": null
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "seed": 77,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_77/fold_1_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 1123908,
+      "shap_time_sec": 4.219646999999895,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 793.515625,
+        "vms_mb": 427914.75,
+        "cpu_user_sec": 109.981057024,
+        "cpu_system_sec": 11.817522176
+      },
+      "resource_after": {
+        "rss_mb": 793.609375,
+        "vms_mb": 427914.75,
+        "cpu_user_sec": 131.24608,
+        "cpu_system_sec": 13.332173824
+      },
+      "shap_error": null
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "seed": 77,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_77/fold_2_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 1123932,
+      "shap_time_sec": 4.251262542000404,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 794.15625,
+        "vms_mb": 427914.75,
+        "cpu_user_sec": 131.583500288,
+        "cpu_system_sec": 13.339536384
+      },
+      "resource_after": {
+        "rss_mb": 794.546875,
+        "vms_mb": 427915.75,
+        "cpu_user_sec": 152.870158336,
+        "cpu_system_sec": 14.830359552
+      },
+      "shap_error": null
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "seed": 77,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_77/fold_3_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 1123868,
+      "shap_time_sec": 4.223438083000474,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 810.265625,
+        "vms_mb": 427930.375,
+        "cpu_user_sec": 153.206243328,
+        "cpu_system_sec": 14.837067776
+      },
+      "resource_after": {
+        "rss_mb": 810.65625,
+        "vms_mb": 427930.375,
+        "cpu_user_sec": 174.46264832,
+        "cpu_system_sec": 16.333500416
+      },
+      "shap_error": null
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "seed": 77,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_77/fold_4_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 1123940,
+      "shap_time_sec": 4.2522447500005,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 826.515625,
+        "vms_mb": 427945.0,
+        "cpu_user_sec": 174.806515712,
+        "cpu_system_sec": 16.340840448
+      },
+      "resource_after": {
+        "rss_mb": 826.984375,
+        "vms_mb": 427945.0,
+        "cpu_user_sec": 196.093067264,
+        "cpu_system_sec": 17.82407168
+      },
+      "shap_error": null
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "seed": 77,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_77/fold_5_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 1123876,
+      "shap_time_sec": 4.242116125000393,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 842.765625,
+        "vms_mb": 427959.625,
+        "cpu_user_sec": 196.431429632,
+        "cpu_system_sec": 17.830797312
+      },
+      "resource_after": {
+        "rss_mb": 843.125,
+        "vms_mb": 427959.625,
+        "cpu_user_sec": 217.691275264,
+        "cpu_system_sec": 19.311085568
+      },
+      "shap_error": null
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_42/fold_1_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 1460457,
+      "shap_time_sec": 35.86416283300059,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 863.5,
+        "vms_mb": 427998.34375,
+        "cpu_user_sec": 218.047660032,
+        "cpu_system_sec": 19.319717888
+      },
+      "resource_after": {
+        "rss_mb": 864.25,
+        "vms_mb": 428042.15625,
+        "cpu_user_sec": 553.53442304,
+        "cpu_system_sec": 32.057997312
+      },
+      "shap_error": null
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_42/fold_2_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 1460706,
+      "shap_time_sec": 35.35654691699983,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 881.5,
+        "vms_mb": 428060.0625,
+        "cpu_user_sec": 554.350936064,
+        "cpu_system_sec": 32.587825152
+      },
+      "resource_after": {
+        "rss_mb": 881.75,
+        "vms_mb": 428057.328125,
+        "cpu_user_sec": 890.652327936,
+        "cpu_system_sec": 44.01061888
+      },
+      "shap_error": null
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_42/fold_3_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 1460033,
+      "shap_time_sec": 35.28332083300029,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 897.65625,
+        "vms_mb": 428075.234375,
+        "cpu_user_sec": 891.392688128,
+        "cpu_system_sec": 44.502974464
+      },
+      "resource_after": {
+        "rss_mb": 897.921875,
+        "vms_mb": 428071.953125,
+        "cpu_user_sec": 1226.744004608,
+        "cpu_system_sec": 56.113631232
+      },
+      "shap_error": null
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_42/fold_4_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 1458824,
+      "shap_time_sec": 34.59890608299975,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 913.640625,
+        "vms_mb": 428089.859375,
+        "cpu_user_sec": 1227.504222208,
+        "cpu_system_sec": 56.626397184
+      },
+      "resource_after": {
+        "rss_mb": 913.890625,
+        "vms_mb": 428086.578125,
+        "cpu_user_sec": 1556.202389504,
+        "cpu_system_sec": 68.002824192
+      },
+      "shap_error": null
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_42/fold_5_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 1459568,
+      "shap_time_sec": 34.91709104200072,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 929.65625,
+        "vms_mb": 428103.9375,
+        "cpu_user_sec": 1556.980826112,
+        "cpu_system_sec": 68.514070528
+      },
+      "resource_after": {
+        "rss_mb": 929.9375,
+        "vms_mb": 428101.203125,
+        "cpu_user_sec": 1889.344159744,
+        "cpu_system_sec": 79.774867456
+      },
+      "shap_error": null
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "seed": 77,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_77/fold_1_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 1461772,
+      "shap_time_sec": 35.60283583399996,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 946.234375,
+        "vms_mb": 428118.5625,
+        "cpu_user_sec": 1890.104377344,
+        "cpu_system_sec": 80.28033024
+      },
+      "resource_after": {
+        "rss_mb": 946.484375,
+        "vms_mb": 428115.828125,
+        "cpu_user_sec": 2229.839069184,
+        "cpu_system_sec": 91.48534784
+      },
+      "shap_error": null
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "seed": 77,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_77/fold_2_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 1460154,
+      "shap_time_sec": 35.01211025000066,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 963.6875,
+        "vms_mb": 428133.1875,
+        "cpu_user_sec": 2230.578839552,
+        "cpu_system_sec": 91.983568896
+      },
+      "resource_after": {
+        "rss_mb": 963.96875,
+        "vms_mb": 428130.453125,
+        "cpu_user_sec": 2562.893545472,
+        "cpu_system_sec": 103.309451264
+      },
+      "shap_error": null
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "seed": 77,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_77/fold_3_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 1460889,
+      "shap_time_sec": 35.24511091699969,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 980.0625,
+        "vms_mb": 428148.359375,
+        "cpu_user_sec": 2563.654549504,
+        "cpu_system_sec": 103.813521408
+      },
+      "resource_after": {
+        "rss_mb": 980.359375,
+        "vms_mb": 428146.078125,
+        "cpu_user_sec": 2899.403341824,
+        "cpu_system_sec": 115.026952192
+      },
+      "shap_error": null
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "seed": 77,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_77/fold_4_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 1460560,
+      "shap_time_sec": 35.421780791000856,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 996.625,
+        "vms_mb": 428162.4375,
+        "cpu_user_sec": 2900.148617216,
+        "cpu_system_sec": 115.521560576
+      },
+      "resource_after": {
+        "rss_mb": 996.90625,
+        "vms_mb": 428160.703125,
+        "cpu_user_sec": 3236.16636928,
+        "cpu_system_sec": 127.249047552
+      },
+      "shap_error": null
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "seed": 77,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_77/fold_5_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 1459986,
+      "shap_time_sec": 35.49380850000034,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 1013.921875,
+        "vms_mb": 428177.609375,
+        "cpu_user_sec": 3236.926324736,
+        "cpu_system_sec": 127.76091648
+      },
+      "resource_after": {
+        "rss_mb": 804.0625,
+        "vms_mb": 427966.96875,
+        "cpu_user_sec": 3560.96278528,
+        "cpu_system_sec": 142.71799296
+      },
+      "shap_error": null
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_42/fold_1_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 2286103,
+      "shap_time_sec": 20.501553375000185,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 831.625,
+        "vms_mb": 427990.6875,
+        "cpu_user_sec": 3561.726148608,
+        "cpu_system_sec": 143.22753536
+      },
+      "resource_after": {
+        "rss_mb": 831.8125,
+        "vms_mb": 427987.40625,
+        "cpu_user_sec": 3643.136016384,
+        "cpu_system_sec": 144.186228736
+      },
+      "shap_error": null
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_42/fold_2_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 2286914,
+      "shap_time_sec": 16.48968212499949,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 835.859375,
+        "vms_mb": 427990.140625,
+        "cpu_user_sec": 3643.799764992,
+        "cpu_system_sec": 144.246751232
+      },
+      "resource_after": {
+        "rss_mb": 835.78125,
+        "vms_mb": 427987.40625,
+        "cpu_user_sec": 3709.40706816,
+        "cpu_system_sec": 144.70848512
+      },
+      "shap_error": null
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_42/fold_3_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 2271263,
+      "shap_time_sec": 16.181579582999802,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 836.546875,
+        "vms_mb": 427990.140625,
+        "cpu_user_sec": 3710.072651776,
+        "cpu_system_sec": 144.7718912
+      },
+      "resource_after": {
+        "rss_mb": 836.46875,
+        "vms_mb": 427987.40625,
+        "cpu_user_sec": 3773.831053312,
+        "cpu_system_sec": 145.348804608
+      },
+      "shap_error": null
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_42/fold_4_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 2273576,
+      "shap_time_sec": 20.156997334000152,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 850.875,
+        "vms_mb": 428003.765625,
+        "cpu_user_sec": 3774.468849664,
+        "cpu_system_sec": 145.40931072
+      },
+      "resource_after": {
+        "rss_mb": 850.796875,
+        "vms_mb": 428001.03125,
+        "cpu_user_sec": 3854.461042688,
+        "cpu_system_sec": 146.110578688
+      },
+      "shap_error": null
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_42/fold_5_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 2282969,
+      "shap_time_sec": 16.386632333000307,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 865.125,
+        "vms_mb": 428017.9375,
+        "cpu_user_sec": 3855.084158976,
+        "cpu_system_sec": 146.174574592
+      },
+      "resource_after": {
+        "rss_mb": 865.03125,
+        "vms_mb": 428014.65625,
+        "cpu_user_sec": 3919.720480768,
+        "cpu_system_sec": 146.689933312
+      },
+      "shap_error": null
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "seed": 77,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_77/fold_1_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 2270856,
+      "shap_time_sec": 18.612572375000127,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 879.46875,
+        "vms_mb": 428031.015625,
+        "cpu_user_sec": 3920.351199232,
+        "cpu_system_sec": 146.749210624
+      },
+      "resource_after": {
+        "rss_mb": 879.390625,
+        "vms_mb": 428028.28125,
+        "cpu_user_sec": 3994.321158144,
+        "cpu_system_sec": 147.364872192
+      },
+      "shap_error": null
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "seed": 77,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_77/fold_2_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 2282767,
+      "shap_time_sec": 20.53404437500012,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 894.28125,
+        "vms_mb": 428044.640625,
+        "cpu_user_sec": 3994.960789504,
+        "cpu_system_sec": 147.42167552
+      },
+      "resource_after": {
+        "rss_mb": 894.421875,
+        "vms_mb": 428041.90625,
+        "cpu_user_sec": 4076.384813056,
+        "cpu_system_sec": 148.159053824
+      },
+      "shap_error": null
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "seed": 77,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_77/fold_3_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 2277466,
+      "shap_time_sec": 16.238698625000325,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 908.9375,
+        "vms_mb": 428058.265625,
+        "cpu_user_sec": 4077.043318784,
+        "cpu_system_sec": 148.212056064
+      },
+      "resource_after": {
+        "rss_mb": 909.0,
+        "vms_mb": 428055.53125,
+        "cpu_user_sec": 4141.10711808,
+        "cpu_system_sec": 148.782432256
+      },
+      "shap_error": null
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "seed": 77,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_77/fold_4_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 2298628,
+      "shap_time_sec": 20.10663858299995,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 923.703125,
+        "vms_mb": 428071.890625,
+        "cpu_user_sec": 4141.7244672,
+        "cpu_system_sec": 148.844331008
+      },
+      "resource_after": {
+        "rss_mb": 924.03125,
+        "vms_mb": 428069.15625,
+        "cpu_user_sec": 4221.538664448,
+        "cpu_system_sec": 149.523267584
+      },
+      "shap_error": null
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "seed": 77,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_77/fold_5_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 2284135,
+      "shap_time_sec": 16.365728040998874,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 938.421875,
+        "vms_mb": 428085.515625,
+        "cpu_user_sec": 4222.157324288,
+        "cpu_system_sec": 149.59263744
+      },
+      "resource_after": {
+        "rss_mb": 938.390625,
+        "vms_mb": 428082.78125,
+        "cpu_user_sec": 4286.803869696,
+        "cpu_system_sec": 150.107062272
+      },
+      "shap_error": null
+    },
+    {
+      "experiment": "feature_ablation_xgboost_baseline",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/feature_ablation_xgboost_baseline/seed_42/fold_1_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 2286103,
+      "shap_time_sec": 18.55501912499858,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 952.765625,
+        "vms_mb": 428099.140625,
+        "cpu_user_sec": 4287.423315968,
+        "cpu_system_sec": 150.166061056
+      },
+      "resource_after": {
+        "rss_mb": 952.78125,
+        "vms_mb": 428096.40625,
+        "cpu_user_sec": 4361.140830208,
+        "cpu_system_sec": 150.791929856
+      },
+      "shap_error": null
+    },
+    {
+      "experiment": "feature_ablation_xgboost_baseline",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/feature_ablation_xgboost_baseline/seed_42/fold_2_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 2286914,
+      "shap_time_sec": 20.462301249999655,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 967.234375,
+        "vms_mb": 428112.765625,
+        "cpu_user_sec": 4361.786228736,
+        "cpu_system_sec": 150.848897024
+      },
+      "resource_after": {
+        "rss_mb": 967.1875,
+        "vms_mb": 428110.03125,
+        "cpu_user_sec": 4442.927661056,
+        "cpu_system_sec": 151.579721728
+      },
+      "shap_error": null
+    },
+    {
+      "experiment": "feature_ablation_xgboost_baseline",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/feature_ablation_xgboost_baseline/seed_42/fold_3_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 2271263,
+      "shap_time_sec": 18.152324083001076,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 981.5,
+        "vms_mb": 428126.390625,
+        "cpu_user_sec": 4443.57410816,
+        "cpu_system_sec": 151.638687744
+      },
+      "resource_after": {
+        "rss_mb": 253.96875,
+        "vms_mb": 428123.109375,
+        "cpu_user_sec": 4510.141906944,
+        "cpu_system_sec": 152.861212672
+      },
+      "shap_error": null
+    },
+    {
+      "experiment": "feature_ablation_xgboost_baseline",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/feature_ablation_xgboost_baseline/seed_42/fold_4_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 2273576,
+      "shap_time_sec": 15.876815249999709,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 333.25,
+        "vms_mb": 428140.5625,
+        "cpu_user_sec": 4510.79831552,
+        "cpu_system_sec": 152.930516992
+      },
+      "resource_after": {
+        "rss_mb": 336.984375,
+        "vms_mb": 428137.28125,
+        "cpu_user_sec": 4574.107140096,
+        "cpu_system_sec": 153.336692736
+      },
+      "shap_error": null
+    },
+    {
+      "experiment": "feature_ablation_xgboost_baseline",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/feature_ablation_xgboost_baseline/seed_42/fold_5_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 2282969,
+      "shap_time_sec": 16.098139542000354,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 354.265625,
+        "vms_mb": 428154.1875,
+        "cpu_user_sec": 4574.765121536,
+        "cpu_system_sec": 153.387286528
+      },
+      "resource_after": {
+        "rss_mb": 354.65625,
+        "vms_mb": 428150.90625,
+        "cpu_user_sec": 4638.452482048,
+        "cpu_system_sec": 153.709559808
+      },
+      "shap_error": null
+    },
+    {
+      "experiment": "feature_ablation_xgboost_poly2",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/feature_ablation_xgboost_poly2/seed_42/fold_1_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 2239417,
+      "shap_time_sec": 24.819420457999513,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 683.28125,
+        "vms_mb": 428153.640625,
+        "cpu_user_sec": 4639.648907264,
+        "cpu_system_sec": 153.832603648
+      },
+      "resource_after": {
+        "rss_mb": 696.953125,
+        "vms_mb": 428150.90625,
+        "cpu_user_sec": 4734.96027136,
+        "cpu_system_sec": 156.02679808
+      },
+      "shap_error": null
+    },
+    {
+      "experiment": "feature_ablation_xgboost_poly2",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/feature_ablation_xgboost_poly2/seed_42/fold_2_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 2234323,
+      "shap_time_sec": 20.321751958001187,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 698.265625,
+        "vms_mb": 428158.1875,
+        "cpu_user_sec": 4735.614058496,
+        "cpu_system_sec": 156.0887296
+      },
+      "resource_after": {
+        "rss_mb": 685.78125,
+        "vms_mb": 427983.3125,
+        "cpu_user_sec": 4815.332573184,
+        "cpu_system_sec": 157.710123008
+      },
+      "shap_error": null
+    },
+    {
+      "experiment": "feature_ablation_xgboost_poly2",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/feature_ablation_xgboost_poly2/seed_42/fold_3_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 2215330,
+      "shap_time_sec": 25.716571541999656,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 708.140625,
+        "vms_mb": 428007.03125,
+        "cpu_user_sec": 4817.696063488,
+        "cpu_system_sec": 157.832347648
+      },
+      "resource_after": {
+        "rss_mb": 164.453125,
+        "vms_mb": 428003.75,
+        "cpu_user_sec": 4908.0041472,
+        "cpu_system_sec": 161.258422272
+      },
+      "shap_error": null
+    },
+    {
+      "experiment": "feature_ablation_xgboost_poly2",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/feature_ablation_xgboost_poly2/seed_42/fold_4_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 2237441,
+      "shap_time_sec": 20.646818375000294,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 229.421875,
+        "vms_mb": 428020.109375,
+        "cpu_user_sec": 4908.697780224,
+        "cpu_system_sec": 161.329610752
+      },
+      "resource_after": {
+        "rss_mb": 233.4375,
+        "vms_mb": 428017.375,
+        "cpu_user_sec": 4988.573581312,
+        "cpu_system_sec": 163.283304448
+      },
+      "shap_error": null
+    },
+    {
+      "experiment": "feature_ablation_xgboost_poly2",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/feature_ablation_xgboost_poly2/seed_42/fold_5_pipeline.joblib",
+      "target": "MedHouseVal",
+      "model_size_bytes": 2238808,
+      "shap_time_sec": 20.69197837500178,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 250.671875,
+        "vms_mb": 428033.734375,
+        "cpu_user_sec": 4989.233135616,
+        "cpu_system_sec": 163.355590656
+      },
+      "resource_after": {
+        "rss_mb": 567.96875,
+        "vms_mb": 428031.0,
+        "cpu_user_sec": 5070.110326784,
+        "cpu_system_sec": 164.974362624
+      },
+      "shap_error": null
+    }
+  ]
+}

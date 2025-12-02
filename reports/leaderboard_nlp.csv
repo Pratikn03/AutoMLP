@@ -1,0 +1,2 @@
+dataset,framework,accuracy,f1_macro,roc_auc_ovr,avg_precision_ovr,fit_time_sec,predict_time_sec,duration_sec
+sms_spam_collection,Logistic_TFIDF,0.9641186368357071,0.9134646835159159,0.9909745655014162,0.9694523714046867,0.01896367073059082,0.007927799224853515,0.1370527744293213

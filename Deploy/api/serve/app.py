@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 from typing import Dict, Any, Optional
 import os, json, time, glob
+from pathlib import Path
 from prometheus_client import Counter, Histogram, generate_latest, CONTENT_TYPE_LATEST
 from starlette.responses import Response
 
@@ -12,6 +13,7 @@ API_ENABLE_H2O = os.getenv("API_ENABLE_H2O", "").strip().lower() in {"1", "true"
 H2O_AVAILABLE = False
 H2O_MODEL = None
 H2O = None
+H2O_METADATA_PATH = Path("Project") / "artifacts" / "h2o" / "model_metadata.json"
 
 # Simple in-memory "model" simulation; in real use, load from artifacts/
 APP_VERSION = "pro_v8"
@@ -45,27 +47,51 @@ async def startup():
                 # ignore init failures; loading may still work in some setups
                 pass
 
-            # Look for any saved model under Project/artifacts/h2o
-            mojo_dir = os.path.join("Project", "artifacts", "h2o")
-            if os.path.isdir(mojo_dir):
-                # prefer H2O binary models loadable by h2o.load_model
-                candidates = glob.glob(os.path.join(mojo_dir, "**"), recursive=False)
-                for c in candidates:
+            def _load_from_metadata() -> Optional[Any]:
+                if not H2O_METADATA_PATH.exists():
+                    return None
+                payload = json.loads(H2O_METADATA_PATH.read_text(encoding="utf-8"))
+                model_path = payload.get("model_path")
+                mojo_path = payload.get("mojo_path")
+                if model_path and Path(model_path).exists():
+                    return H2O.load_model(str(Path(model_path)))
+                if mojo_path and Path(mojo_path).exists():
                     try:
-                        # attempt to load; if it's a MOJO zip this may raise and be skipped
-                        model = H2O.load_model(c)
-                        H2O_MODEL = model
-                        break
+                        return H2O.import_mojo(str(Path(mojo_path)))
                     except Exception:
-                        continue
+                        return None
+                return None
+
+            H2O_MODEL = _load_from_metadata()
+            if H2O_MODEL is None:
+                # fallback to best-effort scan of artifact directory
+                mojo_dir = os.path.join("Project", "artifacts", "h2o")
+                if os.path.isdir(mojo_dir):
+                    candidates = glob.glob(os.path.join(mojo_dir, "*"))
+                    for c in candidates:
+                        try:
+                            model = H2O.load_model(c)
+                            H2O_MODEL = model
+                            break
+                        except Exception:
+                            continue
         except Exception:
             H2O_AVAILABLE = False
     READY = True
 
+def _status_payload() -> Dict[str, Any]:
+    return {"status": "ok", "ready": READY, "h2o_model_loaded": bool(H2O_MODEL)}
+
+@app.get("/health")
+def health():
+    payload = _status_payload()
+    REQS.labels(path="/health", status="200").inc()
+    return payload
+
 @app.get("/healthz")
 def healthz():
     REQS.labels(path="/healthz", status="200").inc()
-    return {"status":"ok"}
+    return _status_payload()
 
 @app.get("/readyz")
 def readyz():
@@ -79,6 +105,7 @@ def version():
 
 @app.get("/metrics")
 def metrics():
+    REQS.labels(path="/metrics", status="200").inc()
     return Response(generate_latest(), media_type=CONTENT_TYPE_LATEST)
 
 

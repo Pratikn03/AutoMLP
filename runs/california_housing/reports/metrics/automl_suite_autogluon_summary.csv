@@ -1,0 +1,2 @@
+seed,fit_time_sec_mean,fit_time_sec_std,predict_time_sec_mean,predict_time_sec_std,rmse_mean,rmse_std,mae_mean,mae_std,r2_mean,r2_std,target,experiment,framework
+42,29.93226163340005,8.310829786152661,0.1509824247999859,0.10897176481315275,0.43041200257325807,0.010211460894304714,0.2758526313447694,0.007529055042412614,0.8607403151347857,0.007164058529398607,MedHouseVal,automl_suite_autogluon,automl_suite_autogluon

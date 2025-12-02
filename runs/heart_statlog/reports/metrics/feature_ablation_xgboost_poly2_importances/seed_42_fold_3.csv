@@ -1,0 +1,93 @@
+feature,importance
+thal,0.06820831
+resting_electrocardiographic_results number_of_major_vessels,0.046761326
+resting_blood_pressure fasting_blood_sugar,0.046744615
+chest fasting_blood_sugar,0.044988755
+thal^2,0.040847003
+resting_electrocardiographic_results slope,0.035097603
+resting_blood_pressure number_of_major_vessels,0.028588245
+fasting_blood_sugar,0.024440533
+maximum_heart_rate_achieved thal,0.023660049
+exercise_induced_angina thal,0.023403475
+age thal,0.022774518
+class_absent,0.022586621
+fasting_blood_sugar slope,0.021974688
+exercise_induced_angina number_of_major_vessels,0.016251178
+resting_electrocardiographic_results oldpeak,0.016201084
+serum_cholestoral oldpeak,0.01605232
+resting_electrocardiographic_results exercise_induced_angina,0.014884376
+serum_cholestoral resting_electrocardiographic_results,0.014172587
+serum_cholestoral slope,0.013188996
+chest exercise_induced_angina,0.013122256
+age fasting_blood_sugar,0.012658985
+age slope,0.01265772
+resting_blood_pressure thal,0.012383394
+fasting_blood_sugar maximum_heart_rate_achieved,0.011770881
+age^2,0.011262353
+serum_cholestoral exercise_induced_angina,0.011211233
+chest serum_cholestoral,0.010641899
+maximum_heart_rate_achieved exercise_induced_angina,0.010605614
+exercise_induced_angina oldpeak,0.01049291
+maximum_heart_rate_achieved^2,0.010275132
+exercise_induced_angina,0.010129013
+age chest,0.009910824
+maximum_heart_rate_achieved slope,0.009418931
+age serum_cholestoral,0.009364915
+resting_blood_pressure oldpeak,0.00925274
+age resting_electrocardiographic_results,0.009220736
+class_present,0.009215773
+age exercise_induced_angina,0.009200797
+resting_electrocardiographic_results,0.00917769
+chest resting_blood_pressure,0.00903624
+serum_cholestoral thal,0.008953104
+maximum_heart_rate_achieved,0.008769519
+chest,0.008713432
+serum_cholestoral maximum_heart_rate_achieved,0.008333199
+resting_blood_pressure slope,0.008194521
+exercise_induced_angina slope,0.0079155145
+age,0.007915383
+serum_cholestoral,0.0077935583
+resting_blood_pressure serum_cholestoral,0.007685084
+chest oldpeak,0.0074567487
+resting_blood_pressure exercise_induced_angina,0.0072520757
+age oldpeak,0.0071830247
+age resting_blood_pressure,0.007176716
+maximum_heart_rate_achieved oldpeak,0.0071672495
+resting_blood_pressure maximum_heart_rate_achieved,0.0071615702
+chest maximum_heart_rate_achieved,0.0069693807
+resting_electrocardiographic_results maximum_heart_rate_achieved,0.0067433575
+age maximum_heart_rate_achieved,0.006584
+resting_blood_pressure,0.0065024495
+oldpeak,0.006461434
+resting_blood_pressure resting_electrocardiographic_results,0.0063764667
+oldpeak thal,0.0063186437
+maximum_heart_rate_achieved number_of_major_vessels,0.006230329
+chest slope,0.0061996137
+slope thal,0.0060858186
+resting_blood_pressure^2,0.005632594
+chest resting_electrocardiographic_results,0.005547624
+oldpeak slope,0.005377702
+chest number_of_major_vessels,0.0053523965
+serum_cholestoral^2,0.0053033596
+number_of_major_vessels,0.0052511636
+serum_cholestoral number_of_major_vessels,0.00521728
+slope,0.0051474776
+age number_of_major_vessels,0.0036866164
+oldpeak number_of_major_vessels,0.0035680232
+number_of_major_vessels thal,0.0028229214
+slope number_of_major_vessels,0.0023481753
+chest thal,0.0007661635
+number_of_major_vessels^2,0.0
+slope^2,0.0
+chest^2,0.0
+oldpeak^2,0.0
+exercise_induced_angina^2,0.0
+resting_electrocardiographic_results thal,0.0
+resting_electrocardiographic_results^2,0.0
+fasting_blood_sugar thal,0.0
+fasting_blood_sugar number_of_major_vessels,0.0
+fasting_blood_sugar oldpeak,0.0
+fasting_blood_sugar exercise_induced_angina,0.0
+fasting_blood_sugar resting_electrocardiographic_results,0.0
+fasting_blood_sugar^2,0.0
+serum_cholestoral fasting_blood_sugar,0.0

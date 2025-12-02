@@ -1,0 +1,11 @@
+framework,estimator,variant_key,variant_name,variant_description,metric,mean,std,n,delta_vs_baseline
+feature_ablation_xgboost_baseline,xgboost,baseline,Baseline,"Median/most-frequent imputation, scaling enabled, no extra transforms.",fit_time_sec,0.5137089166004444,0.004975653123728865,5,0.0
+feature_ablation_xgboost_poly2,xgboost,poly2,Polynomial (deg=2),Augment numeric features with 2nd-degree polynomial terms.,fit_time_sec,0.5451009751996025,0.005122616678466277,5,
+feature_ablation_xgboost_baseline,xgboost,baseline,Baseline,"Median/most-frequent imputation, scaling enabled, no extra transforms.",mae,0.03743824735283848,0.0016464308358771513,5,0.0
+feature_ablation_xgboost_poly2,xgboost,poly2,Polynomial (deg=2),Augment numeric features with 2nd-degree polynomial terms.,mae,0.03740286156535144,0.0013793852692535603,5,
+feature_ablation_xgboost_baseline,xgboost,baseline,Baseline,"Median/most-frequent imputation, scaling enabled, no extra transforms.",predict_time_sec,0.00196743320266246,4.817964831348079e-05,5,0.0
+feature_ablation_xgboost_poly2,xgboost,poly2,Polynomial (deg=2),Augment numeric features with 2nd-degree polynomial terms.,predict_time_sec,0.00451150820008476,3.8277568810772205e-05,5,
+feature_ablation_xgboost_baseline,xgboost,baseline,Baseline,"Median/most-frequent imputation, scaling enabled, no extra transforms.",r2,0.12453758716583249,0.07203493979345,5,0.0
+feature_ablation_xgboost_poly2,xgboost,poly2,Polynomial (deg=2),Augment numeric features with 2nd-degree polynomial terms.,r2,0.1305499672889709,0.05012172135054789,5,
+feature_ablation_xgboost_baseline,xgboost,baseline,Baseline,"Median/most-frequent imputation, scaling enabled, no extra transforms.",rmse,0.04442659318447108,0.0017044861018885346,5,0.0
+feature_ablation_xgboost_poly2,xgboost,poly2,Polynomial (deg=2),Augment numeric features with 2nd-degree polynomial terms.,rmse,0.04428897649049754,0.0010949677118841108,5,

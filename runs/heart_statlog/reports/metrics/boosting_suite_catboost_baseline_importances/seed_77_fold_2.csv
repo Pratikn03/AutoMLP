@@ -1,0 +1,15 @@
+feature,importance
+serum_cholestoral,16.850314152095955
+age,13.28520220535192
+maximum_heart_rate_achieved,12.875394117553247
+thal,10.458525099079429
+oldpeak,9.080081925982315
+resting_blood_pressure,8.266536930435878
+slope,5.176023770967365
+resting_electrocardiographic_results,4.908361099866289
+number_of_major_vessels,4.795207692012888
+chest,4.300832598492001
+class_absent,3.4545765886668818
+exercise_induced_angina,2.570970449886852
+class_present,2.548087301248511
+fasting_blood_sugar,1.429886068360473

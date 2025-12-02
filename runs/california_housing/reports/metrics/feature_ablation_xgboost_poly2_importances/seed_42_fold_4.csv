@@ -1,0 +1,45 @@
+feature,importance
+MedInc Longitude,0.4781288
+MedInc^2,0.046310775
+MedInc AveBedrms,0.045448273
+AveOccup Latitude,0.04040067
+MedInc,0.038782485
+AveOccup^2,0.029356498
+HouseAge Longitude,0.027686758
+MedInc HouseAge,0.022998672
+Longitude^2,0.02037862
+AveOccup Longitude,0.020162819
+AveRooms AveOccup,0.018941374
+Latitude,0.01811961
+AveOccup,0.01789123
+MedInc Latitude,0.017470274
+Longitude,0.015672013
+Latitude^2,0.011842897
+AveRooms Latitude,0.01049407
+Latitude Longitude,0.01009504
+HouseAge AveBedrms,0.007555344
+AveBedrms AveOccup,0.0061780643
+AveRooms Longitude,0.006148545
+HouseAge AveRooms,0.0055818954
+MedInc Population,0.0051933206
+HouseAge Population,0.005032521
+MedInc AveRooms,0.0049924087
+AveBedrms Longitude,0.0047904914
+AveRooms^2,0.004634205
+HouseAge AveOccup,0.00433779
+AveRooms AveBedrms,0.004262272
+HouseAge Latitude,0.0039863135
+Population AveOccup,0.003980532
+AveBedrms Population,0.0039692773
+Population Longitude,0.0037878174
+MedInc AveOccup,0.0037666108
+AveBedrms^2,0.003692911
+Population Latitude,0.0036415188
+AveRooms,0.0035275142
+AveRooms Population,0.0034625393
+Population^2,0.0034608317
+AveBedrms Latitude,0.0033218525
+AveBedrms,0.0029819887
+HouseAge^2,0.0026778814
+Population,0.0025825673
+HouseAge,0.0022722268

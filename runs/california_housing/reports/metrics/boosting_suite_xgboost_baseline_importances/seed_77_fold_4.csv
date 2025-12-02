@@ -1,0 +1,9 @@
+feature,importance
+MedInc,0.4342254
+AveOccup,0.13585417
+Latitude,0.12186815
+Longitude,0.11581318
+AveRooms,0.06950661
+HouseAge,0.061460175
+AveBedrms,0.036658783
+Population,0.024613578

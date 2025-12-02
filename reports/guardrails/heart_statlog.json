@@ -1,0 +1,8 @@
+{
+  "dataset": "heart_statlog",
+  "path": "src/data/datasets/tabular/heart_statlog.csv",
+  "rows": 270,
+  "columns": 14,
+  "issues": [],
+  "status": "pass"
+}

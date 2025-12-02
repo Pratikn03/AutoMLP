@@ -10,6 +10,12 @@ st.title("AutoML Leaderboard")
 
 RUNS_ROOT = Path("runs")
 REPORTS_ROOT = Path("reports")
+VISION_LEADERBOARD = REPORTS_ROOT / "leaderboard_vision.csv"
+VISION_DATASET_NAME = "Vision (images)"
+AUDIO_LEADERBOARD = REPORTS_ROOT / "leaderboard_audio.csv"
+AUDIO_DATASET_NAME = "Audio (speech)"
+NLP_LEADERBOARD = REPORTS_ROOT / "leaderboard_nlp.csv"
+NLP_DATASET_NAME = "Text (NLP)"
 
 
 def available_datasets() -> list[str]:
@@ -157,23 +163,47 @@ def render_metric_summary(df: pd.DataFrame) -> None:
 
 dataset_options = available_datasets()
 aggregated_path = REPORTS_ROOT / "leaderboard_multi.csv"
+vision_df = load_optional_csv(VISION_LEADERBOARD)
+audio_df = load_optional_csv(AUDIO_LEADERBOARD)
+nlp_df = load_optional_csv(NLP_LEADERBOARD)
 if aggregated_path.exists():
     dataset_options.append("Combined (all datasets)")
+if not vision_df.empty and VISION_DATASET_NAME not in dataset_options:
+    dataset_options.append(VISION_DATASET_NAME)
+if not audio_df.empty and AUDIO_DATASET_NAME not in dataset_options:
+    dataset_options.append(AUDIO_DATASET_NAME)
+if not nlp_df.empty and NLP_DATASET_NAME not in dataset_options:
+    dataset_options.append(NLP_DATASET_NAME)
 
-if not dataset_options:
-    fallback = REPORTS_ROOT / "leaderboard.csv"
-    if fallback.exists():
-        df = pd.read_csv(fallback)
-        st.info("Showing fallback leaderboard (single dataset).")
-        render_leaderboard(df)
-    else:
-        st.warning("No leaderboard yet. Run `python scripts/run_all.py` first.")
-    st.stop()
+    if not dataset_options:
+        fallback = REPORTS_ROOT / "leaderboard.csv"
+        if fallback.exists():
+            df = pd.read_csv(fallback)
+            st.info("Showing fallback leaderboard (single dataset).")
+            render_leaderboard(df)
+        else:
+            st.warning("No leaderboard yet. Run `python scripts/run_all.py` first.")
+        st.stop()
 
 selected = st.sidebar.selectbox("Dataset", dataset_options)
 
 if selected == "Combined (all datasets)":
     df = pd.read_csv(aggregated_path)
+    if not vision_df.empty:
+        if "dataset" not in vision_df.columns:
+            vision_df = vision_df.copy()
+            vision_df["dataset"] = "vision"
+        df = pd.concat([df, vision_df], ignore_index=True)
+    if not audio_df.empty:
+        if "dataset" not in audio_df.columns:
+            audio_df = audio_df.copy()
+            audio_df["dataset"] = "audio"
+        df = pd.concat([df, audio_df], ignore_index=True)
+    if not nlp_df.empty:
+        if "dataset" not in nlp_df.columns:
+            nlp_df = nlp_df.copy()
+            nlp_df["dataset"] = "nlp"
+        df = pd.concat([df, nlp_df], ignore_index=True)
     datasets_in_df = sorted(df["dataset"].unique()) if "dataset" in df.columns else []
     if datasets_in_df:
         chosen = st.sidebar.multiselect("Filter datasets", datasets_in_df, default=datasets_in_df)
@@ -181,6 +211,24 @@ if selected == "Combined (all datasets)":
             df = df[df["dataset"].isin(chosen)]
     render_leaderboard(df)
     render_metric_summary(df)
+elif selected == VISION_DATASET_NAME:
+    if vision_df.empty:
+        st.error("Vision leaderboard missing. Run the vision training script first.")
+        st.stop()
+    render_leaderboard(vision_df)
+    render_metric_summary(vision_df)
+elif selected == AUDIO_DATASET_NAME:
+    if audio_df.empty:
+        st.error("Audio leaderboard missing. Run the audio training script first.")
+        st.stop()
+    render_leaderboard(audio_df)
+    render_metric_summary(audio_df)
+elif selected == NLP_DATASET_NAME:
+    if nlp_df.empty:
+        st.error("NLP leaderboard missing. Run the NLP training script first.")
+        st.stop()
+    render_leaderboard(nlp_df)
+    render_metric_summary(nlp_df)
 else:
     leaderboard_path = RUNS_ROOT / selected / "reports" / "leaderboard.csv"
     if not leaderboard_path.exists():

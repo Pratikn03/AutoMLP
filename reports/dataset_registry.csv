@@ -1,4 +1,4 @@
 dataset,path,rows,columns,target_candidates
-modeldata_demo,/Users/pratik_n/Downloads/Pro_v8_AllInOne/Project/src/data/modeldata_demo.csv,1200,8,"['Region', 'PolicyType', 'Channel', 'PrevClaims', 'HasAddon']"
-modeldata,/Users/pratik_n/Downloads/Pro_v8_AllInOne/src/data/modeldata.csv,162090,351,"['IsSurplusLines', 'IsAgencyBilled', 'ProducerHoldFlag', 'BinderExpectedFlag', 'IsRenewal']"
-salary,/Users/pratik_n/Downloads/Pro_v8_AllInOne/src/data/salary.csv,40,5,"['Gender', 'Age', 'Years of service', 'Education level']"
+timeseries_demo,/Users/pratik_n/Downloads/Pro_v8_AllInOne/Project/src/data/timeseries_demo.csv,180,2,[]
+_salary_skipped,/Users/pratik_n/Downloads/Pro_v8_AllInOne/src/data/datasets/tabular/_salary_skipped.csv,40,5,"['Gender', 'Age', 'Years of service', 'Education level']"
+breast_cancer,/Users/pratik_n/Downloads/Pro_v8_AllInOne/src/data/datasets/tabular/breast_cancer.csv,569,31,['target']

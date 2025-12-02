@@ -1,0 +1,41 @@
+{
+  "experiment_name": "automl_suite_autogluon",
+  "seeds": [
+    42
+  ],
+  "n_splits": 5,
+  "metrics": [
+    "accuracy",
+    "precision",
+    "recall",
+    "f1"
+  ],
+  "preprocessing": {
+    "numeric_imputer_strategy": "median",
+    "categorical_imputer_strategy": "most_frequent",
+    "scale_numeric": false,
+    "poly_degree": null,
+    "binning_strategy": null,
+    "n_bins": 5,
+    "bin_encode": "onehot-dense",
+    "vif_threshold": null
+  },
+  "output_dir": "reports/metrics",
+  "artifact_dir": "artifacts/experiments",
+  "figure_dir": "figures/feature_importance",
+  "save_pipeline": true,
+  "save_feature_importance": true,
+  "feature_importance_top_k": 20,
+  "metadata": {},
+  "target": "V5",
+  "estimator": "AutoGluonClassifier",
+  "estimator_params": {
+    "time_limit": 600,
+    "presets": "medium_quality",
+    "eval_metric": null,
+    "problem_type": null,
+    "hyperparameters": null,
+    "verbosity": 0,
+    "task": "auto"
+  }
+}

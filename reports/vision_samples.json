@@ -1,0 +1,50 @@
+[
+  {
+    "actual": "cat",
+    "pred": "cat"
+  },
+  {
+    "actual": "ship",
+    "pred": "ship"
+  },
+  {
+    "actual": "ship",
+    "pred": "ship"
+  },
+  {
+    "actual": "airplane",
+    "pred": "airplane"
+  },
+  {
+    "actual": "frog",
+    "pred": "frog"
+  },
+  {
+    "actual": "frog",
+    "pred": "frog"
+  },
+  {
+    "actual": "automobile",
+    "pred": "truck"
+  },
+  {
+    "actual": "frog",
+    "pred": "frog"
+  },
+  {
+    "actual": "cat",
+    "pred": "cat"
+  },
+  {
+    "actual": "automobile",
+    "pred": "automobile"
+  },
+  {
+    "actual": "airplane",
+    "pred": "airplane"
+  },
+  {
+    "actual": "truck",
+    "pred": "truck"
+  }
+]

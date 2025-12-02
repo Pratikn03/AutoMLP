@@ -1,0 +1,13 @@
+name,modality,task,n_samples,n_features,n_classes,source,license
+fsdd,audio,audio classification,50,,10,Free Spoken Digit Dataset,MIT license
+_salary_skipped,tabular,regression,40,4,,Synthetic HR comp sample,CC0 (user provided)
+breast_cancer,tabular,classification,569,30,2,UCI / sklearn breast cancer,CC BY 4.0
+diabetes_regression,tabular,regression,442,10,,UCI / sklearn diabetes,CC BY 4.0
+heart_statlog,tabular,classification,270,13,2,UCI Statlog (Heart),CC BY 4.0
+iris,tabular,classification,150,4,3,UCI Iris,Public Domain
+modeldata,tabular,classification,162090,350,2,Tidymodels modeldata insurance sample,CC BY 4.0
+titanic,tabular,classification,2201,3,2,Kaggle Titanic (preprocessed),CC0
+train,tabular,classification,150,4,3,Iris CSV (demo),Public Domain
+wine,tabular,classification,178,13,3,UCI Wine,CC BY 4.0
+cifar10,vision,image classification,50,,10,CIFAR-10 (MIT/Toronto),MIT license
+sms_spam_collection,text,text classification,5574,2,2,UCI SMSSpamCollection,Public Domain

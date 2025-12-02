@@ -18,6 +18,7 @@ from Project.utils.standardize import (
 SUMMARY_PATH = Path("reports/framework_summary.csv")
 COMPARISONS_PATH = Path("reports/framework_comparisons.csv")
 LEADERBOARD_PATH = Path("reports/leaderboard.csv")
+OPS_PATH = Path("reports/leaderboard_ops.csv")
 
 
 def _style() -> None:
@@ -26,20 +27,23 @@ def _style() -> None:
     plt.rcParams.update({"figure.dpi": 320, "savefig.dpi": 320})
 
 
-def load_data() -> tuple[Dict[str, pd.DataFrame], pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+def _safe_read_csv(path: Path) -> pd.DataFrame:
+    if not path.exists() or path.stat().st_size == 0:
+        return pd.DataFrame()
+    try:
+        return pd.read_csv(path)
+    except Exception as exc:  # pragma: no cover - defensive
+        print(f"[plot_comparisons] Skipping {path}: {exc}")
+        return pd.DataFrame()
+
+
+def load_data() -> tuple[Dict[str, pd.DataFrame], pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame]:
     metrics = load_metrics()
-    summary = pd.read_csv(SUMMARY_PATH) if SUMMARY_PATH.exists() else pd.DataFrame()
-    comparisons = (
-        pd.read_csv(COMPARISONS_PATH)
-        if COMPARISONS_PATH.exists()
-        else pd.DataFrame()
-    )
-    leaderboard = (
-        pd.read_csv(LEADERBOARD_PATH)
-        if LEADERBOARD_PATH.exists()
-        else pd.DataFrame()
-    )
-    return metrics, summary, comparisons, leaderboard
+    summary = _safe_read_csv(SUMMARY_PATH)
+    comparisons = _safe_read_csv(COMPARISONS_PATH)
+    leaderboard = _safe_read_csv(LEADERBOARD_PATH)
+    ops = _safe_read_csv(OPS_PATH)
+    return metrics, summary, comparisons, leaderboard, ops
 
 
 def plot_mean_ci(summary: pd.DataFrame) -> List[str]:
@@ -200,9 +204,107 @@ def plot_leaderboard(leaderboard: pd.DataFrame) -> List[str]:
     return paths
 
 
+def plot_classifier_histograms(leaderboard: pd.DataFrame) -> str | None:
+    if leaderboard.empty:
+        return None
+    required = {"framework", "accuracy", "f1_macro"}
+    if not required.issubset(leaderboard.columns):
+        return None
+    grouped = (
+        leaderboard.groupby("framework")[["accuracy", "f1_macro"]]
+        .mean(numeric_only=True)
+        .dropna()
+        .sort_values("accuracy", ascending=True)
+    )
+    if grouped.empty:
+        return None
+    fig, axes = plt.subplots(1, 2, figsize=(12, 5), sharey=True)
+    axes[0].barh(grouped.index, grouped["accuracy"], color="slateblue")
+    axes[0].set_title("Classifier Accuracy")
+    axes[0].set_xlabel("Accuracy")
+    axes[1].barh(grouped.index, grouped["f1_macro"], color="darkorange")
+    axes[1].set_title("Classifier F1 Macro")
+    axes[1].set_xlabel("F1 Macro")
+    plt.tight_layout()
+    path = "figures/classifier_accuracy_precision.png"
+    fig.savefig(path, bbox_inches="tight")
+    plt.close(fig)
+    return path
+
+
+def plot_accuracy_runtime_pareto(ops_table: pd.DataFrame) -> str | None:
+    """Scatter plot accuracy vs predict_time_p95 with Pareto frontier highlighted."""
+    path = "figures/pareto_accuracy_runtime.png"
+    if ops_table.empty:
+        fig, ax = plt.subplots(figsize=(6, 3))
+        ax.axis("off")
+        ax.text(0.5, 0.5, "No runtime data available yet.\nRun the full pipeline to populate metrics.", ha="center", va="center")
+        fig.savefig(path, bbox_inches="tight")
+        plt.close(fig)
+        return path
+    required = {"framework", "accuracy", "predict_time_p95"}
+    if not required.issubset(ops_table.columns):
+        fig, ax = plt.subplots(figsize=(6, 3))
+        ax.axis("off")
+        ax.text(0.5, 0.5, "leaderboard_ops.csv missing accuracy/runtime columns.", ha="center", va="center")
+        fig.savefig(path, bbox_inches="tight")
+        plt.close(fig)
+        return path
+    df = ops_table[list(required)].copy()
+    df = df.replace([np.inf, -np.inf], np.nan).dropna()
+    df = df[df["predict_time_p95"] > 0]
+    if df.empty:
+        return None
+    df = df.sort_values("predict_time_p95").reset_index(drop=True)
+    pareto_flags: List[bool] = []
+    best_acc = -np.inf
+    for _, row in df.iterrows():
+        acc = float(row["accuracy"])
+        if acc >= best_acc - 1e-10:
+            pareto_flags.append(True)
+            best_acc = max(best_acc, acc)
+        else:
+            pareto_flags.append(False)
+    df["on_pareto"] = pareto_flags
+
+    fig, ax = plt.subplots(figsize=(8, 5))
+    off = df[~df["on_pareto"]]
+    on = df[df["on_pareto"]]
+    ax.scatter(
+        off["predict_time_p95"],
+        off["accuracy"],
+        color="tab:gray",
+        alpha=0.6,
+        label="Frameworks",
+    )
+    ax.scatter(
+        on["predict_time_p95"],
+        on["accuracy"],
+        color="tab:orange",
+        label="Pareto front",
+    )
+    for _, row in on.iterrows():
+        ax.annotate(
+            row["framework"],
+            xy=(row["predict_time_p95"], row["accuracy"]),
+            xytext=(4, 4),
+            textcoords="offset points",
+            fontsize=8,
+        )
+    ax.set_xlabel("Predict time p95 (sec)")
+    ax.set_ylabel("Accuracy")
+    ax.set_title("Accuracy vs Runtime Pareto Frontier")
+    ax.grid(True, alpha=0.3)
+    ax.legend()
+    plt.tight_layout()
+    fig.savefig(path, bbox_inches="tight")
+    plt.close(fig)
+    return path
+
+
 def main() -> None:
     _style()
-    metrics, summary, comparisons, leaderboard = load_data()
+    metrics, summary, comparisons, leaderboard, ops = load_data()
 
     produced: List[str] = []
     produced.extend(plot_mean_ci(summary))
@@ -212,6 +314,12 @@ def main() -> None:
         produced.append(box_path)
     produced.extend(plot_heatmaps(comparisons))
     produced.extend(plot_leaderboard(leaderboard))
+    pareto_path = plot_accuracy_runtime_pareto(ops)
+    if pareto_path:
+        produced.append(pareto_path)
+    hist_path = plot_classifier_histograms(leaderboard)
+    if hist_path:
+        produced.append(hist_path)
 
     if produced:
         print("Generated visualizations:")
@@ -223,4 +331,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

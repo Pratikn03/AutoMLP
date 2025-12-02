@@ -1,0 +1,122 @@
+[
+  {
+    "framework":"feature_ablation_xgboost_baseline",
+    "estimator":"xgboost",
+    "variant_key":"baseline",
+    "variant_name":"Baseline",
+    "variant_description":"Median\/most-frequent imputation, scaling enabled, no extra transforms.",
+    "metric":"fit_time_sec",
+    "mean":0.5137089166,
+    "std":0.0049756531,
+    "n":5,
+    "delta_vs_baseline":0.0
+  },
+  {
+    "framework":"feature_ablation_xgboost_poly2",
+    "estimator":"xgboost",
+    "variant_key":"poly2",
+    "variant_name":"Polynomial (deg=2)",
+    "variant_description":"Augment numeric features with 2nd-degree polynomial terms.",
+    "metric":"fit_time_sec",
+    "mean":0.5451009752,
+    "std":0.0051226167,
+    "n":5,
+    "delta_vs_baseline":null
+  },
+  {
+    "framework":"feature_ablation_xgboost_baseline",
+    "estimator":"xgboost",
+    "variant_key":"baseline",
+    "variant_name":"Baseline",
+    "variant_description":"Median\/most-frequent imputation, scaling enabled, no extra transforms.",
+    "metric":"mae",
+    "mean":0.0374382474,
+    "std":0.0016464308,
+    "n":5,
+    "delta_vs_baseline":0.0
+  },
+  {
+    "framework":"feature_ablation_xgboost_poly2",
+    "estimator":"xgboost",
+    "variant_key":"poly2",
+    "variant_name":"Polynomial (deg=2)",
+    "variant_description":"Augment numeric features with 2nd-degree polynomial terms.",
+    "metric":"mae",
+    "mean":0.0374028616,
+    "std":0.0013793853,
+    "n":5,
+    "delta_vs_baseline":null
+  },
+  {
+    "framework":"feature_ablation_xgboost_baseline",
+    "estimator":"xgboost",
+    "variant_key":"baseline",
+    "variant_name":"Baseline",
+    "variant_description":"Median\/most-frequent imputation, scaling enabled, no extra transforms.",
+    "metric":"predict_time_sec",
+    "mean":0.0019674332,
+    "std":0.0000481796,
+    "n":5,
+    "delta_vs_baseline":0.0
+  },
+  {
+    "framework":"feature_ablation_xgboost_poly2",
+    "estimator":"xgboost",
+    "variant_key":"poly2",
+    "variant_name":"Polynomial (deg=2)",
+    "variant_description":"Augment numeric features with 2nd-degree polynomial terms.",
+    "metric":"predict_time_sec",
+    "mean":0.0045115082,
+    "std":0.0000382776,
+    "n":5,
+    "delta_vs_baseline":null
+  },
+  {
+    "framework":"feature_ablation_xgboost_baseline",
+    "estimator":"xgboost",
+    "variant_key":"baseline",
+    "variant_name":"Baseline",
+    "variant_description":"Median\/most-frequent imputation, scaling enabled, no extra transforms.",
+    "metric":"r2",
+    "mean":0.1245375872,
+    "std":0.0720349398,
+    "n":5,
+    "delta_vs_baseline":0.0
+  },
+  {
+    "framework":"feature_ablation_xgboost_poly2",
+    "estimator":"xgboost",
+    "variant_key":"poly2",
+    "variant_name":"Polynomial (deg=2)",
+    "variant_description":"Augment numeric features with 2nd-degree polynomial terms.",
+    "metric":"r2",
+    "mean":0.1305499673,
+    "std":0.0501217214,
+    "n":5,
+    "delta_vs_baseline":null
+  },
+  {
+    "framework":"feature_ablation_xgboost_baseline",
+    "estimator":"xgboost",
+    "variant_key":"baseline",
+    "variant_name":"Baseline",
+    "variant_description":"Median\/most-frequent imputation, scaling enabled, no extra transforms.",
+    "metric":"rmse",
+    "mean":0.0444265932,
+    "std":0.0017044861,
+    "n":5,
+    "delta_vs_baseline":0.0
+  },
+  {
+    "framework":"feature_ablation_xgboost_poly2",
+    "estimator":"xgboost",
+    "variant_key":"poly2",
+    "variant_name":"Polynomial (deg=2)",
+    "variant_description":"Augment numeric features with 2nd-degree polynomial terms.",
+    "metric":"rmse",
+    "mean":0.0442889765,
+    "std":0.0010949677,
+    "n":5,
+    "delta_vs_baseline":null
+  }
+]

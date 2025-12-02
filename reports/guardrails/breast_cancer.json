@@ -1,0 +1,8 @@
+{
+  "dataset": "breast_cancer",
+  "path": "src/data/datasets/tabular/breast_cancer.csv",
+  "rows": 569,
+  "columns": 31,
+  "issues": [],
+  "status": "pass"
+}

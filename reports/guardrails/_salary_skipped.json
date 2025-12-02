@@ -1,0 +1,8 @@
+{
+  "dataset": "_salary_skipped",
+  "path": "src/data/datasets/tabular/_salary_skipped.csv",
+  "rows": 40,
+  "columns": 5,
+  "issues": [],
+  "status": "pass"
+}

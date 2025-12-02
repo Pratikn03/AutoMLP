@@ -9,8 +9,9 @@ from typing import Any, Callable, Dict, Iterable, Literal, Optional
 
 import numpy as np
 import pandas as pd
-from sklearn.base import BaseEstimator, ClassifierMixin
-from sklearn.model_selection import ParameterSampler, StratifiedKFold, cross_val_score
+from sklearn.base import BaseEstimator, ClassifierMixin, RegressorMixin
+from sklearn.model_selection import KFold, ParameterSampler, StratifiedKFold, cross_val_score
+from sklearn.utils.multiclass import type_of_target
 
 from Project.experiments.runner import ExperimentConfig, ExperimentRunner
 
@@ -25,14 +26,29 @@ except Exception:  # pragma: no cover - optional dependency
     XGBClassifier = None  # type: ignore
 
 try:
+    from xgboost import XGBRegressor
+except Exception:  # pragma: no cover - optional dependency
+    XGBRegressor = None  # type: ignore
+
+try:
     from lightgbm import LGBMClassifier
 except Exception:  # pragma: no cover - optional dependency
     LGBMClassifier = None  # type: ignore
 
 try:
+    from lightgbm import LGBMRegressor
+except Exception:  # pragma: no cover - optional dependency
+    LGBMRegressor = None  # type: ignore
+
+try:
     from catboost import CatBoostClassifier
 except Exception:  # pragma: no cover - optional dependency
     CatBoostClassifier = None  # type: ignore
+
+try:
+    from catboost import CatBoostRegressor
+except Exception:  # pragma: no cover - optional dependency
+    CatBoostRegressor = None  # type: ignore
 
 
 BoostingName = Literal["xgboost", "lightgbm", "catboost"]
@@ -68,9 +84,12 @@ DEFAULT_SEARCH_SPACE: Dict[BoostingName, Dict[str, Dict[str, Any]]] = {
 }
 
 
+CLASSIFICATION_SCORING = {"accuracy", "precision", "recall", "f1", "f1_macro", "roc_auc", "roc_auc_ovr"}
+
+
 @dataclass
-class TunableBoostingClassifier(ClassifierMixin, BaseEstimator):
-    """Classifier wrapper adding optional tuning around gradient boosting models."""
+class TunableBoostingClassifier(ClassifierMixin, RegressorMixin, BaseEstimator):
+    """Gradient boosting wrapper supporting optional tuning for classification or regression."""
 
     model_name: BoostingName
     base_params: Optional[Dict[str, Any]] = None
@@ -79,13 +98,14 @@ class TunableBoostingClassifier(ClassifierMixin, BaseEstimator):
     n_iter: int = 20
     n_trials: int = 25
     inner_cv: int = 3
-    scoring: str = "f1"
+    scoring: str = "auto"
     n_jobs: int = -1
     random_state: Optional[int] = None
     verbosity: int = 0
     best_estimator_: Any = field(init=False, default=None, repr=False)
     best_params_: Dict[str, Any] = field(init=False, default_factory=dict, repr=False)
     best_score_: float = field(init=False, default=float("nan"), repr=False)
+    _task_type: Literal["classification", "regression"] = field(init=False, default="classification", repr=False)
 
     def fit(self, X: pd.DataFrame, y: pd.Series):  # type: ignore[override]
         X_arr = X.to_numpy() if hasattr(X, "to_numpy") else np.asarray(X)
@@ -94,16 +114,21 @@ class TunableBoostingClassifier(ClassifierMixin, BaseEstimator):
         rng_seed = int(self.random_state) if self.random_state is not None else 42
         self._rng = np.random.default_rng(rng_seed)
 
+        target_kind = type_of_target(y_arr)
+        self._task_type = "regression" if target_kind in {"continuous", "continuous-multioutput"} else "classification"
+
         search_space = self.tuning_param_space or DEFAULT_SEARCH_SPACE[self.model_name]
         best_params: Dict[str, Any] = {}
         best_score = -math.inf
 
+        scoring_name = self._resolve_scoring()
+
         if self.tuning_strategy == "random":
-            best_params, best_score = self._random_search(X_arr, y_arr, search_space)
+            best_params, best_score = self._random_search(X_arr, y_arr, search_space, scoring_name)
         elif self.tuning_strategy == "optuna":
             if optuna is None:
                 raise ImportError("Optuna is not installed; cannot run optuna tuning.")
-            best_params, best_score = self._optuna_search(X_arr, y_arr, search_space)
+            best_params, best_score = self._optuna_search(X_arr, y_arr, search_space, scoring_name)
         else:
             best_score = float("nan")
 
@@ -126,8 +151,8 @@ class TunableBoostingClassifier(ClassifierMixin, BaseEstimator):
     def predict_proba(self, X):  # type: ignore[override]
         if self.best_estimator_ is None:
             raise RuntimeError("Estimator not fitted. Call fit before predict.")
-        if not hasattr(self.best_estimator_, "predict_proba"):
-            raise AttributeError("Underlying estimator does not support predict_proba")
+        if self._task_type == "regression" or not hasattr(self.best_estimator_, "predict_proba"):
+            raise AttributeError("Predict probabilities unavailable for regression or this estimator")
         return self.best_estimator_.predict_proba(X)
 
     def decision_function(self, X):  # type: ignore[override]
@@ -164,36 +189,36 @@ class TunableBoostingClassifier(ClassifierMixin, BaseEstimator):
             setattr(self, key, value)
         return self
 
-    def _random_search(self, X: np.ndarray, y: np.ndarray, space: Dict[str, Dict[str, Any]]):
+    def _random_search(self, X: np.ndarray, y: np.ndarray, space: Dict[str, Dict[str, Any]], scoring: str):
         distributions = self._param_distributions_for_random(space)
         sampler_seed = int(self._rng.integers(1, 10_000))
         sampler = ParameterSampler(distributions, n_iter=self.n_iter, random_state=sampler_seed)
         cv_seed = int(self._rng.integers(1, 10_000))
-        cv = StratifiedKFold(n_splits=self.inner_cv, shuffle=True, random_state=cv_seed)
+        cv = self._make_inner_cv(cv_seed)
         best_score = -math.inf
         best_params: Dict[str, Any] = {}
 
         for params in sampler:
             candidate = self._create_estimator()
             candidate.set_params(**params)
-            scores = cross_val_score(candidate, X, y, scoring=self.scoring, cv=cv, n_jobs=self.n_jobs, error_score=np.nan)
+            scores = cross_val_score(candidate, X, y, scoring=scoring, cv=cv, n_jobs=self.n_jobs, error_score=np.nan)
             score = float(np.nanmean(scores))
             if score > best_score:
                 best_score = score
                 best_params = params
         return best_params, best_score
 
-    def _optuna_search(self, X: np.ndarray, y: np.ndarray, space: Dict[str, Dict[str, Any]]):
+    def _optuna_search(self, X: np.ndarray, y: np.ndarray, space: Dict[str, Dict[str, Any]], scoring: str):
         assert optuna is not None  # for type checkers
         cv_seed = int(self._rng.integers(1, 10_000))
-        cv = StratifiedKFold(n_splits=self.inner_cv, shuffle=True, random_state=cv_seed)
-        direction = "maximize" if self._is_higher_better(self.scoring) else "minimize"
+        cv = self._make_inner_cv(cv_seed)
+        direction = "maximize" if self._is_higher_better(scoring) else "minimize"
 
         def objective(trial) -> float:
             params = self._sample_with_optuna(trial, space)
             candidate = self._create_estimator()
             candidate.set_params(**params)
-            scores = cross_val_score(candidate, X, y, scoring=self.scoring, cv=cv, n_jobs=self.n_jobs, error_score=np.nan)
+            scores = cross_val_score(candidate, X, y, scoring=scoring, cv=cv, n_jobs=self.n_jobs, error_score=np.nan)
             return float(np.nanmean(scores))
 
         sampler_seed = int(self._rng.integers(1, 10_000))
@@ -206,6 +231,26 @@ class TunableBoostingClassifier(ClassifierMixin, BaseEstimator):
         base_params = dict(self.base_params or {})
         seed = int(self.random_state) if self.random_state is not None else 42
         if self.model_name == "xgboost":
+            if self._task_type == "regression":
+                if XGBRegressor is None:
+                    raise ImportError("xgboost is not installed; install xgboost to use this estimator.")
+                params = {
+                    "n_estimators": 500,
+                    "max_depth": 6,
+                    "learning_rate": 0.05,
+                    "subsample": 0.8,
+                    "colsample_bytree": 0.8,
+                    "min_child_weight": 1,
+                    "gamma": 0.0,
+                    "reg_lambda": 1.0,
+                    "eval_metric": "rmse",
+                    "tree_method": "hist",
+                    "random_state": seed,
+                    "n_jobs": self.n_jobs,
+                    "verbosity": self.verbosity,
+                }
+                params.update(base_params)
+                return XGBRegressor(**params)
             if XGBClassifier is None:
                 raise ImportError("xgboost is not installed; install xgboost to use this estimator.")
             params = {
@@ -228,6 +273,22 @@ class TunableBoostingClassifier(ClassifierMixin, BaseEstimator):
             return XGBClassifier(**params)
 
         if self.model_name == "lightgbm":
+            if self._task_type == "regression":
+                if LGBMRegressor is None:
+                    raise ImportError("lightgbm is not installed; install lightgbm to use this estimator.")
+                params = {
+                    "n_estimators": 500,
+                    "objective": "regression",
+                    "learning_rate": 0.05,
+                    "num_leaves": 31,
+                    "subsample": 0.8,
+                    "colsample_bytree": 0.8,
+                    "random_state": seed,
+                    "n_jobs": self.n_jobs,
+                    "verbosity": self.verbosity,
+                }
+                params.update(base_params)
+                return LGBMRegressor(**params)
             if LGBMClassifier is None:
                 raise ImportError("lightgbm is not installed; install lightgbm to use this estimator.")
             params = {
@@ -245,6 +306,21 @@ class TunableBoostingClassifier(ClassifierMixin, BaseEstimator):
             return LGBMClassifier(**params)
 
         if self.model_name == "catboost":
+            if self._task_type == "regression":
+                if CatBoostRegressor is None:
+                    raise ImportError("catboost is not installed; install catboost to use this estimator.")
+                params = {
+                    "iterations": 1000,
+                    "learning_rate": 0.05,
+                    "depth": 6,
+                    "l2_leaf_reg": 3.0,
+                    "loss_function": "RMSE",
+                    "random_seed": seed,
+                    "allow_writing_files": False,
+                    "verbose": False,
+                }
+                params.update(base_params)
+                return CatBoostRegressor(**params)
             if CatBoostClassifier is None:
                 raise ImportError("catboost is not installed; install catboost to use this estimator.")
             params = {
@@ -264,7 +340,19 @@ class TunableBoostingClassifier(ClassifierMixin, BaseEstimator):
 
     @staticmethod
     def _is_higher_better(scoring: str) -> bool:
-        return scoring.lower() in {"accuracy", "precision", "recall", "f1", "f1_macro", "roc_auc", "roc_auc_ovr"}
+        scoring_lower = scoring.lower()
+        if scoring_lower.startswith("neg_"):
+            return True
+        return scoring_lower in {
+            "accuracy",
+            "precision",
+            "recall",
+            "f1",
+            "f1_macro",
+            "roc_auc",
+            "roc_auc_ovr",
+            "r2",
+        }
 
     def _param_distributions_for_random(self, space: Dict[str, Dict[str, Any]]) -> Dict[str, Iterable[Any]]:
         distributions: Dict[str, Iterable[Any]] = {}
@@ -307,6 +395,25 @@ class TunableBoostingClassifier(ClassifierMixin, BaseEstimator):
                 raise ValueError(f"Unsupported search space type '{kind}' for parameter '{key}'")
         return params
 
+    def _make_inner_cv(self, seed: int):
+        if self._task_type == "regression":
+            return KFold(n_splits=self.inner_cv, shuffle=True, random_state=seed)
+        return StratifiedKFold(n_splits=self.inner_cv, shuffle=True, random_state=seed)
+
+    def _resolve_scoring(self) -> str:
+        if not isinstance(self.scoring, str):
+            return "neg_root_mean_squared_error" if self._task_type == "regression" else "f1"
+        scoring = self.scoring.lower()
+        if scoring in (None, "auto"):
+            return "neg_root_mean_squared_error" if self._task_type == "regression" else "f1"
+        if self._task_type == "regression" and scoring in CLASSIFICATION_SCORING:
+            warnings.warn(
+                f"Scoring '{self.scoring}' is classification-only; switching to neg_root_mean_squared_error for regression.",
+                RuntimeWarning,
+            )
+            return "neg_root_mean_squared_error"
+        return self.scoring
+
 
 def make_boosting_factory(
     model_name: BoostingName,
@@ -317,7 +424,7 @@ def make_boosting_factory(
     n_iter: int = 20,
     n_trials: int = 25,
     inner_cv: int = 3,
-    scoring: str = "f1",
+    scoring: str = "auto",
     n_jobs: int = -1,
     random_state: Optional[int] = None,
     verbosity: int = 0,
@@ -354,7 +461,7 @@ def run_boosting_suite(
     n_iter: int = 20,
     n_trials: int = 25,
     inner_cv: int = 3,
-    scoring: str = "f1",
+    scoring: str = "auto",
     n_jobs: int = -1,
     verbosity: int = 0,
 ) -> Dict[str, Dict[str, Any]]:

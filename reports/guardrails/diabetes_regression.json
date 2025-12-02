@@ -1,0 +1,8 @@
+{
+  "dataset": "diabetes_regression",
+  "path": "src/data/datasets/tabular/diabetes_regression.csv",
+  "rows": 442,
+  "columns": 11,
+  "issues": [],
+  "status": "pass"
+}

@@ -1,1 +1,3 @@
-
+framework_a,framework_b,metric,diff,t_stat,p_value,boot_ci_low,boot_ci_high
+H2O_AutoML,leaderboard,f1_macro,0.0,,,0.0,0.0
+H2O_AutoML,leaderboard,accuracy,0.0,,,0.0,0.0

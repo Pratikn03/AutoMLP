@@ -1,0 +1,6 @@
+fold,framework,accuracy,f1_macro,roc_auc_ovr,avg_precision_ovr
+1,CatBoost,1.0,1.0,,
+2,CatBoost,0.9666666666666667,0.9665831244778613,,
+3,CatBoost,0.9333333333333333,0.9326599326599326,,
+4,CatBoost,1.0,1.0,,
+5,CatBoost,0.9333333333333333,0.9333333333333332,,

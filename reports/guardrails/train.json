@@ -1,0 +1,19 @@
+{
+  "dataset": "train",
+  "path": "src/data/datasets/tabular/train.csv",
+  "rows": 150,
+  "columns": 5,
+  "issues": [
+    {
+      "id": "duplicate_rows",
+      "severity": "warning",
+      "summary": {
+        "duplicates": 1,
+        "fraction": 0.006666666666666667
+      },
+      "description": "Found 1 duplicated records. Duplicates across folds can leak validation data.",
+      "suggested_fix": "Deduplicate before splitting or ensure GroupKFold/GroupShuffleSplit."
+    }
+  ],
+  "status": "issues_found"
+}

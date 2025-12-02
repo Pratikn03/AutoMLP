@@ -1,0 +1,10 @@
+numpy>=1.26
+pandas>=2.2
+scikit-learn>=1.5
+lightgbm>=4.0
+xgboost>=2.0
+flaml>=2.3
+fastapi>=0.110
+uvicorn>=0.30
+matplotlib>=3.8
+seaborn>=0.13

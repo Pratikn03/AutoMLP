@@ -1,0 +1,2361 @@
+{
+  "training": [
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "target": "sex",
+      "seed": 42,
+      "fold": 1,
+      "fit_time_sec": 0.5027590829995461,
+      "predict_time_sec": 0.0020276659925002605,
+      "wall_time_sec": 0.5048439502716064,
+      "resource_before": {
+        "rss_mb": 303.5625,
+        "vms_mb": 402617.5,
+        "cpu_user_sec": 1.041432064,
+        "cpu_system_sec": 0.24428784
+      },
+      "resource_after": {
+        "rss_mb": 315.1875,
+        "vms_mb": 403377.78125,
+        "cpu_user_sec": 1.364550016,
+        "cpu_system_sec": 1.328126464
+      },
+      "rss_delta_mb": 11.625,
+      "model_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_42/fold_1_pipeline.joblib",
+      "model_size_bytes": 1180135,
+      "timestamp": 1763551516.230417
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "target": "sex",
+      "seed": 42,
+      "fold": 2,
+      "fit_time_sec": 0.5045020409888821,
+      "predict_time_sec": 0.0018948750075651333,
+      "wall_time_sec": 0.5064640045166016,
+      "resource_before": {
+        "rss_mb": 380.921875,
+        "vms_mb": 403498.03125,
+        "cpu_user_sec": 1.53829888,
+        "cpu_system_sec": 1.349768704
+      },
+      "resource_after": {
+        "rss_mb": 385.265625,
+        "vms_mb": 403501.03125,
+        "cpu_user_sec": 1.860972416,
+        "cpu_system_sec": 2.438095104
+      },
+      "rss_delta_mb": 4.34375,
+      "model_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_42/fold_2_pipeline.joblib",
+      "model_size_bytes": 1144978,
+      "timestamp": 1763551516.8284202
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "target": "sex",
+      "seed": 42,
+      "fold": 3,
+      "fit_time_sec": 0.5114078330079792,
+      "predict_time_sec": 0.001906499994220212,
+      "wall_time_sec": 0.5133919715881348,
+      "resource_before": {
+        "rss_mb": 395.375,
+        "vms_mb": 403502.75,
+        "cpu_user_sec": 1.949197952,
+        "cpu_system_sec": 2.441508096
+      },
+      "resource_after": {
+        "rss_mb": 396.953125,
+        "vms_mb": 403510.75,
+        "cpu_user_sec": 2.274944512,
+        "cpu_system_sec": 3.529508864
+      },
+      "rss_delta_mb": 1.578125,
+      "model_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_42/fold_3_pipeline.joblib",
+      "model_size_bytes": 1150688,
+      "timestamp": 1763551517.400038
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "target": "sex",
+      "seed": 42,
+      "fold": 4,
+      "fit_time_sec": 0.5087971250031842,
+      "predict_time_sec": 0.0018818329990608618,
+      "wall_time_sec": 0.5107319355010986,
+      "resource_before": {
+        "rss_mb": 398.015625,
+        "vms_mb": 403510.921875,
+        "cpu_user_sec": 2.329411328,
+        "cpu_system_sec": 3.532681472
+      },
+      "resource_after": {
+        "rss_mb": 398.953125,
+        "vms_mb": 403511.921875,
+        "cpu_user_sec": 2.652080896,
+        "cpu_system_sec": 4.62281216
+      },
+      "rss_delta_mb": 0.9375,
+      "model_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_42/fold_4_pipeline.joblib",
+      "model_size_bytes": 1153414,
+      "timestamp": 1763551517.96641
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "target": "sex",
+      "seed": 42,
+      "fold": 5,
+      "fit_time_sec": 0.5135422909952467,
+      "predict_time_sec": 0.0019147090060869232,
+      "wall_time_sec": 0.5155088901519775,
+      "resource_before": {
+        "rss_mb": 411.828125,
+        "vms_mb": 403513.09375,
+        "cpu_user_sec": 2.706490112,
+        "cpu_system_sec": 4.626164736
+      },
+      "resource_after": {
+        "rss_mb": 412.25,
+        "vms_mb": 403514.09375,
+        "cpu_user_sec": 3.030674688,
+        "cpu_system_sec": 5.726349312
+      },
+      "rss_delta_mb": 0.421875,
+      "model_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_42/fold_5_pipeline.joblib",
+      "model_size_bytes": 1136417,
+      "timestamp": 1763551518.5385752
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "target": "sex",
+      "seed": 77,
+      "fold": 1,
+      "fit_time_sec": 0.517002542008413,
+      "predict_time_sec": 0.001923834002809599,
+      "wall_time_sec": 0.5189781188964844,
+      "resource_before": {
+        "rss_mb": 417.8125,
+        "vms_mb": 403514.265625,
+        "cpu_user_sec": 3.084339968,
+        "cpu_system_sec": 5.729767424
+      },
+      "resource_after": {
+        "rss_mb": 422.1875,
+        "vms_mb": 403516.265625,
+        "cpu_user_sec": 3.4121152,
+        "cpu_system_sec": 6.834575872
+      },
+      "rss_delta_mb": 4.375,
+      "model_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_77/fold_1_pipeline.joblib",
+      "model_size_bytes": 1161922,
+      "timestamp": 1763551519.115938
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "target": "sex",
+      "seed": 77,
+      "fold": 2,
+      "fit_time_sec": 0.5206026250089053,
+      "predict_time_sec": 0.0019147499988321215,
+      "wall_time_sec": 0.5225832462310791,
+      "resource_before": {
+        "rss_mb": 423.875,
+        "vms_mb": 403516.4375,
+        "cpu_user_sec": 3.46851328,
+        "cpu_system_sec": 6.837973504
+      },
+      "resource_after": {
+        "rss_mb": 423.984375,
+        "vms_mb": 403516.4375,
+        "cpu_user_sec": 3.797606144,
+        "cpu_system_sec": 7.943068672
+      },
+      "rss_delta_mb": 0.109375,
+      "model_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_77/fold_2_pipeline.joblib",
+      "model_size_bytes": 1175242,
+      "timestamp": 1763551519.695988
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "target": "sex",
+      "seed": 77,
+      "fold": 3,
+      "fit_time_sec": 0.5142597499943804,
+      "predict_time_sec": 0.001910583014250733,
+      "wall_time_sec": 0.5162277221679688,
+      "resource_before": {
+        "rss_mb": 424.171875,
+        "vms_mb": 403516.609375,
+        "cpu_user_sec": 3.852890368,
+        "cpu_system_sec": 7.946383872
+      },
+      "resource_after": {
+        "rss_mb": 425.484375,
+        "vms_mb": 403516.609375,
+        "cpu_user_sec": 4.177980672,
+        "cpu_system_sec": 9.042727936
+      },
+      "rss_delta_mb": 1.3125,
+      "model_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_77/fold_3_pipeline.joblib",
+      "model_size_bytes": 1153554,
+      "timestamp": 1763551520.270319
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "target": "sex",
+      "seed": 77,
+      "fold": 4,
+      "fit_time_sec": 0.4897980829991866,
+      "predict_time_sec": 0.001884375000372529,
+      "wall_time_sec": 0.49173521995544434,
+      "resource_before": {
+        "rss_mb": 425.875,
+        "vms_mb": 403517.78125,
+        "cpu_user_sec": 4.230903296,
+        "cpu_system_sec": 9.045786624
+      },
+      "resource_after": {
+        "rss_mb": 426.15625,
+        "vms_mb": 403518.78125,
+        "cpu_user_sec": 4.545302016,
+        "cpu_system_sec": 10.09191424
+      },
+      "rss_delta_mb": 0.28125,
+      "model_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_77/fold_4_pipeline.joblib",
+      "model_size_bytes": 1130889,
+      "timestamp": 1763551520.821577
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "target": "sex",
+      "seed": 77,
+      "fold": 5,
+      "fit_time_sec": 0.48046125000109896,
+      "predict_time_sec": 0.0020557910029310733,
+      "wall_time_sec": 0.48256397247314453,
+      "resource_before": {
+        "rss_mb": 426.765625,
+        "vms_mb": 403518.953125,
+        "cpu_user_sec": 4.599925248,
+        "cpu_system_sec": 10.09530368
+      },
+      "resource_after": {
+        "rss_mb": 427.28125,
+        "vms_mb": 403518.953125,
+        "cpu_user_sec": 4.912812032,
+        "cpu_system_sec": 11.107633152
+      },
+      "rss_delta_mb": 0.515625,
+      "model_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_77/fold_5_pipeline.joblib",
+      "model_size_bytes": 1140340,
+      "timestamp": 1763551521.3608088
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "target": "sex",
+      "seed": 42,
+      "fold": 1,
+      "fit_time_sec": 0.6673233330075163,
+      "predict_time_sec": 0.0018646660028025508,
+      "wall_time_sec": 0.6692440509796143,
+      "resource_before": {
+        "rss_mb": 438.125,
+        "vms_mb": 403520.125,
+        "cpu_user_sec": 4.971157504,
+        "cpu_system_sec": 11.111471104
+      },
+      "resource_after": {
+        "rss_mb": 439.640625,
+        "vms_mb": 403528.125,
+        "cpu_user_sec": 5.306167808,
+        "cpu_system_sec": 12.609416192
+      },
+      "rss_delta_mb": 1.515625,
+      "model_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_42/fold_1_pipeline.joblib",
+      "model_size_bytes": 700612,
+      "timestamp": 1763551522.093127
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "target": "sex",
+      "seed": 42,
+      "fold": 2,
+      "fit_time_sec": 0.6603364170005079,
+      "predict_time_sec": 0.001803666993509978,
+      "wall_time_sec": 0.6621987819671631,
+      "resource_before": {
+        "rss_mb": 439.921875,
+        "vms_mb": 403528.296875,
+        "cpu_user_sec": 5.36669184,
+        "cpu_system_sec": 12.61284352
+      },
+      "resource_after": {
+        "rss_mb": 440.15625,
+        "vms_mb": 403528.296875,
+        "cpu_user_sec": 5.70267136,
+        "cpu_system_sec": 14.114326528
+      },
+      "rss_delta_mb": 0.234375,
+      "model_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_42/fold_2_pipeline.joblib",
+      "model_size_bytes": 697760,
+      "timestamp": 1763551522.811073
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "target": "sex",
+      "seed": 42,
+      "fold": 3,
+      "fit_time_sec": 0.681653167004697,
+      "predict_time_sec": 0.0017547500028740615,
+      "wall_time_sec": 0.6834542751312256,
+      "resource_before": {
+        "rss_mb": 440.34375,
+        "vms_mb": 403528.46875,
+        "cpu_user_sec": 5.75918336,
+        "cpu_system_sec": 14.1175296
+      },
+      "resource_after": {
+        "rss_mb": 440.453125,
+        "vms_mb": 403528.46875,
+        "cpu_user_sec": 6.098215936,
+        "cpu_system_sec": 15.608792064
+      },
+      "rss_delta_mb": 0.109375,
+      "model_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_42/fold_3_pipeline.joblib",
+      "model_size_bytes": 705862,
+      "timestamp": 1763551523.552939
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "target": "sex",
+      "seed": 42,
+      "fold": 4,
+      "fit_time_sec": 0.672861125000054,
+      "predict_time_sec": 0.0018069590005325153,
+      "wall_time_sec": 0.6747162342071533,
+      "resource_before": {
+        "rss_mb": 440.65625,
+        "vms_mb": 403528.640625,
+        "cpu_user_sec": 6.157067776,
+        "cpu_system_sec": 15.611928576
+      },
+      "resource_after": {
+        "rss_mb": 440.671875,
+        "vms_mb": 403528.640625,
+        "cpu_user_sec": 6.499673088,
+        "cpu_system_sec": 17.14091008
+      },
+      "rss_delta_mb": 0.015625,
+      "model_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_42/fold_4_pipeline.joblib",
+      "model_size_bytes": 702571,
+      "timestamp": 1763551524.286473
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "target": "sex",
+      "seed": 42,
+      "fold": 5,
+      "fit_time_sec": 0.6897187910071807,
+      "predict_time_sec": 0.0019147090060869232,
+      "wall_time_sec": 0.6916861534118652,
+      "resource_before": {
+        "rss_mb": 441.015625,
+        "vms_mb": 403528.8125,
+        "cpu_user_sec": 6.558652416,
+        "cpu_system_sec": 17.144034304
+      },
+      "resource_after": {
+        "rss_mb": 441.046875,
+        "vms_mb": 403528.8125,
+        "cpu_user_sec": 6.900560896,
+        "cpu_system_sec": 18.648451072
+      },
+      "rss_delta_mb": 0.03125,
+      "model_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_42/fold_5_pipeline.joblib",
+      "model_size_bytes": 704591,
+      "timestamp": 1763551525.038524
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "target": "sex",
+      "seed": 77,
+      "fold": 1,
+      "fit_time_sec": 0.674502833004226,
+      "predict_time_sec": 0.0016797919961391017,
+      "wall_time_sec": 0.6762292385101318,
+      "resource_before": {
+        "rss_mb": 441.671875,
+        "vms_mb": 403529.984375,
+        "cpu_user_sec": 6.961862144,
+        "cpu_system_sec": 18.652020736
+      },
+      "resource_after": {
+        "rss_mb": 441.734375,
+        "vms_mb": 403529.984375,
+        "cpu_user_sec": 7.30419712,
+        "cpu_system_sec": 20.188516352
+      },
+      "rss_delta_mb": 0.0625,
+      "model_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_77/fold_1_pipeline.joblib",
+      "model_size_bytes": 700074,
+      "timestamp": 1763551525.7776818
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "target": "sex",
+      "seed": 77,
+      "fold": 2,
+      "fit_time_sec": 0.6903749170014635,
+      "predict_time_sec": 0.001761125007760711,
+      "wall_time_sec": 0.6921849250793457,
+      "resource_before": {
+        "rss_mb": 441.953125,
+        "vms_mb": 403530.15625,
+        "cpu_user_sec": 7.362874368,
+        "cpu_system_sec": 20.191719424
+      },
+      "resource_after": {
+        "rss_mb": 441.953125,
+        "vms_mb": 403530.15625,
+        "cpu_user_sec": 7.70505472,
+        "cpu_system_sec": 21.719089152
+      },
+      "rss_delta_mb": 0.0,
+      "model_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_77/fold_2_pipeline.joblib",
+      "model_size_bytes": 703199,
+      "timestamp": 1763551526.527355
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "target": "sex",
+      "seed": 77,
+      "fold": 3,
+      "fit_time_sec": 0.6778159169916762,
+      "predict_time_sec": 0.0018282919918419793,
+      "wall_time_sec": 0.6797068119049072,
+      "resource_before": {
+        "rss_mb": 442.140625,
+        "vms_mb": 403530.328125,
+        "cpu_user_sec": 7.764307456,
+        "cpu_system_sec": 21.722175488
+      },
+      "resource_after": {
+        "rss_mb": 442.1875,
+        "vms_mb": 403530.328125,
+        "cpu_user_sec": 8.1075584,
+        "cpu_system_sec": 23.265992704
+      },
+      "rss_delta_mb": 0.046875,
+      "model_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_77/fold_3_pipeline.joblib",
+      "model_size_bytes": 698227,
+      "timestamp": 1763551527.263572
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "target": "sex",
+      "seed": 77,
+      "fold": 4,
+      "fit_time_sec": 0.6797622500016587,
+      "predict_time_sec": 0.0018355420033913106,
+      "wall_time_sec": 0.6816480159759521,
+      "resource_before": {
+        "rss_mb": 452.3125,
+        "vms_mb": 403530.5,
+        "cpu_user_sec": 8.166562816,
+        "cpu_system_sec": 23.269261312
+      },
+      "resource_after": {
+        "rss_mb": 452.59375,
+        "vms_mb": 403530.5,
+        "cpu_user_sec": 8.502327296,
+        "cpu_system_sec": 24.761309184
+      },
+      "rss_delta_mb": 0.28125,
+      "model_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_77/fold_4_pipeline.joblib",
+      "model_size_bytes": 699965,
+      "timestamp": 1763551528.000911
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "target": "sex",
+      "seed": 77,
+      "fold": 5,
+      "fit_time_sec": 0.6765255829959642,
+      "predict_time_sec": 0.0017429590079700574,
+      "wall_time_sec": 0.6783177852630615,
+      "resource_before": {
+        "rss_mb": 453.609375,
+        "vms_mb": 403530.671875,
+        "cpu_user_sec": 8.560780288,
+        "cpu_system_sec": 24.764254208
+      },
+      "resource_after": {
+        "rss_mb": 453.796875,
+        "vms_mb": 403530.671875,
+        "cpu_user_sec": 8.90504192,
+        "cpu_system_sec": 26.310969344
+      },
+      "rss_delta_mb": 0.1875,
+      "model_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_77/fold_5_pipeline.joblib",
+      "model_size_bytes": 708202,
+      "timestamp": 1763551528.737758
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "target": "sex",
+      "seed": 42,
+      "fold": 1,
+      "fit_time_sec": 0.3286639580037445,
+      "predict_time_sec": 0.0018961669993586838,
+      "wall_time_sec": 0.33060622215270996,
+      "resource_before": {
+        "rss_mb": 454.421875,
+        "vms_mb": 403531.84375,
+        "cpu_user_sec": 8.97036288,
+        "cpu_system_sec": 26.314686464
+      },
+      "resource_after": {
+        "rss_mb": 473.0625,
+        "vms_mb": 404592.546875,
+        "cpu_user_sec": 11.057415168,
+        "cpu_system_sec": 26.592131072
+      },
+      "rss_delta_mb": 18.640625,
+      "model_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_42/fold_1_pipeline.joblib",
+      "model_size_bytes": 1123664,
+      "timestamp": 1763551529.126473
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "target": "sex",
+      "seed": 42,
+      "fold": 2,
+      "fit_time_sec": 0.24675645800016355,
+      "predict_time_sec": 0.0013039170007687062,
+      "wall_time_sec": 0.2481069564819336,
+      "resource_before": {
+        "rss_mb": 475.65625,
+        "vms_mb": 404592.71875,
+        "cpu_user_sec": 11.107193856,
+        "cpu_system_sec": 26.59516416
+      },
+      "resource_after": {
+        "rss_mb": 479.984375,
+        "vms_mb": 404592.71875,
+        "cpu_user_sec": 13.147510784,
+        "cpu_system_sec": 26.873524224
+      },
+      "rss_delta_mb": 4.328125,
+      "model_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_42/fold_2_pipeline.joblib",
+      "model_size_bytes": 1118720,
+      "timestamp": 1763551529.4294112
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "target": "sex",
+      "seed": 42,
+      "fold": 3,
+      "fit_time_sec": 0.24493862499366514,
+      "predict_time_sec": 0.001261041994439438,
+      "wall_time_sec": 0.2462599277496338,
+      "resource_before": {
+        "rss_mb": 480.21875,
+        "vms_mb": 404592.890625,
+        "cpu_user_sec": 13.19814144,
+        "cpu_system_sec": 26.876432384
+      },
+      "resource_after": {
+        "rss_mb": 480.796875,
+        "vms_mb": 404592.890625,
+        "cpu_user_sec": 15.229277184,
+        "cpu_system_sec": 27.152416768
+      },
+      "rss_delta_mb": 0.578125,
+      "model_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_42/fold_3_pipeline.joblib",
+      "model_size_bytes": 1123656,
+      "timestamp": 1763551529.731914
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "target": "sex",
+      "seed": 42,
+      "fold": 4,
+      "fit_time_sec": 0.24702229199465364,
+      "predict_time_sec": 0.001266374994884245,
+      "wall_time_sec": 0.24833106994628906,
+      "resource_before": {
+        "rss_mb": 485.796875,
+        "vms_mb": 404593.0625,
+        "cpu_user_sec": 15.280584704,
+        "cpu_system_sec": 27.155380224
+      },
+      "resource_after": {
+        "rss_mb": 486.03125,
+        "vms_mb": 404593.0625,
+        "cpu_user_sec": 17.30803712,
+        "cpu_system_sec": 27.448047616
+      },
+      "rss_delta_mb": 0.234375,
+      "model_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_42/fold_4_pipeline.joblib",
+      "model_size_bytes": 1120248,
+      "timestamp": 1763551530.034157
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "target": "sex",
+      "seed": 42,
+      "fold": 5,
+      "fit_time_sec": 0.2501432919962099,
+      "predict_time_sec": 0.001254125003470108,
+      "wall_time_sec": 0.25145697593688965,
+      "resource_before": {
+        "rss_mb": 486.6875,
+        "vms_mb": 404593.234375,
+        "cpu_user_sec": 17.359218688,
+        "cpu_system_sec": 27.450587136
+      },
+      "resource_after": {
+        "rss_mb": 486.84375,
+        "vms_mb": 404593.234375,
+        "cpu_user_sec": 19.386814464,
+        "cpu_system_sec": 27.749400576
+      },
+      "rss_delta_mb": 0.15625,
+      "model_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_42/fold_5_pipeline.joblib",
+      "model_size_bytes": 1123288,
+      "timestamp": 1763551530.3415732
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "target": "sex",
+      "seed": 77,
+      "fold": 1,
+      "fit_time_sec": 0.24806825000268873,
+      "predict_time_sec": 0.0012767500011250377,
+      "wall_time_sec": 0.24941205978393555,
+      "resource_before": {
+        "rss_mb": 487.109375,
+        "vms_mb": 404593.40625,
+        "cpu_user_sec": 19.440125952,
+        "cpu_system_sec": 27.75269376
+      },
+      "resource_after": {
+        "rss_mb": 487.1875,
+        "vms_mb": 404593.40625,
+        "cpu_user_sec": 21.457291264,
+        "cpu_system_sec": 28.056055808
+      },
+      "rss_delta_mb": 0.078125,
+      "model_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_77/fold_1_pipeline.joblib",
+      "model_size_bytes": 1123912,
+      "timestamp": 1763551530.646438
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "target": "sex",
+      "seed": 77,
+      "fold": 2,
+      "fit_time_sec": 0.24749283299024682,
+      "predict_time_sec": 0.0012165840016677976,
+      "wall_time_sec": 0.2487659454345703,
+      "resource_before": {
+        "rss_mb": 487.390625,
+        "vms_mb": 404593.578125,
+        "cpu_user_sec": 21.508251648,
+        "cpu_system_sec": 28.058843136
+      },
+      "resource_after": {
+        "rss_mb": 487.453125,
+        "vms_mb": 404593.578125,
+        "cpu_user_sec": 23.564294144,
+        "cpu_system_sec": 28.338407424
+      },
+      "rss_delta_mb": 0.0625,
+      "model_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_77/fold_2_pipeline.joblib",
+      "model_size_bytes": 1124680,
+      "timestamp": 1763551530.949425
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "target": "sex",
+      "seed": 77,
+      "fold": 3,
+      "fit_time_sec": 0.2473134169995319,
+      "predict_time_sec": 0.001255499999388121,
+      "wall_time_sec": 0.2486422061920166,
+      "resource_before": {
+        "rss_mb": 492.65625,
+        "vms_mb": 404593.75,
+        "cpu_user_sec": 23.615799296,
+        "cpu_system_sec": 28.341243904
+      },
+      "resource_after": {
+        "rss_mb": 492.75,
+        "vms_mb": 404593.75,
+        "cpu_user_sec": 25.647724544,
+        "cpu_system_sec": 28.623988736
+      },
+      "rss_delta_mb": 0.09375,
+      "model_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_77/fold_3_pipeline.joblib",
+      "model_size_bytes": 1123304,
+      "timestamp": 1763551531.251325
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "target": "sex",
+      "seed": 77,
+      "fold": 4,
+      "fit_time_sec": 0.25078862499503884,
+      "predict_time_sec": 0.0012895419931737706,
+      "wall_time_sec": 0.25213122367858887,
+      "resource_before": {
+        "rss_mb": 493.0,
+        "vms_mb": 404593.921875,
+        "cpu_user_sec": 25.698402304,
+        "cpu_system_sec": 28.626823168
+      },
+      "resource_after": {
+        "rss_mb": 493.03125,
+        "vms_mb": 404593.921875,
+        "cpu_user_sec": 27.723655168,
+        "cpu_system_sec": 28.924792832
+      },
+      "rss_delta_mb": 0.03125,
+      "model_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_77/fold_4_pipeline.joblib",
+      "model_size_bytes": 1118352,
+      "timestamp": 1763551531.5600681
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "target": "sex",
+      "seed": 77,
+      "fold": 5,
+      "fit_time_sec": 0.24910808299318887,
+      "predict_time_sec": 0.0012416670069796965,
+      "wall_time_sec": 0.25041890144348145,
+      "resource_before": {
+        "rss_mb": 493.96875,
+        "vms_mb": 404595.09375,
+        "cpu_user_sec": 27.777511424,
+        "cpu_system_sec": 28.928628736
+      },
+      "resource_after": {
+        "rss_mb": 493.96875,
+        "vms_mb": 404595.09375,
+        "cpu_user_sec": 29.836621824,
+        "cpu_system_sec": 29.209612288
+      },
+      "rss_delta_mb": 0.0,
+      "model_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_77/fold_5_pipeline.joblib",
+      "model_size_bytes": 1123672,
+      "timestamp": 1763551531.863845
+    },
+    {
+      "experiment": "automl_suite_flaml",
+      "target": "sex",
+      "seed": 42,
+      "fold": 1,
+      "fit_time_sec": 600.0186629579985,
+      "predict_time_sec": 0.0017781250062398612,
+      "wall_time_sec": 600.0316209793091,
+      "resource_before": {
+        "rss_mb": 302.25,
+        "vms_mb": 402488.484375,
+        "cpu_user_sec": 1.013673536,
+        "cpu_system_sec": 0.180140256
+      },
+      "resource_after": {
+        "rss_mb": 352.921875,
+        "vms_mb": 404465.15625,
+        "cpu_user_sec": 471.38258944,
+        "cpu_system_sec": 1012.781088768
+      },
+      "rss_delta_mb": 50.671875,
+      "model_path": "artifacts/experiments/automl_suite_flaml/seed_42/fold_1_pipeline.joblib",
+      "model_size_bytes": 2357411,
+      "timestamp": 1763552133.516875
+    },
+    {
+      "experiment": "automl_suite_flaml",
+      "target": "sex",
+      "seed": 42,
+      "fold": 2,
+      "fit_time_sec": 600.0036928329937,
+      "predict_time_sec": 0.0017026669956976548,
+      "wall_time_sec": 600.016518831253,
+      "resource_before": {
+        "rss_mb": 371.484375,
+        "vms_mb": 404475.15625,
+        "cpu_user_sec": 471.609737216,
+        "cpu_system_sec": 1012.799307776
+      },
+      "resource_after": {
+        "rss_mb": 361.5,
+        "vms_mb": 404473.15625,
+        "cpu_user_sec": 805.682085888,
+        "cpu_system_sec": 2119.641595904
+      },
+      "rss_delta_mb": -9.984375,
+      "model_path": "artifacts/experiments/automl_suite_flaml/seed_42/fold_2_pipeline.joblib",
+      "model_size_bytes": 1859511,
+      "timestamp": 1763552733.7283351
+    },
+    {
+      "experiment": "automl_suite_flaml",
+      "target": "sex",
+      "seed": 42,
+      "fold": 3,
+      "fit_time_sec": 600.0019824580086,
+      "predict_time_sec": 0.0013868339883629233,
+      "wall_time_sec": 600.0145020484924,
+      "resource_before": {
+        "rss_mb": 372.03125,
+        "vms_mb": 404475.15625,
+        "cpu_user_sec": 805.862244352,
+        "cpu_system_sec": 2119.651557376
+      },
+      "resource_after": {
+        "rss_mb": 350.359375,
+        "vms_mb": 404473.15625,
+        "cpu_user_sec": 1427.833749504,
+        "cpu_system_sec": 3260.336570368
+      },
+      "rss_delta_mb": -21.671875,
+      "model_path": "artifacts/experiments/automl_suite_flaml/seed_42/fold_3_pipeline.joblib",
+      "model_size_bytes": 2896750,
+      "timestamp": 1763553334.0414279
+    },
+    {
+      "experiment": "automl_suite_flaml",
+      "target": "sex",
+      "seed": 42,
+      "fold": 4,
+      "fit_time_sec": 600.1054300830001,
+      "predict_time_sec": 0.0017070419999072328,
+      "wall_time_sec": 600.0793681144714,
+      "resource_before": {
+        "rss_mb": 364.203125,
+        "vms_mb": 404480.15625,
+        "cpu_user_sec": 1428.109000704,
+        "cpu_system_sec": 3260.356755456
+      },
+      "resource_after": {
+        "rss_mb": 340.78125,
+        "vms_mb": 404480.15625,
+        "cpu_user_sec": 2078.555373568,
+        "cpu_system_sec": 4233.250209792
+      },
+      "rss_delta_mb": -23.421875,
+      "model_path": "artifacts/experiments/automl_suite_flaml/seed_42/fold_4_pipeline.joblib",
+      "model_size_bytes": 1622881,
+      "timestamp": 1763553934.251039
+    },
+    {
+      "experiment": "automl_suite_flaml",
+      "target": "sex",
+      "seed": 42,
+      "fold": 5,
+      "fit_time_sec": 600.0031155409961,
+      "predict_time_sec": 0.0011972500069532543,
+      "wall_time_sec": 600.0103459358215,
+      "resource_before": {
+        "rss_mb": 345.6875,
+        "vms_mb": 404480.15625,
+        "cpu_user_sec": 2078.675304448,
+        "cpu_system_sec": 4233.25597696
+      },
+      "resource_after": {
+        "rss_mb": 356.484375,
+        "vms_mb": 404480.15625,
+        "cpu_user_sec": 2869.913714688,
+        "cpu_system_sec": 5024.402374656
+      },
+      "rss_delta_mb": 10.796875,
+      "model_path": "artifacts/experiments/automl_suite_flaml/seed_42/fold_5_pipeline.joblib",
+      "model_size_bytes": 2186212,
+      "timestamp": 1763554534.48417
+    },
+    {
+      "experiment": "automl_suite_h2o",
+      "target": "sex",
+      "seed": 42,
+      "fold": 1,
+      "fit_time_sec": 588.9156362500071,
+      "predict_time_sec": 0.03808608300460037,
+      "wall_time_sec": 588.9596762657166,
+      "resource_before": {
+        "rss_mb": 376.46875,
+        "vms_mb": 404481.15625,
+        "cpu_user_sec": 2870.125789184,
+        "cpu_system_sec": 5024.414957568
+      },
+      "resource_after": {
+        "rss_mb": 257.890625,
+        "vms_mb": 404481.375,
+        "cpu_user_sec": 2872.81905664,
+        "cpu_system_sec": 5024.820232192
+      },
+      "rss_delta_mb": -118.578125,
+      "model_path": null,
+      "model_size_bytes": null,
+      "timestamp": 1763555123.4897249
+    },
+    {
+      "experiment": "automl_suite_h2o",
+      "target": "sex",
+      "seed": 42,
+      "fold": 2,
+      "fit_time_sec": 569.0925805419974,
+      "predict_time_sec": 0.01980037499743048,
+      "wall_time_sec": 569.1181042194366,
+      "resource_before": {
+        "rss_mb": 262.953125,
+        "vms_mb": 404481.375,
+        "cpu_user_sec": 2872.852086784,
+        "cpu_system_sec": 5024.822853632
+      },
+      "resource_after": {
+        "rss_mb": 251.671875,
+        "vms_mb": 404479.375,
+        "cpu_user_sec": 2874.878984192,
+        "cpu_system_sec": 5025.141620736
+      },
+      "rss_delta_mb": -11.28125,
+      "model_path": null,
+      "model_size_bytes": null,
+      "timestamp": 1763555692.640259
+    },
+    {
+      "experiment": "automl_suite_h2o",
+      "target": "sex",
+      "seed": 42,
+      "fold": 3,
+      "fit_time_sec": 569.1668291249953,
+      "predict_time_sec": 0.02093924999644514,
+      "wall_time_sec": 569.1935000419617,
+      "resource_before": {
+        "rss_mb": 257.3125,
+        "vms_mb": 404479.375,
+        "cpu_user_sec": 2874.908606464,
+        "cpu_system_sec": 5025.144242176
+      },
+      "resource_after": {
+        "rss_mb": 251.96875,
+        "vms_mb": 404479.375,
+        "cpu_user_sec": 2877.149937664,
+        "cpu_system_sec": 5025.48660224
+      },
+      "rss_delta_mb": -5.34375,
+      "model_path": null,
+      "model_size_bytes": null,
+      "timestamp": 1763556261.866527
+    },
+    {
+      "experiment": "automl_suite_h2o",
+      "target": "sex",
+      "seed": 42,
+      "fold": 4,
+      "fit_time_sec": 567.7617436669971,
+      "predict_time_sec": 0.021782166993943974,
+      "wall_time_sec": 567.7892389297485,
+      "resource_before": {
+        "rss_mb": 258.328125,
+        "vms_mb": 404479.375,
+        "cpu_user_sec": 2877.17982208,
+        "cpu_system_sec": 5025.48922368
+      },
+      "resource_after": {
+        "rss_mb": 251.265625,
+        "vms_mb": 404479.375,
+        "cpu_user_sec": 2879.341461504,
+        "cpu_system_sec": 5025.837350912
+      },
+      "rss_delta_mb": -7.0625,
+      "model_path": null,
+      "model_size_bytes": null,
+      "timestamp": 1763556829.686544
+    },
+    {
+      "experiment": "automl_suite_h2o",
+      "target": "sex",
+      "seed": 42,
+      "fold": 5,
+      "fit_time_sec": 569.351077290994,
+      "predict_time_sec": 0.02299325000785757,
+      "wall_time_sec": 569.3918039798737,
+      "resource_before": {
+        "rss_mb": 255.890625,
+        "vms_mb": 404479.375,
+        "cpu_user_sec": 2879.368462336,
+        "cpu_system_sec": 5025.84049664
+      },
+      "resource_after": {
+        "rss_mb": 248.34375,
+        "vms_mb": 404479.375,
+        "cpu_user_sec": 2881.512275968,
+        "cpu_system_sec": 5026.185478144
+      },
+      "rss_delta_mb": -7.546875,
+      "model_path": null,
+      "model_size_bytes": null,
+      "timestamp": 1763557399.105322
+    },
+    {
+      "experiment": "feature_ablation_xgboost_baseline",
+      "target": "sex",
+      "seed": 42,
+      "fold": 1,
+      "fit_time_sec": 0.5055747919977875,
+      "predict_time_sec": 0.002038291990174912,
+      "wall_time_sec": 0.5076699256896973,
+      "resource_before": {
+        "rss_mb": 304.953125,
+        "vms_mb": 402488.484375,
+        "cpu_user_sec": 1.024783616,
+        "cpu_system_sec": 0.24105616
+      },
+      "resource_after": {
+        "rss_mb": 318.296875,
+        "vms_mb": 403385.78125,
+        "cpu_user_sec": 1.351300224,
+        "cpu_system_sec": 1.337596672
+      },
+      "rss_delta_mb": 13.34375,
+      "model_path": "artifacts/experiments/feature_ablation_xgboost_baseline/seed_42/fold_1_pipeline.joblib",
+      "model_size_bytes": 1180135,
+      "timestamp": 1763557402.487486,
+      "meta_ablation_suite": true,
+      "meta_preprocessing_variant": "baseline",
+      "meta_feature_variant": "Baseline",
+      "meta_feature_description": "Median/most-frequent imputation, scaling enabled, no extra transforms.",
+      "meta_feature_variant_key": "baseline",
+      "meta_estimator_name": "xgboost",
+      "meta_experiment_family": "feature_ablation"
+    },
+    {
+      "experiment": "feature_ablation_xgboost_baseline",
+      "target": "sex",
+      "seed": 42,
+      "fold": 2,
+      "fit_time_sec": 0.5137451670016162,
+      "predict_time_sec": 0.001968333002878353,
+      "wall_time_sec": 0.5157821178436279,
+      "resource_before": {
+        "rss_mb": 387.890625,
+        "vms_mb": 403496.40625,
+        "cpu_user_sec": 1.523092608,
+        "cpu_system_sec": 1.36141696
+      },
+      "resource_after": {
+        "rss_mb": 391.390625,
+        "vms_mb": 403498.40625,
+        "cpu_user_sec": 1.848019712,
+        "cpu_system_sec": 2.460084992
+      },
+      "rss_delta_mb": 3.5,
+      "model_path": "artifacts/experiments/feature_ablation_xgboost_baseline/seed_42/fold_2_pipeline.joblib",
+      "model_size_bytes": 1144978,
+      "timestamp": 1763557403.093487,
+      "meta_ablation_suite": true,
+      "meta_preprocessing_variant": "baseline",
+      "meta_feature_variant": "Baseline",
+      "meta_feature_description": "Median/most-frequent imputation, scaling enabled, no extra transforms.",
+      "meta_feature_variant_key": "baseline",
+      "meta_estimator_name": "xgboost",
+      "meta_experiment_family": "feature_ablation"
+    },
+    {
+      "experiment": "feature_ablation_xgboost_baseline",
+      "target": "sex",
+      "seed": 42,
+      "fold": 3,
+      "fit_time_sec": 0.5154404579952825,
+      "predict_time_sec": 0.0019326250039739534,
+      "wall_time_sec": 0.5174248218536377,
+      "resource_before": {
+        "rss_mb": 401.828125,
+        "vms_mb": 403498.578125,
+        "cpu_user_sec": 1.936829824,
+        "cpu_system_sec": 2.46366464
+      },
+      "resource_after": {
+        "rss_mb": 404.328125,
+        "vms_mb": 403500.578125,
+        "cpu_user_sec": 2.262988288,
+        "cpu_system_sec": 3.560252672
+      },
+      "rss_delta_mb": 2.5,
+      "model_path": "artifacts/experiments/feature_ablation_xgboost_baseline/seed_42/fold_3_pipeline.joblib",
+      "model_size_bytes": 1150688,
+      "timestamp": 1763557403.6663308,
+      "meta_ablation_suite": true,
+      "meta_preprocessing_variant": "baseline",
+      "meta_feature_variant": "Baseline",
+      "meta_feature_description": "Median/most-frequent imputation, scaling enabled, no extra transforms.",
+      "meta_feature_variant_key": "baseline",
+      "meta_estimator_name": "xgboost",
+      "meta_experiment_family": "feature_ablation"
+    },
+    {
+      "experiment": "feature_ablation_xgboost_baseline",
+      "target": "sex",
+      "seed": 42,
+      "fold": 4,
+      "fit_time_sec": 0.5190829580096761,
+      "predict_time_sec": 0.001983375012059696,
+      "wall_time_sec": 0.5211191177368164,
+      "resource_before": {
+        "rss_mb": 405.28125,
+        "vms_mb": 403500.75,
+        "cpu_user_sec": 2.317462784,
+        "cpu_system_sec": 3.563660032
+      },
+      "resource_after": {
+        "rss_mb": 407.40625,
+        "vms_mb": 403509.75,
+        "cpu_user_sec": 2.643008256,
+        "cpu_system_sec": 4.670112256
+      },
+      "rss_delta_mb": 2.125,
+      "model_path": "artifacts/experiments/feature_ablation_xgboost_baseline/seed_42/fold_4_pipeline.joblib",
+      "model_size_bytes": 1153414,
+      "timestamp": 1763557404.245234,
+      "meta_ablation_suite": true,
+      "meta_preprocessing_variant": "baseline",
+      "meta_feature_variant": "Baseline",
+      "meta_feature_description": "Median/most-frequent imputation, scaling enabled, no extra transforms.",
+      "meta_feature_variant_key": "baseline",
+      "meta_estimator_name": "xgboost",
+      "meta_experiment_family": "feature_ablation"
+    },
+    {
+      "experiment": "feature_ablation_xgboost_baseline",
+      "target": "sex",
+      "seed": 42,
+      "fold": 5,
+      "fit_time_sec": 0.5147012079978595,
+      "predict_time_sec": 0.0019145410042256117,
+      "wall_time_sec": 0.5166699886322021,
+      "resource_before": {
+        "rss_mb": 409.296875,
+        "vms_mb": 403510.921875,
+        "cpu_user_sec": 2.698101504,
+        "cpu_system_sec": 4.675083264
+      },
+      "resource_after": {
+        "rss_mb": 409.921875,
+        "vms_mb": 403510.921875,
+        "cpu_user_sec": 3.02270208,
+        "cpu_system_sec": 5.774945792
+      },
+      "rss_delta_mb": 0.625,
+      "model_path": "artifacts/experiments/feature_ablation_xgboost_baseline/seed_42/fold_5_pipeline.joblib",
+      "model_size_bytes": 1136417,
+      "timestamp": 1763557404.820719,
+      "meta_ablation_suite": true,
+      "meta_preprocessing_variant": "baseline",
+      "meta_feature_variant": "Baseline",
+      "meta_feature_description": "Median/most-frequent imputation, scaling enabled, no extra transforms.",
+      "meta_feature_variant_key": "baseline",
+      "meta_estimator_name": "xgboost",
+      "meta_experiment_family": "feature_ablation"
+    },
+    {
+      "experiment": "feature_ablation_xgboost_poly2",
+      "target": "sex",
+      "seed": 42,
+      "fold": 1,
+      "fit_time_sec": 0.5440819170034956,
+      "predict_time_sec": 0.0045219169987831265,
+      "wall_time_sec": 0.5486581325531006,
+      "resource_before": {
+        "rss_mb": 417.03125,
+        "vms_mb": 403512.09375,
+        "cpu_user_sec": 3.08136448,
+        "cpu_system_sec": 5.778868736
+      },
+      "resource_after": {
+        "rss_mb": 439.28125,
+        "vms_mb": 403525.21875,
+        "cpu_user_sec": 3.948358912,
+        "cpu_system_sec": 6.604162048
+      },
+      "rss_delta_mb": 22.25,
+      "model_path": "artifacts/experiments/feature_ablation_xgboost_poly2/seed_42/fold_1_pipeline.joblib",
+      "model_size_bytes": 918395,
+      "timestamp": 1763557405.44499,
+      "meta_ablation_suite": true,
+      "meta_preprocessing_variant": "poly2",
+      "meta_feature_variant": "Polynomial (deg=2)",
+      "meta_feature_description": "Augment numeric features with 2nd-degree polynomial terms.",
+      "meta_feature_variant_key": "poly2",
+      "meta_estimator_name": "xgboost",
+      "meta_experiment_family": "feature_ablation"
+    },
+    {
+      "experiment": "feature_ablation_xgboost_poly2",
+      "target": "sex",
+      "seed": 42,
+      "fold": 2,
+      "fit_time_sec": 0.5464103330014041,
+      "predict_time_sec": 0.004507457997533493,
+      "wall_time_sec": 0.5509748458862305,
+      "resource_before": {
+        "rss_mb": 439.546875,
+        "vms_mb": 403525.390625,
+        "cpu_user_sec": 4.01640064,
+        "cpu_system_sec": 6.608479744
+      },
+      "resource_after": {
+        "rss_mb": 439.6875,
+        "vms_mb": 403525.390625,
+        "cpu_user_sec": 4.86563584,
+        "cpu_system_sec": 7.448542208
+      },
+      "rss_delta_mb": 0.140625,
+      "model_path": "artifacts/experiments/feature_ablation_xgboost_poly2/seed_42/fold_2_pipeline.joblib",
+      "model_size_bytes": 904998,
+      "timestamp": 1763557406.063489,
+      "meta_ablation_suite": true,
+      "meta_preprocessing_variant": "poly2",
+      "meta_feature_variant": "Polynomial (deg=2)",
+      "meta_feature_description": "Augment numeric features with 2nd-degree polynomial terms.",
+      "meta_feature_variant_key": "poly2",
+      "meta_estimator_name": "xgboost",
+      "meta_experiment_family": "feature_ablation"
+    },
+    {
+      "experiment": "feature_ablation_xgboost_poly2",
+      "target": "sex",
+      "seed": 42,
+      "fold": 3,
+      "fit_time_sec": 0.5462568329967326,
+      "predict_time_sec": 0.004568000003928319,
+      "wall_time_sec": 0.550879955291748,
+      "resource_before": {
+        "rss_mb": 439.890625,
+        "vms_mb": 403525.5625,
+        "cpu_user_sec": 4.931933184,
+        "cpu_system_sec": 7.452104192
+      },
+      "resource_after": {
+        "rss_mb": 443.9375,
+        "vms_mb": 403525.625,
+        "cpu_user_sec": 5.783241728,
+        "cpu_system_sec": 8.292908032
+      },
+      "rss_delta_mb": 4.046875,
+      "model_path": "artifacts/experiments/feature_ablation_xgboost_poly2/seed_42/fold_3_pipeline.joblib",
+      "model_size_bytes": 899901,
+      "timestamp": 1763557406.685336,
+      "meta_ablation_suite": true,
+      "meta_preprocessing_variant": "poly2",
+      "meta_feature_variant": "Polynomial (deg=2)",
+      "meta_feature_description": "Augment numeric features with 2nd-degree polynomial terms.",
+      "meta_feature_variant_key": "poly2",
+      "meta_estimator_name": "xgboost",
+      "meta_experiment_family": "feature_ablation"
+    },
+    {
+      "experiment": "feature_ablation_xgboost_poly2",
+      "target": "sex",
+      "seed": 42,
+      "fold": 4,
+      "fit_time_sec": 0.5373128339997493,
+      "predict_time_sec": 0.004463207995286211,
+      "wall_time_sec": 0.5418210029602051,
+      "resource_before": {
+        "rss_mb": 444.875,
+        "vms_mb": 403526.796875,
+        "cpu_user_sec": 5.850162176,
+        "cpu_system_sec": 8.297145856
+      },
+      "resource_after": {
+        "rss_mb": 452.640625,
+        "vms_mb": 403527.796875,
+        "cpu_user_sec": 6.69671936,
+        "cpu_system_sec": 9.117119488
+      },
+      "rss_delta_mb": 7.765625,
+      "model_path": "artifacts/experiments/feature_ablation_xgboost_poly2/seed_42/fold_4_pipeline.joblib",
+      "model_size_bytes": 902542,
+      "timestamp": 1763557407.297983,
+      "meta_ablation_suite": true,
+      "meta_preprocessing_variant": "poly2",
+      "meta_feature_variant": "Polynomial (deg=2)",
+      "meta_feature_description": "Augment numeric features with 2nd-degree polynomial terms.",
+      "meta_feature_variant_key": "poly2",
+      "meta_estimator_name": "xgboost",
+      "meta_experiment_family": "feature_ablation"
+    },
+    {
+      "experiment": "feature_ablation_xgboost_poly2",
+      "target": "sex",
+      "seed": 42,
+      "fold": 5,
+      "fit_time_sec": 0.5514429589966312,
+      "predict_time_sec": 0.004496958004892804,
+      "wall_time_sec": 0.555994987487793,
+      "resource_before": {
+        "rss_mb": 452.96875,
+        "vms_mb": 403527.96875,
+        "cpu_user_sec": 6.765522432,
+        "cpu_system_sec": 9.121526784
+      },
+      "resource_after": {
+        "rss_mb": 454.84375,
+        "vms_mb": 403528.96875,
+        "cpu_user_sec": 7.610228736,
+        "cpu_system_sec": 9.9710464
+      },
+      "rss_delta_mb": 1.875,
+      "model_path": "artifacts/experiments/feature_ablation_xgboost_poly2/seed_42/fold_5_pipeline.joblib",
+      "model_size_bytes": 890587,
+      "timestamp": 1763557407.919796,
+      "meta_ablation_suite": true,
+      "meta_preprocessing_variant": "poly2",
+      "meta_feature_variant": "Polynomial (deg=2)",
+      "meta_feature_description": "Augment numeric features with 2nd-degree polynomial terms.",
+      "meta_feature_variant_key": "poly2",
+      "meta_estimator_name": "xgboost",
+      "meta_experiment_family": "feature_ablation"
+    }
+  ],
+  "explainability": [
+    {
+      "experiment": "automl_suite_flaml",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/automl_suite_flaml/seed_42/fold_1_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 2357411,
+      "shap_time_sec": 2.9945599170023343,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 389.296875,
+        "vms_mb": 402706.9375,
+        "cpu_user_sec": 1.352593664,
+        "cpu_system_sec": 0.238741632
+      },
+      "resource_after": {
+        "rss_mb": 447.671875,
+        "vms_mb": 403415.4375,
+        "cpu_user_sec": 6.561355264,
+        "cpu_system_sec": 0.72956576
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "automl_suite_flaml",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/automl_suite_flaml/seed_42/fold_2_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 1859511,
+      "shap_time_sec": 2.8005824589927215,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 567.171875,
+        "vms_mb": 403576.375,
+        "cpu_user_sec": 6.87496704,
+        "cpu_system_sec": 0.754590016
+      },
+      "resource_after": {
+        "rss_mb": 570.953125,
+        "vms_mb": 403577.375,
+        "cpu_user_sec": 11.247560704,
+        "cpu_system_sec": 1.191207936
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "automl_suite_flaml",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/automl_suite_flaml/seed_42/fold_3_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 2896750,
+      "shap_time_sec": 3.5115828330017393,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 602.015625,
+        "vms_mb": 403607.390625,
+        "cpu_user_sec": 11.545066496,
+        "cpu_system_sec": 1.19844416
+      },
+      "resource_after": {
+        "rss_mb": 602.375,
+        "vms_mb": 403607.390625,
+        "cpu_user_sec": 22.281230336,
+        "cpu_system_sec": 1.6972544
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "automl_suite_flaml",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/automl_suite_flaml/seed_42/fold_4_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 1622881,
+      "shap_time_sec": 3.739123124993057,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 603.3125,
+        "vms_mb": 403608.5625,
+        "cpu_user_sec": 22.56758784,
+        "cpu_system_sec": 1.707371904
+      },
+      "resource_after": {
+        "rss_mb": 603.765625,
+        "vms_mb": 403608.5625,
+        "cpu_user_sec": 32.964438016,
+        "cpu_system_sec": 2.240618496
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "automl_suite_flaml",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/automl_suite_flaml/seed_42/fold_5_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 2186212,
+      "shap_time_sec": 2.942285874989466,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 604.703125,
+        "vms_mb": 403609.734375,
+        "cpu_user_sec": 33.224493056,
+        "cpu_system_sec": 2.246591744
+      },
+      "resource_after": {
+        "rss_mb": 604.859375,
+        "vms_mb": 403609.734375,
+        "cpu_user_sec": 40.138448896,
+        "cpu_system_sec": 2.691431168
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_42/fold_1_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 1123664,
+      "shap_time_sec": 4.954650916988612,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 629.765625,
+        "vms_mb": 404649.75,
+        "cpu_user_sec": 40.315461632,
+        "cpu_system_sec": 2.69750656
+      },
+      "resource_after": {
+        "rss_mb": 641.9375,
+        "vms_mb": 404814.453125,
+        "cpu_user_sec": 61.186904064,
+        "cpu_system_sec": 4.611207168
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_42/fold_2_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 1118720,
+      "shap_time_sec": 4.94276004099811,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 658.796875,
+        "vms_mb": 404830.46875,
+        "cpu_user_sec": 61.377773568,
+        "cpu_system_sec": 4.617918464
+      },
+      "resource_after": {
+        "rss_mb": 660.171875,
+        "vms_mb": 404826.640625,
+        "cpu_user_sec": 82.209562624,
+        "cpu_system_sec": 6.491563008
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_42/fold_3_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 1123656,
+      "shap_time_sec": 4.960550792005961,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 660.765625,
+        "vms_mb": 404830.09375,
+        "cpu_user_sec": 82.400354304,
+        "cpu_system_sec": 6.497864704
+      },
+      "resource_after": {
+        "rss_mb": 661.265625,
+        "vms_mb": 404829.0,
+        "cpu_user_sec": 103.303118848,
+        "cpu_system_sec": 8.408077312
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_42/fold_4_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 1120248,
+      "shap_time_sec": 4.928403832993354,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 661.828125,
+        "vms_mb": 404830.8125,
+        "cpu_user_sec": 103.493435392,
+        "cpu_system_sec": 8.417028096
+      },
+      "resource_after": {
+        "rss_mb": 662.109375,
+        "vms_mb": 404829.171875,
+        "cpu_user_sec": 124.351987712,
+        "cpu_system_sec": 10.304155648
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_42/fold_5_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 1123288,
+      "shap_time_sec": 4.9601532079977915,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 662.53125,
+        "vms_mb": 404831.984375,
+        "cpu_user_sec": 124.540633088,
+        "cpu_system_sec": 10.313085952
+      },
+      "resource_after": {
+        "rss_mb": 662.875,
+        "vms_mb": 404829.796875,
+        "cpu_user_sec": 145.366269952,
+        "cpu_system_sec": 12.235046912
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "seed": 77,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_77/fold_1_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 1123912,
+      "shap_time_sec": 4.979316665994702,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 663.3125,
+        "vms_mb": 404832.15625,
+        "cpu_user_sec": 145.55725824,
+        "cpu_system_sec": 12.242617344
+      },
+      "resource_after": {
+        "rss_mb": 663.53125,
+        "vms_mb": 404832.609375,
+        "cpu_user_sec": 166.494240768,
+        "cpu_system_sec": 14.12722176
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "seed": 77,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_77/fold_2_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 1124680,
+      "shap_time_sec": 4.978157833000296,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 663.96875,
+        "vms_mb": 404833.328125,
+        "cpu_user_sec": 166.683820032,
+        "cpu_system_sec": 14.134335488
+      },
+      "resource_after": {
+        "rss_mb": 664.234375,
+        "vms_mb": 404832.234375,
+        "cpu_user_sec": 187.633156096,
+        "cpu_system_sec": 16.07243776
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "seed": 77,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_77/fold_3_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 1123304,
+      "shap_time_sec": 5.001848917003372,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 681.09375,
+        "vms_mb": 404849.34375,
+        "cpu_user_sec": 187.823767552,
+        "cpu_system_sec": 16.079838208
+      },
+      "resource_after": {
+        "rss_mb": 681.203125,
+        "vms_mb": 404847.703125,
+        "cpu_user_sec": 208.823353344,
+        "cpu_system_sec": 18.028845056
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "seed": 77,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_77/fold_4_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 1118352,
+      "shap_time_sec": 5.023154583002906,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 697.921875,
+        "vms_mb": 404865.359375,
+        "cpu_user_sec": 209.012686848,
+        "cpu_system_sec": 18.03544576
+      },
+      "resource_after": {
+        "rss_mb": 698.265625,
+        "vms_mb": 404862.078125,
+        "cpu_user_sec": 229.955485696,
+        "cpu_system_sec": 19.974561792
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "boosting_suite_catboost_baseline",
+      "seed": 77,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_catboost_baseline/seed_77/fold_5_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 1123672,
+      "shap_time_sec": 5.314499209009227,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 715.1875,
+        "vms_mb": 404880.828125,
+        "cpu_user_sec": 230.147473408,
+        "cpu_system_sec": 19.984590848
+      },
+      "resource_after": {
+        "rss_mb": 715.46875,
+        "vms_mb": 404878.09375,
+        "cpu_user_sec": 251.524235264,
+        "cpu_system_sec": 21.924564992
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_42/fold_1_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 700612,
+      "shap_time_sec": 42.514788457992836,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 716.453125,
+        "vms_mb": 404883.0,
+        "cpu_user_sec": 251.720728576,
+        "cpu_system_sec": 21.9316736
+      },
+      "resource_after": {
+        "rss_mb": 716.953125,
+        "vms_mb": 404879.71875,
+        "cpu_user_sec": 596.187807744,
+        "cpu_system_sec": 23.066464256
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_42/fold_2_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 697760,
+      "shap_time_sec": 42.06753329200728,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 718.109375,
+        "vms_mb": 404883.171875,
+        "cpu_user_sec": 596.380024832,
+        "cpu_system_sec": 23.072065536
+      },
+      "resource_after": {
+        "rss_mb": 718.25,
+        "vms_mb": 404879.890625,
+        "cpu_user_sec": 935.293222912,
+        "cpu_system_sec": 24.204546048
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_42/fold_3_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 705862,
+      "shap_time_sec": 41.91131008299999,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 718.9375,
+        "vms_mb": 404883.890625,
+        "cpu_user_sec": 935.483015168,
+        "cpu_system_sec": 24.209852416
+      },
+      "resource_after": {
+        "rss_mb": 718.84375,
+        "vms_mb": 404880.0625,
+        "cpu_user_sec": 1275.26305792,
+        "cpu_system_sec": 25.284962304
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_42/fold_4_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 702571,
+      "shap_time_sec": 42.45920204199501,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 719.46875,
+        "vms_mb": 404884.0625,
+        "cpu_user_sec": 1275.452588032,
+        "cpu_system_sec": 25.290016768
+      },
+      "resource_after": {
+        "rss_mb": 719.390625,
+        "vms_mb": 404880.234375,
+        "cpu_user_sec": 1618.522406912,
+        "cpu_system_sec": 26.37274112
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_42/fold_5_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 704591,
+      "shap_time_sec": 44.10195670800749,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 720.484375,
+        "vms_mb": 404884.140625,
+        "cpu_user_sec": 1618.712854528,
+        "cpu_system_sec": 26.378110976
+      },
+      "resource_after": {
+        "rss_mb": 720.40625,
+        "vms_mb": 404881.40625,
+        "cpu_user_sec": 1976.567857152,
+        "cpu_system_sec": 27.480223744
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "seed": 77,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_77/fold_1_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 700074,
+      "shap_time_sec": 41.47784270900593,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 721.203125,
+        "vms_mb": 404885.859375,
+        "cpu_user_sec": 1976.75712512,
+        "cpu_system_sec": 27.48510208
+      },
+      "resource_after": {
+        "rss_mb": 721.109375,
+        "vms_mb": 404882.578125,
+        "cpu_user_sec": 2311.665221632,
+        "cpu_system_sec": 28.55481344
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "seed": 77,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_77/fold_2_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 703199,
+      "shap_time_sec": 43.91506562499853,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 721.703125,
+        "vms_mb": 404886.03125,
+        "cpu_user_sec": 2311.855276032,
+        "cpu_system_sec": 28.559972352
+      },
+      "resource_after": {
+        "rss_mb": 721.6875,
+        "vms_mb": 404882.75,
+        "cpu_user_sec": 2670.54088192,
+        "cpu_system_sec": 29.6420864
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "seed": 77,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_77/fold_3_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 698227,
+      "shap_time_sec": 43.12502529199992,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 722.296875,
+        "vms_mb": 404887.75,
+        "cpu_user_sec": 2670.730674176,
+        "cpu_system_sec": 29.647087616
+      },
+      "resource_after": {
+        "rss_mb": 722.21875,
+        "vms_mb": 404883.921875,
+        "cpu_user_sec": 3018.017472512,
+        "cpu_system_sec": 30.73878016
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "seed": 77,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_77/fold_4_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 699965,
+      "shap_time_sec": 42.767252957986784,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 722.90625,
+        "vms_mb": 404887.375,
+        "cpu_user_sec": 3018.2080512,
+        "cpu_system_sec": 30.743875584
+      },
+      "resource_after": {
+        "rss_mb": 722.859375,
+        "vms_mb": 404884.09375,
+        "cpu_user_sec": 3366.509346816,
+        "cpu_system_sec": 31.823190016
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "boosting_suite_lightgbm_baseline",
+      "seed": 77,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_lightgbm_baseline/seed_77/fold_5_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 708202,
+      "shap_time_sec": 42.94209275000321,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 723.5625,
+        "vms_mb": 404888.09375,
+        "cpu_user_sec": 3366.699139072,
+        "cpu_system_sec": 31.828103168
+      },
+      "resource_after": {
+        "rss_mb": 723.5,
+        "vms_mb": 404884.265625,
+        "cpu_user_sec": 3715.720282112,
+        "cpu_system_sec": 32.8954368
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_42/fold_1_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 1180135,
+      "shap_time_sec": 13.059473583009094,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 726.171875,
+        "vms_mb": 404889.71875,
+        "cpu_user_sec": 3715.909287936,
+        "cpu_system_sec": 32.900571136
+      },
+      "resource_after": {
+        "rss_mb": 726.375,
+        "vms_mb": 404886.4375,
+        "cpu_user_sec": 3798.252650496,
+        "cpu_system_sec": 33.634330624
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_42/fold_2_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 1144978,
+      "shap_time_sec": 13.004378959012683,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 726.78125,
+        "vms_mb": 404890.4375,
+        "cpu_user_sec": 3798.496182272,
+        "cpu_system_sec": 33.641986048
+      },
+      "resource_after": {
+        "rss_mb": 726.671875,
+        "vms_mb": 404886.609375,
+        "cpu_user_sec": 3880.632713216,
+        "cpu_system_sec": 34.373705728
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_42/fold_3_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 1150688,
+      "shap_time_sec": 12.915714208997088,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 729.09375,
+        "vms_mb": 404893.0625,
+        "cpu_user_sec": 3880.821981184,
+        "cpu_system_sec": 34.379943936
+      },
+      "resource_after": {
+        "rss_mb": 729.015625,
+        "vms_mb": 404889.78125,
+        "cpu_user_sec": 3961.815564288,
+        "cpu_system_sec": 35.1104
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_42/fold_4_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 1153414,
+      "shap_time_sec": 13.030176542000845,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 731.453125,
+        "vms_mb": 404894.234375,
+        "cpu_user_sec": 3962.004570112,
+        "cpu_system_sec": 35.116490752
+      },
+      "resource_after": {
+        "rss_mb": 731.375,
+        "vms_mb": 404890.953125,
+        "cpu_user_sec": 4044.309921792,
+        "cpu_system_sec": 35.846275072
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_42/fold_5_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 1136417,
+      "shap_time_sec": 13.35150083299959,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 732.015625,
+        "vms_mb": 404895.953125,
+        "cpu_user_sec": 4044.497616896,
+        "cpu_system_sec": 35.85253376
+      },
+      "resource_after": {
+        "rss_mb": 732.03125,
+        "vms_mb": 404892.125,
+        "cpu_user_sec": 4127.403278336,
+        "cpu_system_sec": 36.57527296
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "seed": 77,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_77/fold_1_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 1161922,
+      "shap_time_sec": 13.232447916991077,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 732.515625,
+        "vms_mb": 404895.578125,
+        "cpu_user_sec": 4127.593857024,
+        "cpu_system_sec": 36.58121216
+      },
+      "resource_after": {
+        "rss_mb": 732.421875,
+        "vms_mb": 404892.296875,
+        "cpu_user_sec": 4211.327107072,
+        "cpu_system_sec": 37.314916352
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "seed": 77,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_77/fold_2_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 1175242,
+      "shap_time_sec": 13.068795874991338,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 732.90625,
+        "vms_mb": 404896.75,
+        "cpu_user_sec": 4211.514802176,
+        "cpu_system_sec": 37.32109312
+      },
+      "resource_after": {
+        "rss_mb": 732.8125,
+        "vms_mb": 404893.46875,
+        "cpu_user_sec": 4294.342344704,
+        "cpu_system_sec": 38.051176448
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "seed": 77,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_77/fold_3_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 1153554,
+      "shap_time_sec": 13.136065499988035,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 733.296875,
+        "vms_mb": 404897.46875,
+        "cpu_user_sec": 4294.530564096,
+        "cpu_system_sec": 38.057357312
+      },
+      "resource_after": {
+        "rss_mb": 733.1875,
+        "vms_mb": 404893.640625,
+        "cpu_user_sec": 4377.517228032,
+        "cpu_system_sec": 38.78551552
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "seed": 77,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_77/fold_4_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 1130889,
+      "shap_time_sec": 12.796540958996047,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 733.671875,
+        "vms_mb": 404896.921875,
+        "cpu_user_sec": 4377.705447424,
+        "cpu_system_sec": 38.791643136
+      },
+      "resource_after": {
+        "rss_mb": 733.71875,
+        "vms_mb": 404893.640625,
+        "cpu_user_sec": 4457.712582656,
+        "cpu_system_sec": 39.516082176
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "boosting_suite_xgboost_baseline",
+      "seed": 77,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/boosting_suite_xgboost_baseline/seed_77/fold_5_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 1140340,
+      "shap_time_sec": 12.751368625002215,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 736.0,
+        "vms_mb": 404898.921875,
+        "cpu_user_sec": 4457.901850624,
+        "cpu_system_sec": 39.522054144
+      },
+      "resource_after": {
+        "rss_mb": 735.90625,
+        "vms_mb": 404895.640625,
+        "cpu_user_sec": 4537.629278208,
+        "cpu_system_sec": 40.24307712
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "feature_ablation_xgboost_baseline",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/feature_ablation_xgboost_baseline/seed_42/fold_1_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 1180135,
+      "shap_time_sec": 13.010538165995968,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 736.546875,
+        "vms_mb": 404899.46875,
+        "cpu_user_sec": 4537.818021888,
+        "cpu_system_sec": 40.2491392
+      },
+      "resource_after": {
+        "rss_mb": 736.4375,
+        "vms_mb": 404895.640625,
+        "cpu_user_sec": 4619.942494208,
+        "cpu_system_sec": 40.982654976
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "feature_ablation_xgboost_baseline",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/feature_ablation_xgboost_baseline/seed_42/fold_2_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 1144978,
+      "shap_time_sec": 12.960388833002071,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 737.453125,
+        "vms_mb": 404900.484375,
+        "cpu_user_sec": 4620.1307136,
+        "cpu_system_sec": 40.988946432
+      },
+      "resource_after": {
+        "rss_mb": 737.34375,
+        "vms_mb": 404896.65625,
+        "cpu_user_sec": 4702.080073728,
+        "cpu_system_sec": 41.725620224
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "feature_ablation_xgboost_baseline",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/feature_ablation_xgboost_baseline/seed_42/fold_3_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 1150688,
+      "shap_time_sec": 12.908958500003791,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 737.640625,
+        "vms_mb": 404899.9375,
+        "cpu_user_sec": 4702.269341696,
+        "cpu_system_sec": 41.73099008
+      },
+      "resource_after": {
+        "rss_mb": 737.609375,
+        "vms_mb": 404896.65625,
+        "cpu_user_sec": 4783.227797504,
+        "cpu_system_sec": 42.455502848
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "feature_ablation_xgboost_baseline",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/feature_ablation_xgboost_baseline/seed_42/fold_4_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 1153414,
+      "shap_time_sec": 13.307223499999964,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 737.96875,
+        "vms_mb": 404900.9375,
+        "cpu_user_sec": 4783.416541184,
+        "cpu_system_sec": 42.460717056
+      },
+      "resource_after": {
+        "rss_mb": 737.875,
+        "vms_mb": 404897.65625,
+        "cpu_user_sec": 4865.870790656,
+        "cpu_system_sec": 43.191361536
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "feature_ablation_xgboost_baseline",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/feature_ablation_xgboost_baseline/seed_42/fold_5_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 1136417,
+      "shap_time_sec": 13.08790641700034,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 754.609375,
+        "vms_mb": 404916.78125,
+        "cpu_user_sec": 4866.056912896,
+        "cpu_system_sec": 43.197308928
+      },
+      "resource_after": {
+        "rss_mb": 754.71875,
+        "vms_mb": 404913.5,
+        "cpu_user_sec": 4948.607107072,
+        "cpu_system_sec": 43.931885568
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "feature_ablation_xgboost_poly2",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/feature_ablation_xgboost_poly2/seed_42/fold_1_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 918395,
+      "shap_time_sec": 17.489618166000582,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 756.109375,
+        "vms_mb": 404917.78125,
+        "cpu_user_sec": 4948.796899328,
+        "cpu_system_sec": 43.93762816
+      },
+      "resource_after": {
+        "rss_mb": 756.03125,
+        "vms_mb": 404914.5,
+        "cpu_user_sec": 5024.712228864,
+        "cpu_system_sec": 44.718452736
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "feature_ablation_xgboost_poly2",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/feature_ablation_xgboost_poly2/seed_42/fold_2_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 904998,
+      "shap_time_sec": 17.946661416994175,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 772.59375,
+        "vms_mb": 404934.171875,
+        "cpu_user_sec": 5024.911982592,
+        "cpu_system_sec": 44.724527104
+      },
+      "resource_after": {
+        "rss_mb": 772.53125,
+        "vms_mb": 404930.34375,
+        "cpu_user_sec": 5100.28939264,
+        "cpu_system_sec": 45.77644544
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "feature_ablation_xgboost_poly2",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/feature_ablation_xgboost_poly2/seed_42/fold_3_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 899901,
+      "shap_time_sec": 18.036406708997674,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 772.71875,
+        "vms_mb": 404934.171875,
+        "cpu_user_sec": 5100.489146368,
+        "cpu_system_sec": 45.782368256
+      },
+      "resource_after": {
+        "rss_mb": 772.671875,
+        "vms_mb": 404930.34375,
+        "cpu_user_sec": 5177.117507584,
+        "cpu_system_sec": 46.848290816
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "feature_ablation_xgboost_poly2",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/feature_ablation_xgboost_poly2/seed_42/fold_4_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 902542,
+      "shap_time_sec": 17.855170625000028,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 772.796875,
+        "vms_mb": 404933.625,
+        "cpu_user_sec": 5177.317261312,
+        "cpu_system_sec": 46.853885952
+      },
+      "resource_after": {
+        "rss_mb": 772.703125,
+        "vms_mb": 404930.34375,
+        "cpu_user_sec": 5252.61602816,
+        "cpu_system_sec": 47.921332224
+      },
+      "shap_error": "lime_not_installed"
+    },
+    {
+      "experiment": "feature_ablation_xgboost_poly2",
+      "seed": 42,
+      "fold": -1,
+      "pipeline_path": "artifacts/experiments/feature_ablation_xgboost_poly2/seed_42/fold_5_pipeline.joblib",
+      "target": "sex",
+      "model_size_bytes": 890587,
+      "shap_time_sec": 18.15165845899901,
+      "lime_time_sec": null,
+      "resource_before": {
+        "rss_mb": 772.84375,
+        "vms_mb": 404933.625,
+        "cpu_user_sec": 5252.8152576,
+        "cpu_system_sec": 47.92721408
+      },
+      "resource_after": {
+        "rss_mb": 772.75,
+        "vms_mb": 404930.34375,
+        "cpu_user_sec": 5329.963712512,
+        "cpu_system_sec": 49.003544576
+      },
+      "shap_error": "lime_not_installed"
+    }
+  ]
+}

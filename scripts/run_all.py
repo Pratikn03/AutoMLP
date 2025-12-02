@@ -1,3 +1,4 @@
+
 import argparse
 import json
 import os
@@ -19,6 +20,14 @@ if REPO_ROOT not in sys.path:
 from Project.utils.system import merge_runtime_sections
 
 
+def _env_flag(name: str, default: bool = False) -> bool:
+    """Interpret standard truthy environment variables."""
+    raw = os.getenv(name)
+    if raw is None:
+        return default
+    return raw.strip().lower() in {"1", "true", "yes", "on"}
+
+
 PIPELINE_STEPS = [
     "Project/trainers/train_boosters.py",
     "Project/trainers/train_catboost.py",
@@ -38,6 +47,7 @@ PIPELINE_STEPS = [
 
 GLOBAL_STEPS = [
     "Project/deeplearning/image_cnn_torch.py",
+    "Project/nlp/train_sms_spam.py",
     "Project/timeseries/forecast_baseline.py",
 ]
 
@@ -50,6 +60,7 @@ FRAMEWORK_META: Dict[str, Dict[str, str]] = {
     "AutoGluon": {"category": "automl"},
     "Keras_MLP": {"category": "deep_learning"},
     "ResNet18_CIFAR10": {"category": "vision"},
+    "Logistic_TFIDF": {"category": "nlp"},
 }
 
 
@@ -58,7 +69,25 @@ def abs_path(*parts: str) -> str:
     return os.path.join(REPO_ROOT, *parts)
 
 
-def discover_datasets(max_datasets: int = 3) -> List[Path]:
+GLOBAL_STEP_OUTPUTS: Dict[str, List[Path]] = {
+    "Project/deeplearning/image_cnn_torch.py": [
+        Path(abs_path("reports")) / "leaderboard_vision.csv",
+        Path(abs_path("reports")) / "vision_metrics.json",
+    ],
+    "Project/nlp/train_sms_spam.py": [
+        Path(abs_path("reports")) / "leaderboard_nlp.csv",
+    ],
+    "Project/timeseries/forecast_baseline.py": [
+        Path(abs_path("reports")) / "timeseries_metrics.json",
+    ],
+}
+
+
+def discover_datasets(
+    max_datasets: int = 3,
+    prefer_small: bool = False,
+    max_size_mb: Optional[float] = None,
+) -> Tuple[List[Path], Dict[str, Any]]:
     candidates: List[Path] = []
     env_sources = os.getenv("DATASET_PATHS")
     if env_sources:
@@ -69,13 +98,19 @@ def discover_datasets(max_datasets: int = 3) -> List[Path]:
             path = Path(trimmed).expanduser()
             if path.exists():
                 candidates.append(path.resolve())
-    search_roots = [Path(REPO_ROOT) / "Project" / "src" / "data", Path(REPO_ROOT) / "src" / "data"]
+    search_roots = [
+        Path(REPO_ROOT) / "Project" / "src" / "data",
+        Path(REPO_ROOT) / "src" / "data",
+        Path(REPO_ROOT) / "Project" / "src" / "data" / "datasets",
+        Path(REPO_ROOT) / "src" / "data" / "datasets",
+    ]
     for root in search_roots:
         if not root.exists():
             continue
-        for csv_path in sorted(root.glob("*.csv")):
+        for csv_path in sorted(root.rglob("*.csv")):
             candidates.append(csv_path.resolve())
-    unique: List[Path] = []
+    dataset_meta: List[Dict[str, object]] = []
+    skipped_large: List[Dict[str, object]] = []
     seen: set[str] = set()
     for path in candidates:
         if not path.exists():
@@ -83,12 +118,28 @@ def discover_datasets(max_datasets: int = 3) -> List[Path]:
         key = str(path)
         if key not in seen:
             seen.add(key)
-            unique.append(path)
-    if not unique:
+            size_bytes = path.stat().st_size
+            size_mb = round(size_bytes / (1024**2), 3)
+            meta = {"path": path, "size_mb": size_mb}
+            if max_size_mb is not None and size_mb > max_size_mb:
+                skipped_large.append(meta)
+                continue
+            dataset_meta.append(meta)
+    if not dataset_meta:
         from Project.utils.io import find_csv  # lazy import to avoid circulars
 
-        unique.append(Path(find_csv()).resolve())
-    return unique[:max_datasets]
+        fallback = Path(find_csv()).resolve()
+        dataset_meta.append({"path": fallback, "size_mb": round(fallback.stat().st_size / (1024**2), 3)})
+
+    if prefer_small:
+        dataset_meta.sort(key=lambda meta: float(meta["size_mb"]))
+
+    selected = [meta["path"] for meta in dataset_meta[:max_datasets]]
+    diagnostics = {
+        "skipped_large": skipped_large,
+        "candidates_considered": dataset_meta,
+    }
+    return selected, diagnostics
 
 
 def dataset_slug(path: Path) -> str:
@@ -191,15 +242,50 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
         default=int(os.getenv("RUN_ALL_STEP_TIMEOUT", "0")),
         help="Optional timeout in seconds for each pipeline step. 0 disables the timeout.",
     )
+    parser.add_argument(
+        "--prefer-small-datasets",
+        action="store_true",
+        default=_env_flag("RUN_ALL_PREFER_SMALL"),
+        help="Prefer smaller CSVs first by sorting candidates by file size before selection.",
+    )
+    parser.add_argument(
+        "--dataset-max-mb",
+        type=float,
+        default=float(os.getenv("RUN_ALL_DATASET_MAX_MB", "0") or 0),
+        help="Skip datasets larger than this threshold (MB). 0 disables the filter.",
+    )
+    parser.add_argument(
+        "--skip-global",
+        action="store_true",
+        default=_env_flag("RUN_ALL_SKIP_GLOBAL"),
+        help="Skip global (vision/audio/timeseries) steps entirely.",
+    )
+    parser.add_argument(
+        "--rerun-global",
+        action="store_true",
+        default=_env_flag("RUN_ALL_RERUN_GLOBAL"),
+        help="Force running global steps even if their artifacts already exist.",
+    )
     return parser.parse_args(argv)
 
 
 def main(argv: Optional[Sequence[str]] = None) -> None:
     args = parse_args(argv)
+    size_cap = args.dataset_max_mb if args.dataset_max_mb > 0 else None
     runs_root = Path(abs_path("runs"))
     runs_root.mkdir(parents=True, exist_ok=True)
 
-    datasets = discover_datasets(max_datasets=args.max_datasets)
+    datasets, dataset_diag = discover_datasets(
+        max_datasets=args.max_datasets,
+        prefer_small=args.prefer_small_datasets,
+        max_size_mb=size_cap,
+    )
+    if dataset_diag.get("skipped_large"):
+        print("[Info] Skipping datasets above --dataset-max-mb threshold:")
+        for meta in dataset_diag["skipped_large"]:
+            print(f"  - {meta['path']} ({meta['size_mb']} MB)")
+    if not datasets:
+        raise RuntimeError("No datasets available after applying filters.")
     dataset_infos: List[Dict[str, object]] = []
     orchestrator_runtime: List[Dict[str, object]] = []
     leaderboard_frames: List[Any] = []
@@ -237,7 +323,6 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
         env = os.environ.copy()
         env["PYTHONPATH"] = REPO_ROOT
         env.setdefault("PYTHONHASHSEED", "42")
-        env.setdefault("TARGET", env.get("TARGET", "IsInsurable"))
         env.setdefault("FLAML_TIME_BUDGET", str(args.flaml_time_budget))
         env["CSV_PATH"] = str(dataset_path)
 
@@ -257,15 +342,22 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
         if idx < len(datasets) - 1:
             clean_base_dirs()
 
-    if GLOBAL_STEPS:
+    if GLOBAL_STEPS and not args.skip_global:
         global_env = os.environ.copy()
         global_env["PYTHONPATH"] = REPO_ROOT
         global_env.setdefault("PYTHONHASHSEED", "42")
-        global_env.setdefault("TARGET", global_env.get("TARGET", "IsInsurable"))
         global_env.setdefault("FLAML_TIME_BUDGET", str(args.flaml_time_budget))
         for step in GLOBAL_STEPS:
+            if not args.rerun_global:
+                outputs = GLOBAL_STEP_OUTPUTS.get(step, [])
+                if outputs and all(path.exists() for path in outputs):
+                    joined = ", ".join(str(path) for path in outputs)
+                    print(f"[Skip] ({step}) Cached artifacts detected → {joined}")
+                    continue
             entry = run_step(step, global_env, "global", timeout_val)
             orchestrator_runtime.append(entry)
+    elif args.skip_global:
+        print("[Info] Global steps skipped via --skip-global.")
 
     if leaderboard_frames:
         import pandas as pd
@@ -325,6 +417,11 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
     runtime_root.write_text(json.dumps(aggregated_runtime, indent=2))
 
     print(f"All tasks finished. Datasets captured: {[info['dataset'] for info in dataset_infos]}")
+    if dataset_infos:
+        summary_line = ", ".join(
+            f"{info['dataset']} (rows={info.get('rows')}, columns={info.get('columns')})" for info in dataset_infos
+        )
+        print(f"[Summary] {summary_line}")
     print(f"Reports root → {abs_path('reports')} | Runs archive → {abs_path('runs')}")
 
 

@@ -1,1 +1,1 @@
-[]
+[{"framework_a":"H2O_AutoML","framework_b":"leaderboard","metric":"f1_macro","diff":0.0,"t_stat":null,"p_value":null,"boot_ci_low":0.0,"boot_ci_high":0.0},{"framework_a":"H2O_AutoML","framework_b":"leaderboard","metric":"accuracy","diff":0.0,"t_stat":null,"p_value":null,"boot_ci_low":0.0,"boot_ci_high":0.0}]

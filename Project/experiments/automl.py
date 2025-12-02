@@ -10,7 +10,8 @@ from typing import Any, Callable, Dict, Iterable, Literal, Optional, cast
 
 import numpy as np
 import pandas as pd
-from sklearn.base import BaseEstimator, ClassifierMixin
+from sklearn.base import BaseEstimator, ClassifierMixin, RegressorMixin
+from sklearn.utils.multiclass import type_of_target
 
 from Project.experiments.runner import ExperimentConfig, ExperimentRunner
 
@@ -59,31 +60,50 @@ def _ensure_series(y: Any, name: str = "target") -> pd.Series:
 
 
 @dataclass
-class AutoGluonClassifier(ClassifierMixin, BaseEstimator):
-    """Thin wrapper around AutoGluon Tabular for binary classification."""
+class AutoGluonClassifier(ClassifierMixin, RegressorMixin, BaseEstimator):
+    """Thin wrapper around AutoGluon Tabular supporting classification or regression."""
 
     time_limit: int = 600
     presets: str = "medium_quality"
-    eval_metric: Optional[str] = "f1"
-    problem_type: Optional[str] = "binary"
+    eval_metric: Optional[str] = None
+    problem_type: Optional[str] = None
     hyperparameters: Optional[Dict[str, Any]] = None
     verbosity: int = 0
     label: str = field(default="__target__", init=False)
     skip_preprocessing: bool = True
+    task: Literal["auto", "classification", "regression"] = "auto"
+    _resolved_task: Literal["classification", "regression"] = field(init=False, default="classification", repr=False)
 
     def fit(self, X: Any, y: Any):  # type: ignore[override]
         if TabularPredictor is None:
             raise ImportError("AutoGluon is not installed; install autogluon.tabular to enable this estimator.")
         X_df = _ensure_dataframe(X)
         y_series = _ensure_series(y, name=self.label)
+        if self.task == "auto":
+            resolved_task: Literal["classification", "regression"] = (
+                "regression" if type_of_target(y_series) in {"continuous", "continuous-multioutput"} else "classification"
+            )
+        else:
+            resolved_task = cast(Literal["classification", "regression"], self.task)
+
+        problem_type = self.problem_type
+        eval_metric = self.eval_metric
+        if resolved_task == "regression":
+            problem_type = problem_type or "regression"
+            eval_metric = eval_metric or "rmse"
+        else:
+            num_classes = y_series.nunique(dropna=True)
+            if problem_type is None:
+                problem_type = "multiclass" if num_classes > 2 else "binary"
+            eval_metric = eval_metric or "f1"
         train_df = X_df.copy()
         train_df[self.label] = y_series
         self._tmpdir = tempfile.mkdtemp(prefix="autogluon_", dir=None)
         self._predictor = TabularPredictor(
             label=self.label,
             path=self._tmpdir,
-            problem_type=self.problem_type,
-            eval_metric=self.eval_metric,
+            problem_type=problem_type,
+            eval_metric=eval_metric,
         )
         self._predictor.fit(
             train_data=train_df,
@@ -92,7 +112,11 @@ class AutoGluonClassifier(ClassifierMixin, BaseEstimator):
             hyperparameters=self.hyperparameters,
             verbosity=self.verbosity,
         )
-        self.classes_ = np.array(self._predictor.class_labels)
+        self._resolved_task = resolved_task
+        if resolved_task == "classification":
+            self.classes_ = np.array(self._predictor.class_labels)
+        else:
+            self.classes_ = None
         self.n_features_in_ = X_df.shape[1]
         return self
 
@@ -105,6 +129,8 @@ class AutoGluonClassifier(ClassifierMixin, BaseEstimator):
     def predict_proba(self, X: Any):  # type: ignore[override]
         if not hasattr(self, "_predictor"):
             raise RuntimeError("AutoGluonClassifier is not fitted yet.")
+        if self._resolved_task == "regression":
+            raise AttributeError("Predict probabilities unavailable for regression tasks")
         proba = self._predictor.predict_proba(_ensure_dataframe(X))
         return proba.to_numpy()
 
@@ -116,6 +142,7 @@ class AutoGluonClassifier(ClassifierMixin, BaseEstimator):
             "problem_type": self.problem_type,
             "hyperparameters": self.hyperparameters,
             "verbosity": self.verbosity,
+            "task": self.task,
         }
 
     def set_params(self, **params):  # type: ignore[override]
@@ -130,14 +157,16 @@ class AutoGluonClassifier(ClassifierMixin, BaseEstimator):
 
 
 @dataclass
-class LightAutoMLClassifier(ClassifierMixin, BaseEstimator):
+class LightAutoMLClassifier(ClassifierMixin, RegressorMixin, BaseEstimator):
     """Wrapper around LightAutoML TabularAutoML preset."""
 
     time_limit: int = 600
     cpu_limit: int = 0
-    task_name: str = "binary"
+    task_name: Optional[str] = None
     random_state: int = 42
     skip_preprocessing: bool = True
+    task: Literal["auto", "classification", "regression"] = "auto"
+    _resolved_task: Literal["classification", "regression"] = field(init=False, default="classification", repr=False)
 
     def fit(self, X: Any, y: Any):  # type: ignore[override]
         if TabularAutoML is None or Task is None:
@@ -146,18 +175,40 @@ class LightAutoMLClassifier(ClassifierMixin, BaseEstimator):
         y_series = _ensure_series(y, name="__target__")
         train_df = X_df.copy()
         train_df[y_series.name] = y_series
-        task = Task(self.task_name)
+        if self.task == "auto":
+            resolved_task: Literal["classification", "regression"] = (
+                "regression" if type_of_target(y_series) in {"continuous", "continuous-multioutput"} else "classification"
+            )
+        else:
+            resolved_task = cast(Literal["classification", "regression"], self.task)
+
+        task_name = self.task_name
+        if resolved_task == "regression":
+            task_name = task_name or "reg"
+        else:
+            classes = y_series.nunique(dropna=True)
+            if task_name is None:
+                task_name = "multiclass" if classes > 2 else "binary"
+
+        task = Task(task_name)
         automl = TabularAutoML(task=task, timeout=self.time_limit, cpu_limit=self.cpu_limit, random_state=self.random_state)
         automl.fit_predict(train_df, roles={"target": y_series.name})
         self._automl = automl
         self._task = task
-        self.classes_ = np.unique(y_series)
+        self._resolved_task = resolved_task
+        if resolved_task == "classification":
+            self.classes_ = np.unique(y_series)
+        else:
+            self.classes_ = None
         self.n_features_in_ = X_df.shape[1]
         return self
 
     def predict(self, X: Any):  # type: ignore[override]
         if not hasattr(self, "_automl"):
             raise RuntimeError("LightAutoMLClassifier is not fitted yet.")
+        if self._resolved_task == "regression":
+            preds = self._automl.predict(_ensure_dataframe(X))
+            return np.asarray(preds.data).reshape(-1)
         proba = self.predict_proba(X)
         if proba.shape[1] == 1:
             return (proba[:, 0] >= 0.5).astype(int)
@@ -166,6 +217,8 @@ class LightAutoMLClassifier(ClassifierMixin, BaseEstimator):
     def predict_proba(self, X: Any):  # type: ignore[override]
         if not hasattr(self, "_automl"):
             raise RuntimeError("LightAutoMLClassifier is not fitted yet.")
+        if self._resolved_task == "regression":
+            raise AttributeError("Predict probabilities unavailable for regression tasks")
         preds = self._automl.predict(_ensure_dataframe(X))
         data = np.asarray(preds.data)
         if data.ndim == 1:
@@ -181,6 +234,7 @@ class LightAutoMLClassifier(ClassifierMixin, BaseEstimator):
             "cpu_limit": self.cpu_limit,
             "task_name": self.task_name,
             "random_state": self.random_state,
+            "task": self.task,
         }
 
     def set_params(self, **params):  # type: ignore[override]
@@ -190,29 +244,40 @@ class LightAutoMLClassifier(ClassifierMixin, BaseEstimator):
 
 
 @dataclass
-class FLAMLClassifier(ClassifierMixin, BaseEstimator):
-    """FLAML AutoML classifier with configurable time budget."""
+class FLAMLClassifier(ClassifierMixin, RegressorMixin, BaseEstimator):
+    """FLAML AutoML estimator with configurable time budget."""
 
     time_limit: int = 600
-    metric: str = "f1"
-    task: str = "classification"
+    metric: Optional[str] = None
+    task: str = "auto"
     log_file_name: Optional[str] = None
     estimator_list: Optional[Iterable[str]] = None
     n_jobs: int = -1
     random_state: Optional[int] = 42
     skip_preprocessing: bool = True
+    _resolved_task: Literal["classification", "regression"] = field(init=False, default="classification", repr=False)
 
     def fit(self, X: Any, y: Any):  # type: ignore[override]
         if FLAMLAutoML is None:
             raise ImportError("FLAML is not installed; install flaml to enable this estimator.")
         X_df = _ensure_dataframe(X)
         y_series = _ensure_series(y)
+        if self.task == "auto":
+            resolved_task: Literal["classification", "regression"] = (
+                "regression" if type_of_target(y_series) in {"continuous", "continuous-multioutput"} else "classification"
+            )
+        else:
+            resolved_task = "regression" if self.task.lower().startswith("reg") else "classification"
+
+        metric = self.metric
+        if metric is None or metric == "auto":
+            metric = "rmse" if resolved_task == "regression" else "f1"
         automl = FLAMLAutoML()
         automl.fit(
             X_train=X_df,
             y_train=y_series,
-            task=self.task,
-            metric=self.metric,
+            task=resolved_task,
+            metric=metric,
             time_budget=self.time_limit,
             log_file_name=self.log_file_name,
             estimator_list=list(self.estimator_list) if self.estimator_list is not None else None,
@@ -220,7 +285,11 @@ class FLAMLClassifier(ClassifierMixin, BaseEstimator):
             seed=self.random_state,
         )
         self._automl = automl
-        self.classes_ = np.unique(y_series)
+        self._resolved_task = resolved_task
+        if resolved_task == "classification":
+            self.classes_ = np.unique(y_series)
+        else:
+            self.classes_ = None
         self.n_features_in_ = X_df.shape[1]
         return self
 
@@ -232,7 +301,7 @@ class FLAMLClassifier(ClassifierMixin, BaseEstimator):
     def predict_proba(self, X: Any):  # type: ignore[override]
         if not hasattr(self, "_automl"):
             raise RuntimeError("FLAMLClassifier is not fitted yet.")
-        if not hasattr(self._automl, "predict_proba"):
+        if self._resolved_task == "regression" or not hasattr(self._automl, "predict_proba"):
             raise AttributeError("FLAML estimator does not expose predict_proba")
         return self._automl.predict_proba(_ensure_dataframe(X))
 
@@ -254,7 +323,7 @@ class FLAMLClassifier(ClassifierMixin, BaseEstimator):
 
 
 @dataclass
-class H2OAutoMLClassifier(ClassifierMixin, BaseEstimator):
+class H2OAutoMLClassifier(ClassifierMixin, RegressorMixin, BaseEstimator):
     """Wrapper for H2O AutoML with runtime controls."""
 
     time_limit: int = 600
@@ -264,6 +333,8 @@ class H2OAutoMLClassifier(ClassifierMixin, BaseEstimator):
     random_seed: int = 42
     skip_preprocessing: bool = True
     label: str = field(default="__target__", init=False)
+    task: Literal["auto", "classification", "regression"] = "auto"
+    _resolved_task: Literal["classification", "regression"] = field(init=False, default="classification", repr=False)
 
     def fit(self, X: Any, y: Any):  # type: ignore[override]
         if H2OAutoML is None or h2o is None:
@@ -273,11 +344,18 @@ class H2OAutoMLClassifier(ClassifierMixin, BaseEstimator):
             h2o_local.init(max_mem_size=self.max_mem_size)
         X_df = _ensure_dataframe(X)
         y_series = _ensure_series(y, name=self.label)
+        if self.task == "auto":
+            resolved_task: Literal["classification", "regression"] = (
+                "regression" if type_of_target(y_series) in {"continuous", "continuous-multioutput"} else "classification"
+            )
+        else:
+            resolved_task = cast(Literal["classification", "regression"], self.task)
         train_df = X_df.copy()
         train_df[self.label] = y_series
         train_frame = h2o_local.H2OFrame(train_df)
-        train_col = train_frame[self.label]
-        train_frame[self.label] = cast(Any, train_col).asfactor()
+        if resolved_task == "classification":
+            train_col = train_frame[self.label]
+            train_frame[self.label] = cast(Any, train_col).asfactor()
         automl_cls = cast(Any, H2OAutoML)
         automl = automl_cls(
             max_runtime_secs=self.time_limit,
@@ -288,7 +366,11 @@ class H2OAutoMLClassifier(ClassifierMixin, BaseEstimator):
         automl.train(y=self.label, training_frame=train_frame)
         self._automl = automl
         self._leader = cast(Any, automl.leader)
-        self.classes_ = np.unique(y_series)
+        self._resolved_task = resolved_task
+        if resolved_task == "classification":
+            self.classes_ = np.unique(y_series)
+        else:
+            self.classes_ = None
         self.n_features_in_ = X_df.shape[1]
         return self
 
@@ -306,6 +388,8 @@ class H2OAutoMLClassifier(ClassifierMixin, BaseEstimator):
         h2o_local = cast(Any, h2o)
         frame = h2o_local.H2OFrame(_ensure_dataframe(X))
         preds = cast(Any, self._leader).predict(frame).as_data_frame(use_pandas=True)
+        if self._resolved_task == "regression":
+            raise AttributeError("Predict probabilities unavailable for regression tasks")
         prob_cols = [col for col in preds.columns if col.startswith("p")]
         if not prob_cols:
             raise AttributeError("H2OAutoML predictions do not include probability columns")
@@ -318,6 +402,7 @@ class H2OAutoMLClassifier(ClassifierMixin, BaseEstimator):
             "project_name": self.project_name,
             "max_mem_size": self.max_mem_size,
             "random_seed": self.random_seed,
+            "task": self.task,
         }
 
     def set_params(self, **params):  # type: ignore[override]

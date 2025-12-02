@@ -1,0 +1,74 @@
+[
+  {
+    "framework":"feature_ablation_xgboost_baseline",
+    "estimator":"xgboost",
+    "variant_key":"baseline",
+    "variant_name":"Baseline",
+    "variant_description":"Median\/most-frequent imputation, scaling enabled, no extra transforms.",
+    "metric":"accuracy",
+    "mean":0.7333333333,
+    "std":0.0165634665,
+    "n":5,
+    "delta_vs_baseline":0.0
+  },
+  {
+    "framework":"feature_ablation_xgboost_poly2",
+    "estimator":"xgboost",
+    "variant_key":"poly2",
+    "variant_name":"Polynomial (deg=2)",
+    "variant_description":"Augment numeric features with 2nd-degree polynomial terms.",
+    "metric":"accuracy",
+    "mean":0.7259259259,
+    "std":0.044212357,
+    "n":5,
+    "delta_vs_baseline":null
+  },
+  {
+    "framework":"feature_ablation_xgboost_baseline",
+    "estimator":"xgboost",
+    "variant_key":"baseline",
+    "variant_name":"Baseline",
+    "variant_description":"Median\/most-frequent imputation, scaling enabled, no extra transforms.",
+    "metric":"fit_time_sec",
+    "mean":0.4950203834,
+    "std":0.0047545698,
+    "n":5,
+    "delta_vs_baseline":0.0
+  },
+  {
+    "framework":"feature_ablation_xgboost_poly2",
+    "estimator":"xgboost",
+    "variant_key":"poly2",
+    "variant_name":"Polynomial (deg=2)",
+    "variant_description":"Augment numeric features with 2nd-degree polynomial terms.",
+    "metric":"fit_time_sec",
+    "mean":0.449620725,
+    "std":0.0088864935,
+    "n":5,
+    "delta_vs_baseline":null
+  },
+  {
+    "framework":"feature_ablation_xgboost_baseline",
+    "estimator":"xgboost",
+    "variant_key":"baseline",
+    "variant_name":"Baseline",
+    "variant_description":"Median\/most-frequent imputation, scaling enabled, no extra transforms.",
+    "metric":"predict_time_sec",
+    "mean":0.0027601002,
+    "std":0.0000881477,
+    "n":5,
+    "delta_vs_baseline":0.0
+  },
+  {
+    "framework":"feature_ablation_xgboost_poly2",
+    "estimator":"xgboost",
+    "variant_key":"poly2",
+    "variant_name":"Polynomial (deg=2)",
+    "variant_description":"Augment numeric features with 2nd-degree polynomial terms.",
+    "metric":"predict_time_sec",
+    "mean":0.0061214666,
+    "std":0.0000418102,
+    "n":5,
+    "delta_vs_baseline":null
+  }
+]

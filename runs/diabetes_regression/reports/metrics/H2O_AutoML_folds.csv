@@ -1,0 +1,2 @@
+framework,f1_macro,accuracy,roc_auc_ovr,avg_precision_ovr
+H2O_AutoML,0.7977941176470589,0.797979797979798,0.8779591836734694,0.8891339965262723

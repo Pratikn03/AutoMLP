@@ -1,0 +1,76 @@
+framework,estimator,variant_key,variant_name,variant_description,metric,mean,std,n,delta_vs_baseline
+feature_ablation_catboost_baseline,catboost,baseline,Baseline,"Median/most-frequent imputation, scaling enabled, no extra transforms.",fit_time_sec,0.11999484999978442,0.024098464207511067,5,0.0
+feature_ablation_catboost_no_scaling,catboost,no_scaling,No Scaling,Disable numeric scaling to test robustness to raw feature magnitudes.,fit_time_sec,0.10898041660257148,0.00023516166692567523,5,
+feature_ablation_catboost_poly2,catboost,poly2,Polynomial (deg=2),Augment numeric features with 2nd-degree polynomial terms.,fit_time_sec,0.10943561659660188,0.0005213992715859222,5,
+feature_ablation_catboost_quantile_bins,catboost,quantile_bins,Quantile Binning,Discretize numeric features into quantile bins and one-hot encode.,fit_time_sec,0.1092966914031421,0.0003804205519984698,5,
+feature_ablation_catboost_vif_filter,catboost,vif_filter,VIF Filter,Apply variance inflation factor filtering (threshold=8).,fit_time_sec,0.4017294336023042,0.0025810388020818787,5,
+feature_ablation_lightgbm_baseline,lightgbm,baseline,Baseline,"Median/most-frequent imputation, scaling enabled, no extra transforms.",fit_time_sec,0.02281226680497634,0.0032203864815779997,5,0.0
+feature_ablation_lightgbm_no_scaling,lightgbm,no_scaling,No Scaling,Disable numeric scaling to test robustness to raw feature magnitudes.,fit_time_sec,0.0215425167989451,0.0008279579649994685,5,
+feature_ablation_lightgbm_poly2,lightgbm,poly2,Polynomial (deg=2),Augment numeric features with 2nd-degree polynomial terms.,fit_time_sec,0.02146610799536568,0.0003062637345946101,5,
+feature_ablation_lightgbm_quantile_bins,lightgbm,quantile_bins,Quantile Binning,Discretize numeric features into quantile bins and one-hot encode.,fit_time_sec,0.02091464999830346,0.00047662861670414206,5,
+feature_ablation_lightgbm_vif_filter,lightgbm,vif_filter,VIF Filter,Apply variance inflation factor filtering (threshold=8).,fit_time_sec,0.306329316800111,0.00097565454802069,5,
+feature_ablation_xgboost_baseline,xgboost,baseline,Baseline,"Median/most-frequent imputation, scaling enabled, no extra transforms.",fit_time_sec,0.565087574798963,0.008821576589202105,5,0.0
+feature_ablation_xgboost_no_scaling,xgboost,no_scaling,No Scaling,Disable numeric scaling to test robustness to raw feature magnitudes.,fit_time_sec,0.5624801168014528,0.006167959943592528,5,
+feature_ablation_xgboost_poly2,xgboost,poly2,Polynomial (deg=2),Augment numeric features with 2nd-degree polynomial terms.,fit_time_sec,0.5653413581982022,0.005547617987765186,5,
+feature_ablation_xgboost_quantile_bins,xgboost,quantile_bins,Quantile Binning,Discretize numeric features into quantile bins and one-hot encode.,fit_time_sec,0.5499972836027155,0.013760051608661457,5,
+feature_ablation_xgboost_vif_filter,xgboost,vif_filter,VIF Filter,Apply variance inflation factor filtering (threshold=8).,fit_time_sec,0.8498055166011909,0.0036850831079485143,5,
+feature_ablation_catboost_baseline,catboost,baseline,Baseline,"Median/most-frequent imputation, scaling enabled, no extra transforms.",mae,2.6011691233201097,0.2661636776547014,5,0.0
+feature_ablation_catboost_no_scaling,catboost,no_scaling,No Scaling,Disable numeric scaling to test robustness to raw feature magnitudes.,mae,2.6011691233201097,0.2661636776547014,5,
+feature_ablation_catboost_poly2,catboost,poly2,Polynomial (deg=2),Augment numeric features with 2nd-degree polynomial terms.,mae,2.6011691233201097,0.2661636776547014,5,
+feature_ablation_catboost_quantile_bins,catboost,quantile_bins,Quantile Binning,Discretize numeric features into quantile bins and one-hot encode.,mae,2.6011691233201097,0.2661636776547014,5,
+feature_ablation_catboost_vif_filter,catboost,vif_filter,VIF Filter,Apply variance inflation factor filtering (threshold=8).,mae,2.6011691233201097,0.2661636776547014,5,
+feature_ablation_lightgbm_baseline,lightgbm,baseline,Baseline,"Median/most-frequent imputation, scaling enabled, no extra transforms.",mae,2.5987092007825408,0.27017314606922704,5,0.0
+feature_ablation_lightgbm_no_scaling,lightgbm,no_scaling,No Scaling,Disable numeric scaling to test robustness to raw feature magnitudes.,mae,2.5987092007825408,0.27017314606922704,5,
+feature_ablation_lightgbm_poly2,lightgbm,poly2,Polynomial (deg=2),Augment numeric features with 2nd-degree polynomial terms.,mae,2.5987092007825408,0.27017314606922704,5,
+feature_ablation_lightgbm_quantile_bins,lightgbm,quantile_bins,Quantile Binning,Discretize numeric features into quantile bins and one-hot encode.,mae,2.5987092007825408,0.27017314606922704,5,
+feature_ablation_lightgbm_vif_filter,lightgbm,vif_filter,VIF Filter,Apply variance inflation factor filtering (threshold=8).,mae,2.5987092007825408,0.27017314606922704,5,
+feature_ablation_xgboost_baseline,xgboost,baseline,Baseline,"Median/most-frequent imputation, scaling enabled, no extra transforms.",mae,2.60050311088562,0.26433645287512497,5,0.0
+feature_ablation_xgboost_no_scaling,xgboost,no_scaling,No Scaling,Disable numeric scaling to test robustness to raw feature magnitudes.,mae,2.60050311088562,0.26433645287512497,5,
+feature_ablation_xgboost_poly2,xgboost,poly2,Polynomial (deg=2),Augment numeric features with 2nd-degree polynomial terms.,mae,2.60050311088562,0.26433645287512497,5,
+feature_ablation_xgboost_quantile_bins,xgboost,quantile_bins,Quantile Binning,Discretize numeric features into quantile bins and one-hot encode.,mae,2.60050311088562,0.26433645287512497,5,
+feature_ablation_xgboost_vif_filter,xgboost,vif_filter,VIF Filter,Apply variance inflation factor filtering (threshold=8).,mae,2.60050311088562,0.26433645287512497,5,
+feature_ablation_catboost_baseline,catboost,baseline,Baseline,"Median/most-frequent imputation, scaling enabled, no extra transforms.",predict_time_sec,0.0024575751944211598,0.0004231381880762156,5,0.0
+feature_ablation_catboost_no_scaling,catboost,no_scaling,No Scaling,Disable numeric scaling to test robustness to raw feature magnitudes.,predict_time_sec,0.0034876167977926794,0.0012943440094601276,5,
+feature_ablation_catboost_poly2,catboost,poly2,Polynomial (deg=2),Augment numeric features with 2nd-degree polynomial terms.,predict_time_sec,0.012162458195234583,0.020843356525357914,5,
+feature_ablation_catboost_quantile_bins,catboost,quantile_bins,Quantile Binning,Discretize numeric features into quantile bins and one-hot encode.,predict_time_sec,0.003489199996693,0.0017512749280144838,5,
+feature_ablation_catboost_vif_filter,catboost,vif_filter,VIF Filter,Apply variance inflation factor filtering (threshold=8).,predict_time_sec,0.00318319979996882,0.001156211213650961,5,
+feature_ablation_lightgbm_baseline,lightgbm,baseline,Baseline,"Median/most-frequent imputation, scaling enabled, no extra transforms.",predict_time_sec,0.00166725839953866,0.00015425863025342071,5,0.0
+feature_ablation_lightgbm_no_scaling,lightgbm,no_scaling,No Scaling,Disable numeric scaling to test robustness to raw feature magnitudes.,predict_time_sec,0.00159767519799056,0.00012634613644909077,5,
+feature_ablation_lightgbm_poly2,lightgbm,poly2,Polynomial (deg=2),Augment numeric features with 2nd-degree polynomial terms.,predict_time_sec,0.0015530250006122,4.286674271562697e-05,5,
+feature_ablation_lightgbm_quantile_bins,lightgbm,quantile_bins,Quantile Binning,Discretize numeric features into quantile bins and one-hot encode.,predict_time_sec,0.0015210329933324402,7.236740107613596e-05,5,
+feature_ablation_lightgbm_vif_filter,lightgbm,vif_filter,VIF Filter,Apply variance inflation factor filtering (threshold=8).,predict_time_sec,0.0017153583990875201,7.382419819381016e-05,5,
+feature_ablation_xgboost_baseline,xgboost,baseline,Baseline,"Median/most-frequent imputation, scaling enabled, no extra transforms.",predict_time_sec,0.007124291604850399,0.0006738671493408664,5,0.0
+feature_ablation_xgboost_no_scaling,xgboost,no_scaling,No Scaling,Disable numeric scaling to test robustness to raw feature magnitudes.,predict_time_sec,0.007721166798728481,0.0013637794182370393,5,
+feature_ablation_xgboost_poly2,xgboost,poly2,Polynomial (deg=2),Augment numeric features with 2nd-degree polynomial terms.,predict_time_sec,0.00781904999748798,0.0013186862856596803,5,
+feature_ablation_xgboost_quantile_bins,xgboost,quantile_bins,Quantile Binning,Discretize numeric features into quantile bins and one-hot encode.,predict_time_sec,0.007299424998927839,0.0010765359965837162,5,
+feature_ablation_xgboost_vif_filter,xgboost,vif_filter,VIF Filter,Apply variance inflation factor filtering (threshold=8).,predict_time_sec,0.00786849160504056,0.0013629487054445484,5,
+feature_ablation_catboost_baseline,catboost,baseline,Baseline,"Median/most-frequent imputation, scaling enabled, no extra transforms.",r2,-0.03906274372247816,0.06745676587159236,5,0.0
+feature_ablation_catboost_no_scaling,catboost,no_scaling,No Scaling,Disable numeric scaling to test robustness to raw feature magnitudes.,r2,-0.03906274372247816,0.06745676587159236,5,
+feature_ablation_catboost_poly2,catboost,poly2,Polynomial (deg=2),Augment numeric features with 2nd-degree polynomial terms.,r2,-0.03906274372247816,0.06745676587159236,5,
+feature_ablation_catboost_quantile_bins,catboost,quantile_bins,Quantile Binning,Discretize numeric features into quantile bins and one-hot encode.,r2,-0.03906274372247816,0.06745676587159236,5,
+feature_ablation_catboost_vif_filter,catboost,vif_filter,VIF Filter,Apply variance inflation factor filtering (threshold=8).,r2,-0.03906274372247816,0.06745676587159236,5,
+feature_ablation_lightgbm_baseline,lightgbm,baseline,Baseline,"Median/most-frequent imputation, scaling enabled, no extra transforms.",r2,-0.03643855496310672,0.059705878469690186,5,0.0
+feature_ablation_lightgbm_no_scaling,lightgbm,no_scaling,No Scaling,Disable numeric scaling to test robustness to raw feature magnitudes.,r2,-0.03643855496310672,0.059705878469690186,5,
+feature_ablation_lightgbm_poly2,lightgbm,poly2,Polynomial (deg=2),Augment numeric features with 2nd-degree polynomial terms.,r2,-0.03643855496310672,0.059705878469690186,5,
+feature_ablation_lightgbm_quantile_bins,lightgbm,quantile_bins,Quantile Binning,Discretize numeric features into quantile bins and one-hot encode.,r2,-0.03643855496310672,0.059705878469690186,5,
+feature_ablation_lightgbm_vif_filter,lightgbm,vif_filter,VIF Filter,Apply variance inflation factor filtering (threshold=8).,r2,-0.03643855496310672,0.059705878469690186,5,
+feature_ablation_xgboost_baseline,xgboost,baseline,Baseline,"Median/most-frequent imputation, scaling enabled, no extra transforms.",r2,-0.038811349868774374,0.06973726649256001,5,0.0
+feature_ablation_xgboost_no_scaling,xgboost,no_scaling,No Scaling,Disable numeric scaling to test robustness to raw feature magnitudes.,r2,-0.038811349868774374,0.06973726649256001,5,
+feature_ablation_xgboost_poly2,xgboost,poly2,Polynomial (deg=2),Augment numeric features with 2nd-degree polynomial terms.,r2,-0.038811349868774374,0.06973726649256001,5,
+feature_ablation_xgboost_quantile_bins,xgboost,quantile_bins,Quantile Binning,Discretize numeric features into quantile bins and one-hot encode.,r2,-0.038811349868774374,0.06973726649256001,5,
+feature_ablation_xgboost_vif_filter,xgboost,vif_filter,VIF Filter,Apply variance inflation factor filtering (threshold=8).,r2,-0.038811349868774374,0.06973726649256001,5,
+feature_ablation_catboost_baseline,catboost,baseline,Baseline,"Median/most-frequent imputation, scaling enabled, no extra transforms.",rmse,3.047829694344318,0.2695427790702654,5,0.0
+feature_ablation_catboost_no_scaling,catboost,no_scaling,No Scaling,Disable numeric scaling to test robustness to raw feature magnitudes.,rmse,3.047829694344318,0.2695427790702654,5,
+feature_ablation_catboost_poly2,catboost,poly2,Polynomial (deg=2),Augment numeric features with 2nd-degree polynomial terms.,rmse,3.047829694344318,0.2695427790702654,5,
+feature_ablation_catboost_quantile_bins,catboost,quantile_bins,Quantile Binning,Discretize numeric features into quantile bins and one-hot encode.,rmse,3.047829694344318,0.2695427790702654,5,
+feature_ablation_catboost_vif_filter,catboost,vif_filter,VIF Filter,Apply variance inflation factor filtering (threshold=8).,rmse,3.047829694344318,0.2695427790702654,5,
+feature_ablation_lightgbm_baseline,lightgbm,baseline,Baseline,"Median/most-frequent imputation, scaling enabled, no extra transforms.",rmse,3.044713834249511,0.27283816019881285,5,0.0
+feature_ablation_lightgbm_no_scaling,lightgbm,no_scaling,No Scaling,Disable numeric scaling to test robustness to raw feature magnitudes.,rmse,3.044713834249511,0.27283816019881285,5,
+feature_ablation_lightgbm_poly2,lightgbm,poly2,Polynomial (deg=2),Augment numeric features with 2nd-degree polynomial terms.,rmse,3.044713834249511,0.27283816019881285,5,
+feature_ablation_lightgbm_quantile_bins,lightgbm,quantile_bins,Quantile Binning,Discretize numeric features into quantile bins and one-hot encode.,rmse,3.044713834249511,0.27283816019881285,5,
+feature_ablation_lightgbm_vif_filter,lightgbm,vif_filter,VIF Filter,Apply variance inflation factor filtering (threshold=8).,rmse,3.044713834249511,0.27283816019881285,5,
+feature_ablation_xgboost_baseline,xgboost,baseline,Baseline,"Median/most-frequent imputation, scaling enabled, no extra transforms.",rmse,3.047213840484619,0.2680698290828588,5,0.0
+feature_ablation_xgboost_no_scaling,xgboost,no_scaling,No Scaling,Disable numeric scaling to test robustness to raw feature magnitudes.,rmse,3.047213840484619,0.2680698290828588,5,
+feature_ablation_xgboost_poly2,xgboost,poly2,Polynomial (deg=2),Augment numeric features with 2nd-degree polynomial terms.,rmse,3.047213840484619,0.2680698290828588,5,
+feature_ablation_xgboost_quantile_bins,xgboost,quantile_bins,Quantile Binning,Discretize numeric features into quantile bins and one-hot encode.,rmse,3.047213840484619,0.2680698290828588,5,
+feature_ablation_xgboost_vif_filter,xgboost,vif_filter,VIF Filter,Apply variance inflation factor filtering (threshold=8).,rmse,3.047213840484619,0.2680698290828588,5,

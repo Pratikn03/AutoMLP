@@ -127,9 +127,14 @@ def build_preprocessor(df: pd.DataFrame, config: Optional[PreprocessingConfig] =
             ),
         ))
 
+    try:
+        categorical_encoder = OneHotEncoder(handle_unknown="ignore", sparse_output=False)
+    except TypeError:  # pragma: no cover - older sklearn fallback
+        categorical_encoder = OneHotEncoder(handle_unknown="ignore", sparse=False)
+
     categorical_steps: List[tuple[str, Any]] = [
         ("imputer", SimpleImputer(strategy=cfg.categorical_imputer_strategy, fill_value="missing")),
-        ("encoder", OneHotEncoder(handle_unknown="ignore")),
+        ("encoder", categorical_encoder),
     ]
 
     transformers: List[tuple[str, Any, List[str]]] = []

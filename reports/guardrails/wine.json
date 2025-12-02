@@ -1,0 +1,8 @@
+{
+  "dataset": "wine",
+  "path": "src/data/datasets/tabular/wine.csv",
+  "rows": 178,
+  "columns": 14,
+  "issues": [],
+  "status": "pass"
+}

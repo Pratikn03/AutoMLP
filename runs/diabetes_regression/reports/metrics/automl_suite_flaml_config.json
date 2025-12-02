@@ -1,0 +1,40 @@
+{
+  "experiment_name": "automl_suite_flaml",
+  "seeds": [
+    42
+  ],
+  "n_splits": 5,
+  "metrics": [
+    "rmse",
+    "mae",
+    "r2"
+  ],
+  "preprocessing": {
+    "numeric_imputer_strategy": "median",
+    "categorical_imputer_strategy": "most_frequent",
+    "scale_numeric": false,
+    "poly_degree": null,
+    "binning_strategy": null,
+    "n_bins": 5,
+    "bin_encode": "onehot-dense",
+    "vif_threshold": null
+  },
+  "output_dir": "reports/metrics",
+  "artifact_dir": "artifacts/experiments",
+  "figure_dir": "figures/feature_importance",
+  "save_pipeline": true,
+  "save_feature_importance": true,
+  "feature_importance_top_k": 20,
+  "metadata": {},
+  "target": "sex",
+  "estimator": "FLAMLClassifier",
+  "estimator_params": {
+    "time_limit": 600,
+    "metric": null,
+    "task": "auto",
+    "log_file_name": null,
+    "estimator_list": null,
+    "n_jobs": -1,
+    "random_state": 42
+  }
+}

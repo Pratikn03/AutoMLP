@@ -1,0 +1,7 @@
+framework,estimator,variant_key,variant_name,variant_description,metric,mean,std,n,delta_vs_baseline
+feature_ablation_xgboost_baseline,xgboost,baseline,Baseline,"Median/most-frequent imputation, scaling enabled, no extra transforms.",accuracy,0.9630957925787922,0.01901043513139633,5,0.0
+feature_ablation_xgboost_poly2,xgboost,poly2,Polynomial (deg=2),Augment numeric features with 2nd-degree polynomial terms.,accuracy,0.9701288619779538,0.004763014374511675,5,
+feature_ablation_xgboost_baseline,xgboost,baseline,Baseline,"Median/most-frequent imputation, scaling enabled, no extra transforms.",fit_time_sec,0.30307028339011594,0.005704595291705022,5,0.0
+feature_ablation_xgboost_poly2,xgboost,poly2,Polynomial (deg=2),Augment numeric features with 2nd-degree polynomial terms.,fit_time_sec,0.45004216660163365,0.01514493860283354,5,
+feature_ablation_xgboost_baseline,xgboost,baseline,Baseline,"Median/most-frequent imputation, scaling enabled, no extra transforms.",predict_time_sec,0.0026462252018973004,9.419757378388998e-05,5,0.0
+feature_ablation_xgboost_poly2,xgboost,poly2,Polynomial (deg=2),Augment numeric features with 2nd-degree polynomial terms.,predict_time_sec,0.02210843339562412,0.0006055094609783746,5,

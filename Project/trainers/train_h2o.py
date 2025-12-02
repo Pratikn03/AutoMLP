@@ -5,7 +5,9 @@ and `Project.utils.sanitize` so it runs correctly when invoked from
 `scripts/run_all.py` with PYTHONPATH set to the repo root.
 """
 
+import json
 import os
+import time
 import warnings
 
 import numpy as np
@@ -142,6 +144,8 @@ def main():
         print(f"Saved H2O model: {model_path}")
     except Exception as e:
         print("[H2O] Could not save binary model:", e)
+        model_path = None
+    mojo_path = None
     try:
         # Also save a MOJO for production scoring (leader.download_mojo may exist)
         mojo_path = aml.leader.download_mojo(path=art_dir)  # type: ignore[attr-defined]
@@ -153,6 +157,15 @@ def main():
             print(f"MOJO available at: {mojo_path}")
         except Exception:
             print("[H2O] Could not save MOJO:", e)
+
+    metadata = {
+        "model_path": model_path,
+        "mojo_path": mojo_path,
+        "saved_at": time.time(),
+        "h2o_version": getattr(h2o, "__version__", "unknown"),
+    }
+    with open(os.path.join(art_dir, "model_metadata.json"), "w", encoding="utf-8") as fh:
+        json.dump(metadata, fh, indent=2)
 
     # Shutdown cleanly
     try:

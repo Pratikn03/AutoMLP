@@ -10,9 +10,13 @@ from sklearn.metrics import (
     accuracy_score,
     average_precision_score,
     f1_score,
+    mean_absolute_error,
+    mean_squared_error,
+    r2_score,
     roc_auc_score,
 )
-from sklearn.model_selection import StratifiedKFold
+from sklearn.model_selection import StratifiedKFold, train_test_split
+from sklearn.utils.multiclass import type_of_target
 
 from Project.utils.io import guess_target_column, load_dataset
 from Project.utils.sanitize import sanitize_columns
@@ -39,7 +43,7 @@ def _prepare_target(series: pd.Series) -> pd.Series:
 
 def main() -> None:
     try:
-        from catboost import CatBoostClassifier, Pool
+        from catboost import CatBoostClassifier, CatBoostRegressor, Pool
     except Exception as exc:  # pragma: no cover - optional dependency
         print("[CatBoost] Not available → skipping. Reason:", exc)
         return
@@ -53,59 +57,113 @@ def main() -> None:
     y = _prepare_target(df[target_col])
     X = df.drop(columns=[target_col])
 
-    cat_indices = _resolve_cat_features(X)
-    cv = StratifiedKFold(n_splits=N_SPLITS, shuffle=True, random_state=SEED)
+    target_kind = type_of_target(y)
+    if target_kind in {"continuous", "continuous-multioutput"}:
+        problem_type = "regression"
+        y = pd.to_numeric(y, errors="coerce")
+        mask = y.notna()
+        if not mask.all():
+            X = X.loc[mask]
+            y = y.loc[mask]
+        y = y.astype(float)
+    else:
+        problem_type = "classification"
 
+    cat_indices = _resolve_cat_features(X)
+    if cat_indices:
+        for idx in cat_indices:
+            col = X.columns[idx]
+            X[col] = X[col].astype(str).replace({"nan": "__nan__", "None": "__nan__"}).fillna("__nan__")
+    folds = []
+    if N_SPLITS >= 2:
+        cv = StratifiedKFold(n_splits=N_SPLITS, shuffle=True, random_state=SEED)
+        try:
+            folds = list(cv.split(X, y))
+        except ValueError as exc:
+            print(f"[CatBoost] Falling back to holdout split: {exc}")
+    if not folds:
+        stratify = y if y.nunique() > 1 else None
+        idx = np.arange(len(y))
+        try:
+            train_idx, valid_idx = train_test_split(idx, test_size=0.2, random_state=SEED, stratify=stratify)
+        except ValueError:
+            train_idx, valid_idx = train_test_split(idx, test_size=0.2, random_state=SEED, stratify=None)
+        folds = [(train_idx, valid_idx)]
+
+    is_binary = problem_type == "classification" and y.nunique() == 2
     rows = []
-    for fold, (train_idx, valid_idx) in enumerate(cv.split(X, y), start=1):
-        model = CatBoostClassifier(
+
+    def _make_model():
+        if problem_type == "regression":
+            return CatBoostRegressor(
+                depth=6,
+                learning_rate=0.05,
+                iterations=400,
+                loss_function="RMSE",
+                eval_metric="RMSE",
+                random_seed=SEED,
+                verbose=False,
+            )
+        loss = "Logloss" if is_binary else "MultiClass"
+        eval_metric = "F1" if is_binary else "TotalF1"
+        return CatBoostClassifier(
             depth=6,
             learning_rate=0.05,
             iterations=400,
-            loss_function="Logloss",
-            eval_metric="F1",
+            loss_function=loss,
+            eval_metric=eval_metric,
             random_seed=SEED,
             auto_class_weights="Balanced",
             verbose=False,
         )
+
+    for fold, (train_idx, valid_idx) in enumerate(folds, start=1):
+        model = _make_model()
         train_pool = Pool(X.iloc[train_idx], y.iloc[train_idx], cat_features=cat_indices or None)
         valid_pool = Pool(X.iloc[valid_idx], y.iloc[valid_idx], cat_features=cat_indices or None)
         model.fit(train_pool, eval_set=valid_pool, verbose=False)
 
-        pred_labels = np.asarray(model.predict(valid_pool)).ravel()
-        y_valid = np.asarray(y.iloc[valid_idx])
-        acc = float(accuracy_score(y_valid, pred_labels))
-        f1 = float(f1_score(y_valid, pred_labels, average="macro"))
-        try:
-            pred_prob = np.asarray(model.predict_proba(valid_pool))[:, 1]
-            roc = float(roc_auc_score(y_valid, pred_prob))
-            ap = float(average_precision_score(y_valid, pred_prob))
-        except Exception:
-            roc, ap = float("nan"), float("nan")
-
-        rows.append({
-            "fold": fold,
-            "framework": "CatBoost",
-            "accuracy": acc,
-            "f1_macro": f1,
-            "roc_auc_ovr": roc,
-            "avg_precision_ovr": ap,
-        })
+        if problem_type == "classification":
+            pred_labels = np.asarray(model.predict(valid_pool)).ravel()
+            y_valid = np.asarray(y.iloc[valid_idx])
+            acc = float(accuracy_score(y_valid, pred_labels))
+            f1 = float(f1_score(y_valid, pred_labels, average="macro"))
+            if is_binary:
+                try:
+                    pred_prob = np.asarray(model.predict_proba(valid_pool))[:, 1]
+                    roc = float(roc_auc_score(y_valid, pred_prob))
+                    ap = float(average_precision_score(y_valid, pred_prob))
+                except Exception:
+                    roc, ap = float("nan"), float("nan")
+            else:
+                roc, ap = float("nan"), float("nan")
+            rows.append({
+                "fold": fold,
+                "framework": "CatBoost",
+                "accuracy": acc,
+                "f1_macro": f1,
+                "roc_auc_ovr": roc,
+                "avg_precision_ovr": ap,
+            })
+        else:
+            preds = np.asarray(model.predict(valid_pool)).ravel()
+            truth = np.asarray(y.iloc[valid_idx])
+            rmse = float(mean_squared_error(truth, preds, squared=False))
+            mae = float(mean_absolute_error(truth, preds))
+            r2 = float(r2_score(truth, preds))
+            rows.append({
+                "fold": fold,
+                "framework": "CatBoost",
+                "rmse": rmse,
+                "mae": mae,
+                "r2": r2,
+            })
 
     metrics_df = pd.DataFrame(rows)
     save_metrics(metrics_df, "CatBoost")
 
     # Persist a final model fitted on the full dataset
-    model = CatBoostClassifier(
-        depth=6,
-        learning_rate=0.05,
-        iterations=400,
-        loss_function="Logloss",
-        eval_metric="F1",
-        random_seed=SEED,
-        auto_class_weights="Balanced",
-        verbose=False,
-    )
+    model = _make_model()
     full_pool = Pool(X, y, cat_features=cat_indices or None)
     model.fit(full_pool, verbose=False)
 

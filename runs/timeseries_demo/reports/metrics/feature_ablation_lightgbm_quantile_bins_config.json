@@ -1,0 +1,52 @@
+{
+  "experiment_name": "feature_ablation_lightgbm_quantile_bins",
+  "seeds": [
+    42
+  ],
+  "n_splits": 5,
+  "metrics": [
+    "rmse",
+    "mae",
+    "r2"
+  ],
+  "preprocessing": {
+    "numeric_imputer_strategy": "median",
+    "categorical_imputer_strategy": "most_frequent",
+    "scale_numeric": true,
+    "poly_degree": null,
+    "binning_strategy": "quantile",
+    "n_bins": 10,
+    "bin_encode": "onehot",
+    "vif_threshold": null
+  },
+  "output_dir": "reports/metrics",
+  "artifact_dir": "artifacts/experiments",
+  "figure_dir": "figures/feature_importance",
+  "save_pipeline": true,
+  "save_feature_importance": true,
+  "feature_importance_top_k": 20,
+  "metadata": {
+    "ablation_suite": true,
+    "preprocessing_variant": "quantile_bins",
+    "feature_variant": "Quantile Binning",
+    "feature_description": "Discretize numeric features into quantile bins and one-hot encode.",
+    "feature_variant_key": "quantile_bins",
+    "estimator_name": "lightgbm",
+    "experiment_family": "feature_ablation"
+  },
+  "target": "y",
+  "estimator": "TunableBoostingClassifier",
+  "estimator_params": {
+    "model_name": "lightgbm",
+    "base_params": null,
+    "tuning_strategy": null,
+    "tuning_param_space": null,
+    "n_iter": 20,
+    "n_trials": 25,
+    "inner_cv": 3,
+    "scoring": "auto",
+    "n_jobs": -1,
+    "random_state": null,
+    "verbosity": 0
+  }
+}

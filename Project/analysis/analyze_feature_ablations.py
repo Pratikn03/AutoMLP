@@ -17,7 +17,15 @@ ABLATION_JSON = Path("reports/feature_ablation_summary.json")
 ABLATION_DIR = Path("reports/ablations")
 FIG_DIR = Path("figures/ablations")
 
-METRICS_OF_INTEREST = ["f1_macro", "accuracy", "fit_time_sec", "predict_time_sec"]
+METRICS_OF_INTEREST = [
+    "f1_macro",
+    "accuracy",
+    "rmse",
+    "mae",
+    "r2",
+    "fit_time_sec",
+    "predict_time_sec",
+]
 
 
 def _prepare_dirs() -> None:
@@ -31,7 +39,8 @@ def _collect_variant_data(metrics: Dict[str, pd.DataFrame]) -> pd.DataFrame:
     for framework, df in metrics.items():
         if df.empty:
             continue
-        if "feature_variant_key" not in df.columns:
+        required_cols = {"feature_variant_key", "feature_variant", "feature_description", "estimator_name"}
+        if not required_cols.issubset(df.columns):
             continue
         numeric_cols = [col for col in df.columns if col in METRICS_OF_INTEREST]
         if not numeric_cols:

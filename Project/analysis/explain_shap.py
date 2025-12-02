@@ -16,6 +16,7 @@ from Project.utils.io import load_dataset
 from Project.utils.sanitize import sanitize_columns
 from Project.utils.standardize import ensure_directories
 from Project.utils.system import capture_resource_snapshot, merge_runtime_sections
+from sklearn.utils.multiclass import type_of_target
 
 try:  # optional dependency guard (SHAP)
     import shap  # type: ignore
@@ -178,6 +179,9 @@ def main() -> None:
     dataset = pd.concat([X_raw, y_raw], axis=1)
     dataset = dataset.reset_index(drop=True)
 
+    target_kind = type_of_target(y_raw)
+    problem_type = "regression" if target_kind in {"continuous", "continuous-multioutput"} else "classification"
+
     baselines = {}
     descriptors = list(iter_pipelines())
     if joblib is None:
@@ -264,7 +268,14 @@ def main() -> None:
 
                     def predict_fn(raw_data: np.ndarray) -> np.ndarray:
                         frame = pd.DataFrame(raw_data, columns=raw_columns)
-                        return pipeline.predict_proba(frame)[:, 1]
+                        if problem_type == "classification" and hasattr(pipeline, "predict_proba"):
+                            proba = pipeline.predict_proba(frame)
+                            if proba.ndim == 1:
+                                return proba
+                            # fall back to last column to avoid binary-only assumptions
+                            return proba[:, -1]
+                        preds = pipeline.predict(frame)
+                        return np.asarray(preds)
 
                     shap_values, shap_expected = compute_kernel_shap(predict_fn, background_raw, samples_raw)
                     shap_data_matrix = samples_raw
@@ -285,7 +296,13 @@ def main() -> None:
         else:
             start_lime = time.perf_counter()
 
-        if LimeTabularExplainer is not None:
+        can_use_lime = (
+            LimeTabularExplainer is not None
+            and problem_type == "classification"
+            and hasattr(pipeline, "predict_proba")
+        )
+
+        if can_use_lime:
             try:
                 background = raw_training[: min(1000, raw_training.shape[0])]
                 class_names = [str(cls) for cls in np.unique(y_sample)]
@@ -314,9 +331,8 @@ def main() -> None:
                 lime_duration = None
                 if shap_runtime_error is None:
                     shap_runtime_error = f"LIME failed: {exc}"
-        else:
-            if shap_runtime_error is None:
-                shap_runtime_error = "lime_not_installed"
+        elif LimeTabularExplainer is None and shap_runtime_error is None:
+            shap_runtime_error = "lime_not_installed"
 
         runtime_entry: Dict[str, Any] = {
             "experiment": desc.experiment,
@@ -370,8 +386,8 @@ def main() -> None:
                 "seed": desc.seed,
                 "fold": desc.fold,
                 "sample_index": sample_idx,
-                "prediction": float(pipeline.predict_proba(raw_row)[0, 1]) if hasattr(pipeline, "predict_proba") else float(pipeline.predict(raw_row)[0]),
-                "positive_class": str(np.unique(y_sample)[-1]) if y_sample.nunique() else "1",
+                "prediction": float(pipeline.predict_proba(raw_row)[0, -1]) if (problem_type == "classification" and hasattr(pipeline, "predict_proba")) else float(pipeline.predict(raw_row)[0]),
+                "positive_class": str(np.unique(y_sample)[-1]) if (problem_type == "classification" and y_sample.nunique()) else "regression",
                 "top_contributions": contributions,
                 "expected_value": shap_expected if np.isscalar(shap_expected) else None,
             })
